@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolisCore", "SolisCore\SolisCore.csproj", "{C5D0EC82-C822-4F9E-95ED-2DFF541214C5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{FFD3F117-43F7-46B2-BB9D-AE291303FA9C}"
-	ProjectSection(SolutionItems) = preProject
-		LANG.md = LANG.md
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
