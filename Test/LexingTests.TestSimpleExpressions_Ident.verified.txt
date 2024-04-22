@@ -1,0 +1,64 @@
+﻿[
+  {
+    Kind: Ident,
+    Value: Hello,
+    Span: {
+      File: Ident,
+      ByteLength: 5
+    }
+  },
+  {
+    Kind: Ident,
+    Value: _goodbyte,
+    Span: {
+      File: Ident,
+      ByteOffset: 6,
+      ByteLength: 9
+    }
+  },
+  {
+    Kind: Ident,
+    Value: H_goodbye,
+    Span: {
+      File: Ident,
+      ByteOffset: 16,
+      ByteLength: 9
+    }
+  },
+  {
+    Kind: Ident,
+    Value: h123_2323dfsdsfdsf,
+    Span: {
+      File: Ident,
+      ByteOffset: 26,
+      ByteLength: 18
+    }
+  },
+  {
+    Kind: Ident,
+    Value: _,
+    Span: {
+      File: Ident,
+      ByteOffset: 45,
+      ByteLength: 1
+    }
+  },
+  {
+    Kind: Ident,
+    Value: h,
+    Span: {
+      File: Ident,
+      ByteOffset: 47,
+      ByteLength: 1
+    }
+  },
+  {
+    Kind: Ident,
+    Value: _1,
+    Span: {
+      File: Ident,
+      ByteOffset: 49,
+      ByteLength: 2
+    }
+  }
+]

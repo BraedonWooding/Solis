@@ -196,8 +196,9 @@ namespace SolisCore.Lexing
                     case 'Z':
                     case '_':
                         kind = TokenKind.Ident;
-                        while ((char.ToLower(span[relativeIdx]) >= 'a' && char.ToLower(span[relativeIdx]) <= 'z') ||
-                            (span[relativeIdx] >= '0' && span[relativeIdx] <= '9') || span[relativeIdx] == '_')
+                        // TODO: Clean up this ugly statement
+                        while (relativeIdx < span.Length && ((char.ToLower(span[relativeIdx]) >= 'a' && char.ToLower(span[relativeIdx]) <= 'z') ||
+                            (span[relativeIdx] >= '0' && span[relativeIdx] <= '9') || span[relativeIdx] == '_'))
                         {
                             relativeIdx++;
                         }
@@ -282,6 +283,7 @@ namespace SolisCore.Lexing
             ['/'] = TokenKind.MathSymbol,
             ['%'] = TokenKind.MathSymbol,
 
+            [':'] = TokenKind.PunctuationSymbol,
             ['('] = TokenKind.PunctuationSymbol,
             ['['] = TokenKind.PunctuationSymbol,
 

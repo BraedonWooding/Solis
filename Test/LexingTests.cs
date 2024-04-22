@@ -10,6 +10,8 @@ namespace Test
         [DataRow("CompoundInts", "1234567890")]
         [DataRow("SimpleFloats", "12323.112 0.55 .3 .0111 0.1")]
         [DataRow("ExpFloats", "1e10 .1e24 9.8e5")]
+        [DataRow("Ident", "Hello _goodbyte H_goodbye h123_2323dfsdsfdsf _ h _1")]
+        [DataRow("Variable Decl", "var x = 2 const x = 3")]
         public async Task TestSimpleExpressions(string name, string data)
         {
             await Verify(new Lexer().FileToTokens(name, data)).UseMethodName("TestSimpleExpressions_" + name);

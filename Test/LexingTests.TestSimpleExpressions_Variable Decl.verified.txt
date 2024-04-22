@@ -1,0 +1,74 @@
+﻿[
+  {
+    Kind: Var,
+    Value: var,
+    Span: {
+      File: Variable Decl,
+      ByteLength: 3
+    }
+  },
+  {
+    Kind: Ident,
+    Value: x,
+    Span: {
+      File: Variable Decl,
+      ByteOffset: 4,
+      ByteLength: 1
+    }
+  },
+  {
+    Kind: AssignmentSymbol,
+    Value: =,
+    Span: {
+      File: Variable Decl,
+      ByteOffset: 6,
+      ByteLength: 1
+    }
+  },
+  {
+    Kind: ValueInt,
+    Value: 2,
+    RealValue: 2,
+    Span: {
+      File: Variable Decl,
+      ByteOffset: 8,
+      ByteLength: 1
+    }
+  },
+  {
+    Kind: Const,
+    Value: const,
+    Span: {
+      File: Variable Decl,
+      ByteLength: 5
+    }
+  },
+  {
+    Kind: Ident,
+    Value: x,
+    Span: {
+      File: Variable Decl,
+      ByteOffset: 16,
+      ByteLength: 1
+    }
+  },
+  {
+    Kind: AssignmentSymbol,
+    Value: =,
+    Span: {
+      File: Variable Decl,
+      ByteOffset: 18,
+      ByteLength: 1
+    }
+  },
+  {
+    Kind: ValueInt,
+    Value: 3,
+    RealValue: 3,
+    Span: {
+      File: Variable Decl,
+      ByteOffset: 20,
+      ByteLength: 1
+    }
+  }
+]
