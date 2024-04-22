@@ -6,7 +6,7 @@
         Kind: Ident,
         Value: x,
         Span: {
-          File: Declaration,
+          File: Declaration Var,
           ByteOffset: 4,
           ByteLength: 1
         }
