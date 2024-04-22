@@ -1,0 +1,11 @@
+﻿[
+  {
+    Kind: ValueInt,
+    Value: 1234567890,
+    RealValue: 1234567890,
+    Span: {
+      File: CompoundInts,
+      ByteLength: 10
+    }
+  }
+]

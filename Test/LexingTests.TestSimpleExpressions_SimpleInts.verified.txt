@@ -1,0 +1,101 @@
+﻿[
+  {
+    Kind: ValueInt,
+    Value: 1,
+    RealValue: 1,
+    Span: {
+      File: SimpleInts,
+      ByteLength: 1
+    }
+  },
+  {
+    Kind: ValueInt,
+    Value: 2,
+    RealValue: 2,
+    Span: {
+      File: SimpleInts,
+      ByteOffset: 2,
+      ByteLength: 1
+    }
+  },
+  {
+    Kind: ValueInt,
+    Value: 3,
+    RealValue: 3,
+    Span: {
+      File: SimpleInts,
+      ByteOffset: 4,
+      ByteLength: 1
+    }
+  },
+  {
+    Kind: ValueInt,
+    Value: 4,
+    RealValue: 4,
+    Span: {
+      File: SimpleInts,
+      ByteOffset: 6,
+      ByteLength: 1
+    }
+  },
+  {
+    Kind: ValueInt,
+    Value: 5,
+    RealValue: 5,
+    Span: {
+      File: SimpleInts,
+      ByteOffset: 8,
+      ByteLength: 1
+    }
+  },
+  {
+    Kind: ValueInt,
+    Value: 6,
+    RealValue: 6,
+    Span: {
+      File: SimpleInts,
+      ByteOffset: 10,
+      ByteLength: 1
+    }
+  },
+  {
+    Kind: ValueInt,
+    Value: 7,
+    RealValue: 7,
+    Span: {
+      File: SimpleInts,
+      ByteOffset: 12,
+      ByteLength: 1
+    }
+  },
+  {
+    Kind: ValueInt,
+    Value: 8,
+    RealValue: 8,
+    Span: {
+      File: SimpleInts,
+      ByteOffset: 14,
+      ByteLength: 1
+    }
+  },
+  {
+    Kind: ValueInt,
+    Value: 9,
+    RealValue: 9,
+    Span: {
+      File: SimpleInts,
+      ByteOffset: 16,
+      ByteLength: 1
+    }
+  },
+  {
+    Kind: ValueInt,
+    Value: 0,
+    RealValue: 0,
+    Span: {
+      File: SimpleInts,
+      ByteOffset: 18,
+      ByteLength: 1
+    }
+  }
+]

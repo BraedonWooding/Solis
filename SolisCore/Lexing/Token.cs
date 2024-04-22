@@ -59,12 +59,12 @@ namespace SolisCore.Lexing
         // and --
         Comment,
 
-        // Technically
+        Ident,
+
         ValueInt,
         ValueFloat,
         ValueBool,
         ValueString,
         ValueChar,
-
     }
 }

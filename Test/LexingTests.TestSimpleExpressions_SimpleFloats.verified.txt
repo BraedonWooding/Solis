@@ -1,0 +1,51 @@
+﻿[
+  {
+    Kind: ValueFloat,
+    Value: 12323.112,
+    RealValue: 12323.112,
+    Span: {
+      File: SimpleFloats,
+      ByteLength: 9
+    }
+  },
+  {
+    Kind: ValueFloat,
+    Value: 0.55,
+    RealValue: 0.55,
+    Span: {
+      File: SimpleFloats,
+      ByteOffset: 10,
+      ByteLength: 4
+    }
+  },
+  {
+    Kind: ValueFloat,
+    Value: .3,
+    RealValue: 0.3,
+    Span: {
+      File: SimpleFloats,
+      ByteOffset: 15,
+      ByteLength: 2
+    }
+  },
+  {
+    Kind: ValueFloat,
+    Value: .0111,
+    RealValue: 0.0111,
+    Span: {
+      File: SimpleFloats,
+      ByteOffset: 18,
+      ByteLength: 5
+    }
+  },
+  {
+    Kind: ValueFloat,
+    Value: 0.1,
+    RealValue: 0.1,
+    Span: {
+      File: SimpleFloats,
+      ByteOffset: 24,
+      ByteLength: 3
+    }
+  }
+]
