@@ -1,0 +1,17 @@
+﻿{
+  Statements: [
+    {
+      IsConst: false,
+      Identifier: {
+        Kind: Ident,
+        Value: x,
+        Span: {
+          File: Declaration,
+          ByteOffset: 4,
+          ByteLength: 1
+        }
+      },
+      IdentifierValue: x
+    }
+  ]
+}

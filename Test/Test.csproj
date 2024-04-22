@@ -26,4 +26,15 @@
     <ProjectReference Include="..\SolisCore\SolisCore.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="ParsingTests.TestSimpleExpressions_Ident.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
+      <DependentUpon>ParsingTests.cs</DependentUpon>
+    </None>
+    <None Update="ParsingTests.TestSimpleExpressions_SimpleInts.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
+      <DependentUpon>ParsingTests.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+
 </Project>

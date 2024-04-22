@@ -99,7 +99,7 @@ namespace SolisCore.Parser
                 return new VariableDeclaration(
                     isConst: _tokens[idx++].Kind == TokenKind.Const,
                     GetIdent(),
-                    TryConsume(() => _tokens[idx] is Token { Kind: TokenKind.AssignmentSymbol, Value: "=" }, ParseExpression));
+                    TryConsume(() => _tokens.Count > idx && _tokens[idx] is Token { Kind: TokenKind.AssignmentSymbol, Value: "=" }, ParseExpression));
             }
             
             // functions
