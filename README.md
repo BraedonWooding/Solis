@@ -178,6 +178,65 @@ public class MyClass {
 }
 ```
 
+## Signals (Reactivity)
+
+> Sadly, the naming for this can be a bit conflated; for example "Signals" in System Programming, Threading, Godot.
+
+> Signals for this is referring to https://github.com/tc39/proposal-signals which is a reactivity system.
+
+Signals are a powerful abstraction that let you "watch" updates and make dynamic UI components.
+
+A simple example would be this;
+
+```lua
+record Score {
+    base: number,
+    additiveMult: number,
+    multiplicativeMult: number,
+
+    // the total score will be base * additiveMult * multiplicativeMult
+    fn calculateTotalScore() {
+        return base * additiveMult * multiplicativeMult
+    }
+}
+```
+
+For this, if we wanted to have some UI text component update dynamically to show the score as it changes we can use reactivity.  The traditional method would be either to put the UI logic in the Score record or have some sort of global event that checks it or just update it every frame.
+
+This means however, that it can get tricky to handle timing updates, what if the score gets updated 10 times very quickly?  Do you want to show each update separately?  This becomes difficult to do if you are doing a pull based model and very complex logic for a simple class if you are doing push based model (which increases unit testing complexity).
+
+A signal solution would be;
+
+```lua
+record Score {
+    base: Signal[number] = 0,
+    additiveMult: Signal[number] = 1,
+    multiplicativeMult: Signal[number] = 1,
+
+    totalScore = Signal.Computed(fn() base * additiveMult * multiplicativeMult),
+}
+
+// updating score
+var score: Score = {}
+// setting up a reactive watcher
+score.totalScore.watch(fn(newValue) console.println(newValue))
+
+score.base += 10
+score.additiveMult += 5
+score.multiplicativeMult *= 1.5
+
+// sometimes you want to "scope" a change so that you can apply multiple at once
+Signal.scope(fn() {
+    score.base += 10
+    score.additiveMult += 5
+    score.multiplicativeMult *= 1.5
+})
+```
+
+## Async
+
+We support asynchronous programming out of the box built ontop of 
+
 ## Permission
 
 Through the use of 
