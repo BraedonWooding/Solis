@@ -3,26 +3,26 @@
     Kind: Var,
     Value: var,
     Span: {
-      File: Variable Decl,
-      ByteLength: 3
+      ByteLength: 3,
+      Serialized: Variable Decl(0:3) at Line 1:2
     }
   },
   {
     Kind: Ident,
     Value: x,
     Span: {
-      File: Variable Decl,
       ByteOffset: 4,
-      ByteLength: 1
+      ByteLength: 1,
+      Serialized: Variable Decl(4:5) at Line 1:6
     }
   },
   {
     Kind: AssignmentSymbol,
     Value: =,
     Span: {
-      File: Variable Decl,
       ByteOffset: 6,
-      ByteLength: 1
+      ByteLength: 1,
+      Serialized: Variable Decl(6:7) at Line 1:8
     }
   },
   {
@@ -30,35 +30,35 @@
     Value: 2,
     RealValue: 2,
     Span: {
-      File: Variable Decl,
       ByteOffset: 8,
-      ByteLength: 1
+      ByteLength: 1,
+      Serialized: Variable Decl(8:9) at Line 1:10
     }
   },
   {
     Kind: Const,
     Value: const,
     Span: {
-      File: Variable Decl,
-      ByteLength: 5
+      ByteLength: 5,
+      Serialized: Variable Decl(0:5) at Line 1:2
     }
   },
   {
     Kind: Ident,
     Value: x,
     Span: {
-      File: Variable Decl,
       ByteOffset: 16,
-      ByteLength: 1
+      ByteLength: 1,
+      Serialized: Variable Decl(16:17) at Line 1:18
     }
   },
   {
     Kind: AssignmentSymbol,
     Value: =,
     Span: {
-      File: Variable Decl,
       ByteOffset: 18,
-      ByteLength: 1
+      ByteLength: 1,
+      Serialized: Variable Decl(18:19) at Line 1:20
     }
   },
   {
@@ -66,9 +66,9 @@
     Value: 3,
     RealValue: 3,
     Span: {
-      File: Variable Decl,
       ByteOffset: 20,
-      ByteLength: 1
+      ByteLength: 1,
+      Serialized: Variable Decl(20:21) at Line 1:22
     }
   }
 ]

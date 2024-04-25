@@ -5,9 +5,9 @@
         Kind: Ident,
         Value: Foo,
         Span: {
-          File: No Args Function,
           ByteOffset: 3,
-          ByteLength: 3
+          ByteLength: 3,
+          Serialized: No Args Function(3:6) at Line 1:5
         }
       },
       Body: {}

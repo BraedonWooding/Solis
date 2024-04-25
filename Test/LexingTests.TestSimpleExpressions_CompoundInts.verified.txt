@@ -4,8 +4,8 @@
     Value: 1234567890,
     RealValue: 1234567890,
     Span: {
-      File: CompoundInts,
-      ByteLength: 10
+      ByteLength: 10,
+      Serialized: CompoundInts(0:10) at Line 1:2
     }
   }
 ]

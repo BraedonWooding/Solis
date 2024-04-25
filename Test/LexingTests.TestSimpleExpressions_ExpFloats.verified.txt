@@ -4,8 +4,8 @@
     Value: 1e10,
     RealValue: 1E+10,
     Span: {
-      File: ExpFloats,
-      ByteLength: 4
+      ByteLength: 4,
+      Serialized: ExpFloats(0:4) at Line 1:2
     }
   },
   {
@@ -13,9 +13,9 @@
     Value: .1e24,
     RealValue: 1E+23,
     Span: {
-      File: ExpFloats,
       ByteOffset: 5,
-      ByteLength: 5
+      ByteLength: 5,
+      Serialized: ExpFloats(5:10) at Line 1:7
     }
   },
   {
@@ -23,9 +23,9 @@
     Value: 9.8e5,
     RealValue: 980000.0,
     Span: {
-      File: ExpFloats,
       ByteOffset: 11,
-      ByteLength: 5
+      ByteLength: 5,
+      Serialized: ExpFloats(11:16) at Line 1:13
     }
   }
 ]

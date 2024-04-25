@@ -4,8 +4,8 @@
     Value: 12323.112,
     RealValue: 12323.112,
     Span: {
-      File: SimpleFloats,
-      ByteLength: 9
+      ByteLength: 9,
+      Serialized: SimpleFloats(0:9) at Line 1:2
     }
   },
   {
@@ -13,9 +13,9 @@
     Value: 0.55,
     RealValue: 0.55,
     Span: {
-      File: SimpleFloats,
       ByteOffset: 10,
-      ByteLength: 4
+      ByteLength: 4,
+      Serialized: SimpleFloats(10:14) at Line 1:12
     }
   },
   {
@@ -23,9 +23,9 @@
     Value: .3,
     RealValue: 0.3,
     Span: {
-      File: SimpleFloats,
       ByteOffset: 15,
-      ByteLength: 2
+      ByteLength: 2,
+      Serialized: SimpleFloats(15:17) at Line 1:17
     }
   },
   {
@@ -33,9 +33,9 @@
     Value: .0111,
     RealValue: 0.0111,
     Span: {
-      File: SimpleFloats,
       ByteOffset: 18,
-      ByteLength: 5
+      ByteLength: 5,
+      Serialized: SimpleFloats(18:23) at Line 1:20
     }
   },
   {
@@ -43,9 +43,9 @@
     Value: 0.1,
     RealValue: 0.1,
     Span: {
-      File: SimpleFloats,
       ByteOffset: 24,
-      ByteLength: 3
+      ByteLength: 3,
+      Serialized: SimpleFloats(24:27) at Line 1:26
     }
   }
 ]

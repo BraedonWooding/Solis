@@ -30,8 +30,8 @@ namespace SolisCore.Lexing
 
         public override string ToString()
         {
-            // TODO: There is a better way then just checking null on file, maybe FileSpan is nullable??
-            return $"Token({Kind}: {Value}){(Span.File != null ? Span.ToString() : "")}";
+            // TODO: There is a better way then just checking bytelength == 0
+            return $"Token({Kind}: {Value}){(Span.ByteLength == 0 ? Span.ToString() : "")}";
         }
 
         public static Token Punctuation(string symbol)

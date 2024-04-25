@@ -6,9 +6,9 @@
         Kind: Ident,
         Value: y,
         Span: {
-          File: Declaration Const,
           ByteOffset: 6,
-          ByteLength: 1
+          ByteLength: 1,
+          Serialized: Declaration Const(6:7) at Line 1:8
         }
       },
       IdentifierValue: y

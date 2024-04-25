@@ -6,9 +6,9 @@
         Kind: Ident,
         Value: x,
         Span: {
-          File: Declaration Var,
           ByteOffset: 4,
-          ByteLength: 1
+          ByteLength: 1,
+          Serialized: Declaration Var(4:5) at Line 1:6
         }
       },
       IdentifierValue: x

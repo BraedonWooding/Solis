@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SolisCore.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,6 +13,7 @@ namespace SolisCore.Lexing
         public List<Token> FileToTokens(string fileName, string fileContents)
         {
             var result = new List<Token>();
+            var file = new FileInfo(fileName, fileContents);
 
             int currentIdx = 0;
             var span = fileContents.AsSpan();
@@ -24,7 +26,7 @@ namespace SolisCore.Lexing
                 }
 
                 var idx = 0;
-                var token = ParseToken(fileName, span[currentIdx..], ref idx, currentIdx);
+                var token = ParseToken(file, span[currentIdx..], ref idx, currentIdx);
                 currentIdx += idx;
                 result.Add(token);
             }
@@ -32,7 +34,7 @@ namespace SolisCore.Lexing
             return result;
         }
 
-        public Token ParseToken(string fileName, ReadOnlySpan<char> span, ref int relativeIdx, int currentIdx)
+        public Token ParseToken(FileInfo fileName, ReadOnlySpan<char> span, ref int relativeIdx, int currentIdx)
         {
             if (span.Length == 0)
             {

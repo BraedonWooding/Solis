@@ -3,62 +3,62 @@
     Kind: Ident,
     Value: Hello,
     Span: {
-      File: Ident,
-      ByteLength: 5
+      ByteLength: 5,
+      Serialized: Ident(0:5) at Line 1:2
     }
   },
   {
     Kind: Ident,
     Value: _goodbyte,
     Span: {
-      File: Ident,
       ByteOffset: 6,
-      ByteLength: 9
+      ByteLength: 9,
+      Serialized: Ident(6:15) at Line 1:8
     }
   },
   {
     Kind: Ident,
     Value: H_goodbye,
     Span: {
-      File: Ident,
       ByteOffset: 16,
-      ByteLength: 9
+      ByteLength: 9,
+      Serialized: Ident(16:25) at Line 1:18
     }
   },
   {
     Kind: Ident,
     Value: h123_2323dfsdsfdsf,
     Span: {
-      File: Ident,
       ByteOffset: 26,
-      ByteLength: 18
+      ByteLength: 18,
+      Serialized: Ident(26:44) at Line 1:28
     }
   },
   {
     Kind: Ident,
     Value: _,
     Span: {
-      File: Ident,
       ByteOffset: 45,
-      ByteLength: 1
+      ByteLength: 1,
+      Serialized: Ident(45:46) at Line 1:47
     }
   },
   {
     Kind: Ident,
     Value: h,
     Span: {
-      File: Ident,
       ByteOffset: 47,
-      ByteLength: 1
+      ByteLength: 1,
+      Serialized: Ident(47:48) at Line 1:49
     }
   },
   {
     Kind: Ident,
     Value: _1,
     Span: {
-      File: Ident,
       ByteOffset: 49,
-      ByteLength: 2
+      ByteLength: 2,
+      Serialized: Ident(49:51) at Line 1:51
     }
   }
 ]

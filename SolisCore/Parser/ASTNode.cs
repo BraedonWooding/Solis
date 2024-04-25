@@ -7,7 +7,7 @@ namespace SolisCore.Parser
 {
     public class ASTNode
     {
-
+        public string Type => GetType().Name;
     }
 
     public class StatementBody : ASTNode

@@ -7,9 +7,9 @@
             Kind: Ident,
             Value: a,
             Span: {
-              File: Anonymous Function,
               ByteOffset: 3,
-              ByteLength: 1
+              ByteLength: 1,
+              Serialized: Anonymous Function(3:4) at Line 1:5
             }
           }
         },
@@ -18,9 +18,9 @@
             Kind: Ident,
             Value: b,
             Span: {
-              File: Anonymous Function,
               ByteOffset: 6,
-              ByteLength: 1
+              ByteLength: 1,
+              Serialized: Anonymous Function(6:7) at Line 1:8
             }
           }
         }
