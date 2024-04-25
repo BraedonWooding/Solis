@@ -9,9 +9,10 @@
             Span: {
               ByteOffset: 3,
               ByteLength: 1,
-              Serialized: Anonymous Function(3:4) at Line 1:5
+              Serialized: Anonymous Function(3:4) at Line 1:4
             }
-          }
+          },
+          Type: FunctionArg
         },
         {
           Name: {
@@ -20,12 +21,17 @@
             Span: {
               ByteOffset: 6,
               ByteLength: 1,
-              Serialized: Anonymous Function(6:7) at Line 1:8
+              Serialized: Anonymous Function(6:7) at Line 1:7
             }
-          }
+          },
+          Type: FunctionArg
         }
       ],
-      Body: {}
+      Body: {
+        Type: StatementBody
+      },
+      Type: FunctionDeclaration
     }
-  ]
+  ],
+  Type: StatementBody
 }

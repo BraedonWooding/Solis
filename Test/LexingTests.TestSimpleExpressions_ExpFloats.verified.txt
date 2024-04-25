@@ -5,7 +5,7 @@
     RealValue: 1E+10,
     Span: {
       ByteLength: 4,
-      Serialized: ExpFloats(0:4) at Line 1:2
+      Serialized: ExpFloats(0:4) at Line 1:1
     }
   },
   {
@@ -15,7 +15,7 @@
     Span: {
       ByteOffset: 5,
       ByteLength: 5,
-      Serialized: ExpFloats(5:10) at Line 1:7
+      Serialized: ExpFloats(5:10) at Line 1:6
     }
   },
   {
@@ -25,7 +25,7 @@
     Span: {
       ByteOffset: 11,
       ByteLength: 5,
-      Serialized: ExpFloats(11:16) at Line 1:13
+      Serialized: ExpFloats(11:16) at Line 1:12
     }
   }
 ]

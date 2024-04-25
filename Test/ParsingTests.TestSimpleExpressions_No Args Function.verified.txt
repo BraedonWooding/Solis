@@ -7,10 +7,14 @@
         Span: {
           ByteOffset: 3,
           ByteLength: 3,
-          Serialized: No Args Function(3:6) at Line 1:5
+          Serialized: No Args Function(3:6) at Line 1:4
         }
       },
-      Body: {}
+      Body: {
+        Type: StatementBody
+      },
+      Type: FunctionDeclaration
     }
-  ]
+  ],
+  Type: StatementBody
 }

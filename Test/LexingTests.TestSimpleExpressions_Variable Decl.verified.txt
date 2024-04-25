@@ -4,7 +4,7 @@
     Value: var,
     Span: {
       ByteLength: 3,
-      Serialized: Variable Decl(0:3) at Line 1:2
+      Serialized: Variable Decl(0:3) at Line 1:1
     }
   },
   {
@@ -13,7 +13,7 @@
     Span: {
       ByteOffset: 4,
       ByteLength: 1,
-      Serialized: Variable Decl(4:5) at Line 1:6
+      Serialized: Variable Decl(4:5) at Line 1:5
     }
   },
   {
@@ -22,7 +22,7 @@
     Span: {
       ByteOffset: 6,
       ByteLength: 1,
-      Serialized: Variable Decl(6:7) at Line 1:8
+      Serialized: Variable Decl(6:7) at Line 1:7
     }
   },
   {
@@ -32,7 +32,7 @@
     Span: {
       ByteOffset: 8,
       ByteLength: 1,
-      Serialized: Variable Decl(8:9) at Line 1:10
+      Serialized: Variable Decl(8:9) at Line 1:9
     }
   },
   {
@@ -40,7 +40,7 @@
     Value: const,
     Span: {
       ByteLength: 5,
-      Serialized: Variable Decl(0:5) at Line 1:2
+      Serialized: Variable Decl(0:5) at Line 1:1
     }
   },
   {
@@ -49,7 +49,7 @@
     Span: {
       ByteOffset: 16,
       ByteLength: 1,
-      Serialized: Variable Decl(16:17) at Line 1:18
+      Serialized: Variable Decl(16:17) at Line 1:17
     }
   },
   {
@@ -58,7 +58,7 @@
     Span: {
       ByteOffset: 18,
       ByteLength: 1,
-      Serialized: Variable Decl(18:19) at Line 1:20
+      Serialized: Variable Decl(18:19) at Line 1:19
     }
   },
   {
@@ -68,7 +68,7 @@
     Span: {
       ByteOffset: 20,
       ByteLength: 1,
-      Serialized: Variable Decl(20:21) at Line 1:22
+      Serialized: Variable Decl(20:21) at Line 1:21
     }
   }
 ]

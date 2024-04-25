@@ -8,10 +8,12 @@
         Span: {
           ByteOffset: 6,
           ByteLength: 1,
-          Serialized: Declaration Const(6:7) at Line 1:8
+          Serialized: Declaration Const(6:7) at Line 1:7
         }
       },
-      IdentifierValue: y
+      IdentifierValue: y,
+      Type: VariableDeclaration
     }
-  ]
+  ],
+  Type: StatementBody
 }

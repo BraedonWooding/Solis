@@ -5,7 +5,7 @@
     RealValue: 12323.112,
     Span: {
       ByteLength: 9,
-      Serialized: SimpleFloats(0:9) at Line 1:2
+      Serialized: SimpleFloats(0:9) at Line 1:1
     }
   },
   {
@@ -15,7 +15,7 @@
     Span: {
       ByteOffset: 10,
       ByteLength: 4,
-      Serialized: SimpleFloats(10:14) at Line 1:12
+      Serialized: SimpleFloats(10:14) at Line 1:11
     }
   },
   {
@@ -25,7 +25,7 @@
     Span: {
       ByteOffset: 15,
       ByteLength: 2,
-      Serialized: SimpleFloats(15:17) at Line 1:17
+      Serialized: SimpleFloats(15:17) at Line 1:16
     }
   },
   {
@@ -35,7 +35,7 @@
     Span: {
       ByteOffset: 18,
       ByteLength: 5,
-      Serialized: SimpleFloats(18:23) at Line 1:20
+      Serialized: SimpleFloats(18:23) at Line 1:19
     }
   },
   {
@@ -45,7 +45,7 @@
     Span: {
       ByteOffset: 24,
       ByteLength: 3,
-      Serialized: SimpleFloats(24:27) at Line 1:26
+      Serialized: SimpleFloats(24:27) at Line 1:25
     }
   }
 ]

@@ -4,7 +4,7 @@
     Value: Hello,
     Span: {
       ByteLength: 5,
-      Serialized: Ident(0:5) at Line 1:2
+      Serialized: Ident(0:5) at Line 1:1
     }
   },
   {
@@ -13,7 +13,7 @@
     Span: {
       ByteOffset: 6,
       ByteLength: 9,
-      Serialized: Ident(6:15) at Line 1:8
+      Serialized: Ident(6:15) at Line 1:7
     }
   },
   {
@@ -22,7 +22,7 @@
     Span: {
       ByteOffset: 16,
       ByteLength: 9,
-      Serialized: Ident(16:25) at Line 1:18
+      Serialized: Ident(16:25) at Line 1:17
     }
   },
   {
@@ -31,7 +31,7 @@
     Span: {
       ByteOffset: 26,
       ByteLength: 18,
-      Serialized: Ident(26:44) at Line 1:28
+      Serialized: Ident(26:44) at Line 1:27
     }
   },
   {
@@ -40,7 +40,7 @@
     Span: {
       ByteOffset: 45,
       ByteLength: 1,
-      Serialized: Ident(45:46) at Line 1:47
+      Serialized: Ident(45:46) at Line 1:46
     }
   },
   {
@@ -49,7 +49,7 @@
     Span: {
       ByteOffset: 47,
       ByteLength: 1,
-      Serialized: Ident(47:48) at Line 1:49
+      Serialized: Ident(47:48) at Line 1:48
     }
   },
   {
@@ -58,7 +58,7 @@
     Span: {
       ByteOffset: 49,
       ByteLength: 2,
-      Serialized: Ident(49:51) at Line 1:51
+      Serialized: Ident(49:51) at Line 1:50
     }
   }
 ]

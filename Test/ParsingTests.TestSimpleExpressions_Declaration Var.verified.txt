@@ -8,10 +8,12 @@
         Span: {
           ByteOffset: 4,
           ByteLength: 1,
-          Serialized: Declaration Var(4:5) at Line 1:6
+          Serialized: Declaration Var(4:5) at Line 1:5
         }
       },
-      IdentifierValue: x
+      IdentifierValue: x,
+      Type: VariableDeclaration
     }
-  ]
+  ],
+  Type: StatementBody
 }

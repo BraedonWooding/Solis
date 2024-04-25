@@ -5,7 +5,7 @@
     RealValue: 1234567890,
     Span: {
       ByteLength: 10,
-      Serialized: CompoundInts(0:10) at Line 1:2
+      Serialized: CompoundInts(0:10) at Line 1:1
     }
   }
 ]

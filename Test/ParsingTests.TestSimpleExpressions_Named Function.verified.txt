@@ -9,9 +9,10 @@
             Span: {
               ByteOffset: 5,
               ByteLength: 1,
-              Serialized: Named Function(5:6) at Line 1:7
+              Serialized: Named Function(5:6) at Line 1:6
             }
-          }
+          },
+          Type: FunctionArg
         },
         {
           Name: {
@@ -20,9 +21,10 @@
             Span: {
               ByteOffset: 8,
               ByteLength: 1,
-              Serialized: Named Function(8:9) at Line 1:10
+              Serialized: Named Function(8:9) at Line 1:9
             }
-          }
+          },
+          Type: FunctionArg
         }
       ],
       Identifier: {
@@ -31,10 +33,14 @@
         Span: {
           ByteOffset: 3,
           ByteLength: 1,
-          Serialized: Named Function(3:4) at Line 1:5
+          Serialized: Named Function(3:4) at Line 1:4
         }
       },
-      Body: {}
+      Body: {
+        Type: StatementBody
+      },
+      Type: FunctionDeclaration
     }
-  ]
+  ],
+  Type: StatementBody
 }
