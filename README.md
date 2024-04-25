@@ -233,6 +233,39 @@ Signal.scope(fn() {
 })
 ```
 
+### Events
+
+Signals are primarily built ontop of events and solve a lot of the typical cases where you need events in games, but there are still cases where it's useful!
+
+For example, let's say you want a sort of "generic" event hook system for a card game.  Maybe you have an item that means you gain HP for every card you play, you could write it like this
+
+```lua
+// events are "objects"
+const cardPlayed = Event[fn(card: Card)]
+
+const id = cardPlayed.subscribe(fn(card) {
+    // do whatever you want...
+});
+
+// you can then subscribe later on by using "id" i.e.
+cardPlayed.unsubscribe(id)
+```
+
+## Memory Management
+
+Since the purpose of this is for mostly scripting we want to abstract away memory allocations.  One issue however, is "resources" for example an open file/socket or something like that.
+
+Resources automatically cleanup after their lexical scope for example.
+
+```lua
+fn main() {
+    const file = std.file.open("./file.txt", "r")
+    // file is now opened for the lexical scope of the file
+
+    // file will close here
+}
+```
+
 ## Async
 
 We support asynchronous programming out of the box built ontop of 

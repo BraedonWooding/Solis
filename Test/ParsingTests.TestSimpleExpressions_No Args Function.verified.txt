@@ -1,0 +1,16 @@
+﻿{
+  Statements: [
+    {
+      Identifier: {
+        Kind: Ident,
+        Value: Foo,
+        Span: {
+          File: No Args Function,
+          ByteOffset: 3,
+          ByteLength: 3
+        }
+      },
+      Body: {}
+    }
+  ]
+}

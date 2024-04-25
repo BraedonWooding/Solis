@@ -1,0 +1,44 @@
+﻿{
+  Statements: [
+    {
+      IsConst: true,
+      Identifier: {
+        Kind: Ident,
+        Value: x,
+        Span: {
+          File: Anonymous Function Variable,
+          ByteOffset: 6,
+          ByteLength: 1
+        }
+      },
+      IdentifierValue: x,
+      Expression: {
+        Args: [
+          {
+            Name: {
+              Kind: Ident,
+              Value: a,
+              Span: {
+                File: Anonymous Function Variable,
+                ByteOffset: 13,
+                ByteLength: 1
+              }
+            }
+          },
+          {
+            Name: {
+              Kind: Ident,
+              Value: b,
+              Span: {
+                File: Anonymous Function Variable,
+                ByteOffset: 16,
+                ByteLength: 1
+              }
+            }
+          }
+        ],
+        Body: {}
+      }
+    }
+  ]
+}

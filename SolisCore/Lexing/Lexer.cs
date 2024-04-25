@@ -286,14 +286,19 @@ namespace SolisCore.Lexing
             [':'] = TokenKind.PunctuationSymbol,
             ['('] = TokenKind.PunctuationSymbol,
             ['['] = TokenKind.PunctuationSymbol,
+            [')'] = TokenKind.PunctuationSymbol,
+            [']'] = TokenKind.PunctuationSymbol,
+            ['{'] = TokenKind.PunctuationSymbol,
+            ['}'] = TokenKind.PunctuationSymbol,
+            [','] = TokenKind.PunctuationSymbol,
 
-            ['<'] = TokenKind.Comparators,
-            ['>'] = TokenKind.Comparators,
+            ['<'] = TokenKind.ComparatorSymbol,
+            ['>'] = TokenKind.ComparatorSymbol,
 
-            ['!'] = TokenKind.BoolSymbols,
-            ['&'] = TokenKind.BoolSymbols,
-            ['|'] = TokenKind.BoolSymbols,
-            ['~'] = TokenKind.BoolSymbols,
+            ['!'] = TokenKind.BitwiseSymbol,
+            ['&'] = TokenKind.BitwiseSymbol,
+            ['|'] = TokenKind.BitwiseSymbol,
+            ['~'] = TokenKind.BitwiseSymbol,
         };
 
         public Dictionary<string, TokenKind> TwoCharTokens = new Dictionary<string, TokenKind>
@@ -304,12 +309,12 @@ namespace SolisCore.Lexing
             ["/="] = TokenKind.AssignmentSymbol,
             ["%="] = TokenKind.AssignmentSymbol,
 
-            ["<="] = TokenKind.Comparators,
-            [">="] = TokenKind.Comparators,
-            ["=="] = TokenKind.Comparators,
-            ["!="] = TokenKind.Comparators,
-            ["&&"] = TokenKind.Comparators,
-            ["||"] = TokenKind.Comparators,
+            ["<="] = TokenKind.ComparatorSymbol,
+            [">="] = TokenKind.ComparatorSymbol,
+            ["=="] = TokenKind.ComparatorSymbol,
+            ["!="] = TokenKind.ComparatorSymbol,
+            ["&&"] = TokenKind.ComparatorSymbol,
+            ["||"] = TokenKind.ComparatorSymbol,
         };
 
         public HashSet<TokenKind> SimpleTokens = new HashSet<TokenKind>()

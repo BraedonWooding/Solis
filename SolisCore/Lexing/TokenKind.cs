@@ -1,0 +1,42 @@
+﻿namespace SolisCore.Lexing
+{
+    public enum TokenKind
+    {
+        Unknown,
+        Var,
+        Const,
+        Record,
+        Fn,
+        If,
+        Else,
+        For,
+        While,
+        Break,
+        Return,
+        Continue,
+        In,
+
+        // i.e. = += -= ...
+        AssignmentSymbol,
+        // i.e. + - * ...
+        MathSymbol,
+        // i.e. ! ~ | &
+        BitwiseSymbol,
+        // i.e. < == != > >= ...
+        ComparatorSymbol,
+        // i.e. . ( [ { ,
+        PunctuationSymbol,
+
+        // i.e. --[[ ... --]]
+        // and --
+        Comment,
+
+        Ident,
+
+        ValueInt,
+        ValueFloat,
+        ValueBool,
+        ValueString,
+        ValueChar,
+    }
+}

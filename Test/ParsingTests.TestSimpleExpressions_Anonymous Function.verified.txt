@@ -1,0 +1,31 @@
+﻿{
+  Statements: [
+    {
+      Args: [
+        {
+          Name: {
+            Kind: Ident,
+            Value: a,
+            Span: {
+              File: Anonymous Function,
+              ByteOffset: 3,
+              ByteLength: 1
+            }
+          }
+        },
+        {
+          Name: {
+            Kind: Ident,
+            Value: b,
+            Span: {
+              File: Anonymous Function,
+              ByteOffset: 6,
+              ByteLength: 1
+            }
+          }
+        }
+      ],
+      Body: {}
+    }
+  ]
+}

@@ -1,8 +1,9 @@
 ﻿using SolisCore.Utils;
+using System;
 
 namespace SolisCore.Lexing
 {
-    public readonly struct Token
+    public readonly struct Token : IEquatable<Token>
     {
         public readonly TokenKind Kind;
         public readonly string Value;
@@ -26,45 +27,62 @@ namespace SolisCore.Lexing
             RealValue = realValue;
             Span = span;
         }
-    }
 
-    public enum TokenKind
-    {
-        Unknown,
-        Var,
-        Const,
-        Record,
-        Fn,
-        If,
-        Else,
-        For,
-        While,
-        Break,
-        Return,
-        Continue,
-        In,
+        public override string ToString()
+        {
+            // TODO: There is a better way then just checking null on file, maybe FileSpan is nullable??
+            return $"Token({Kind}: {Value}){(Span.File != null ? Span.ToString() : "")}";
+        }
 
-        // i.e. = += -= ...
-        AssignmentSymbol,
-        // i.e. + - * ...
-        MathSymbol,
-        // i.e. ! ~ | &
-        BoolSymbols,
-        // i.e. < == != > >= ...
-        Comparators,
-        // i.e. . ( [ {
-        PunctuationSymbol,
+        public static Token Punctuation(string symbol)
+        {
+            return new Token(TokenKind.PunctuationSymbol, symbol, null, new FileSpan());
+        }
 
-        // i.e. --[[ ... --]]
-        // and --
-        Comment,
+        public static Token BitwiseMath(string symbol)
+        {
+            return new Token(TokenKind.BitwiseSymbol, symbol, null, new FileSpan());
+        }
 
-        Ident,
+        public static Token Math(string symbol)
+        {
+            return new Token(TokenKind.MathSymbol, symbol, null, new FileSpan());
+        }
 
-        ValueInt,
-        ValueFloat,
-        ValueBool,
-        ValueString,
-        ValueChar,
+        public static Token Compare(string symbol)
+        {
+            return new Token(TokenKind.ComparatorSymbol, symbol, null, new FileSpan());
+        }
+
+        public static Token Assignment(string symbol)
+        {
+            return new Token(TokenKind.AssignmentSymbol, symbol, null, new FileSpan());
+        }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is Token token && Equals(token);
+        }
+
+        public bool Equals(Token other)
+        {
+            return Kind == other.Kind &&
+                   Value == other.Value;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Kind, Value);
+        }
+
+        public static bool operator ==(Token left, Token right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(Token left, Token right)
+        {
+            return !(left == right);
+        }
     }
 }
