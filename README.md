@@ -233,42 +233,65 @@ Signal.scope(fn() {
 })
 ```
 
-### Events
+## Async
 
-Signals are primarily built ontop of events and solve a lot of the typical cases where you need events in games, but there are still cases where it's useful!
+We support asynchronous programming out of the box built ontop of a promise based API.
 
-For example, let's say you want a sort of "generic" event hook system for a card game.  Maybe you have an item that means you gain HP for every card you play, you could write it like this
+```rust
+const client = std.net.client;
 
-```lua
-// events are "objects"
-const cardPlayed = Event[fn(card: Card)]
-
-const id = cardPlayed.subscribe(fn(card) {
-    // do whatever you want...
-});
-
-// you can then subscribe later on by using "id" i.e.
-cardPlayed.unsubscribe(id)
-```
-
-## Memory Management
-
-Since the purpose of this is for mostly scripting we want to abstract away memory allocations.  One issue however, is "resources" for example an open file/socket or something like that.
-
-Resources automatically cleanup after their lexical scope for example.
-
-```lua
 fn main() {
-    const file = std.file.open("./file.txt", "r")
-    // file is now opened for the lexical scope of the file
+    // all functions automatically propagate "async"
+    // so we don't need to make it explicit, instead it becomes inferred based on what you do
+    fn getTask() {
+        // for example this won't be async because it doesn't wait for completion
+        return client.get("/version.json")
+    }
 
-    // file will close here
+    const task1 = getTask()
+    const timer = new std.time.Timer()
+
+    // Tasks are what is referred to as an "transparent type", they wrap it with behaviour but just add
+    // a sort of "tag" on the object/class, like a decorator
+    
+    // this will block
+    // TODO: I don't love this generic syntax... it's just as ambiguous
+    //       but maybe we use {} for idx??
+    const version = task1.read[string]()
+    console.log(timer.currentTime)
+
+    // if you want to explicitly wait for a series of tasks to complete there are a few ways
+    // 1. task.wait, allows taking in a series of tasks (or empty arg functions are fine too)
+    const { result1, result2 } = std.task.wait(fn() {
+        std.task.wait(task1)
+        console.log("This should log before the second one, since this doesn't have to wait")
+    }, fn() {
+        std.task.wait(getTask())
+        console.log("This should log after the first one, since this does have to do an api call")
+    })
+
+    // 2. you could "schedule" both by calling both then waiting on just one
+    // this is *roughly* the same performance as Task.WhenAll
+    const task1 = getTask1()
+    const task2 = getTask2()
+
+    const result1 = task1.read[string]()
+    const result2 = task2.read[string]()
 }
 ```
 
-## Async
+### Generics
 
-We support asynchronous programming out of the box built ontop of 
+We have pretty flexible support for generics that matches C#
+
+### Source Generation
+
+Source generation is pretty powerful, let's see how a Task.Wait method could be implemented with it!
+
+```lua
+fn wait()
+
+```
 
 ## Permission
 
