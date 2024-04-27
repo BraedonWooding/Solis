@@ -64,7 +64,7 @@ namespace SolisCore.Parser
 
         private Token? TryIdent()
         {
-            if (Tok is { Kind: TokenKind.Ident })
+            if (Tok is { Kind: TokenKind.Identifier })
             {
                 return _tokens[idx++];
             }
@@ -79,23 +79,66 @@ namespace SolisCore.Parser
             return TryIdent() ?? throw new Exception("Requires identifier");
         }
 
-        private ASTNode ParseExpression()
+        private Expression ParseExpressionAtom()
         {
-            // functions
-            if (Tok is { Kind: TokenKind.Fn })
+            if (Tok is Token { Kind: TokenKind.Identifier, Value: string val })
             {
-                idx++;
-
-                // function name is optional
-                Token? ident = TryIdent();
-                Consume(Token.Punctuation("("));
-
-                return new FunctionDeclaration(
-                    ParseList(end: Token.Punctuation(")"), next: Token.Punctuation(","), parse: ParseArg),
-                    ident,
-                    ParseStatementBodyBraced()
-                );
+                return new AtomExpression(AtomKind.Identifier, val);
             }
+            else if (Tok is Token { Kind: TokenKind kind, RealValue: var realVal } && Enum.TryParse<AtomKind>(kind.ToString(), out var atomKind))
+            {
+                return new AtomExpression(atomKind, realVal);
+            }
+            else if (Tok == Token.Punctuation("("))
+            {
+                // we have an (...) expression
+                var expr = ParseExpression();
+                expr.IsParenthesed = true;
+                return expr;
+            }
+
+            throw new NotImplementedException("Unexpected atom expr");
+        }
+
+        private (Token op, Precendence prec, bool rightAssociative)? TryParseOperator()
+        {
+            if (Tok is Token { Kind: TokenKind.MathSymbol or TokenKind.ComparatorSymbol or TokenKind.BitwiseSymbol, Value: string opStr })
+            {
+                var op = opStr switch
+                {
+                    "+" => OperatorKind.BinaryPlus,
+                    "-" => OperatorKind.BinaryMinus,
+                    
+                    "*" => OperatorKind.BinaryMultiply,
+                    "/" => OperatorKind.BinaryDivide,
+                    "%" => OperatorKind.BinaryModulos,
+                    
+                    "!" => OperatorKind.UnaryLogicalNegate,
+
+
+                    "<" => OperatorKind.LessThan,
+                    ">" => OperatorKind.GreaterThan,
+                    "==" => OperatorKind.Equal,
+                    "<=" => OperatorKind.LessThanOrEqual,
+                    ">=" => OperatorKind.GreaterThanOrEqual,
+                    "!=" => OperatorKind.NotEqual,
+
+                    _ => throw new Exception(opStr + " is not a valid math symbol, invalid parsing logic")
+                };
+            }
+
+            return null;
+        }
+
+        private Expression ParseExpressionAtPrecedence(int precedence)
+        {
+            // TODO:
+            var atom = ParseExpressionAtom();
+            return atom;
+        }
+
+        private Expression ParseExpression()
+        {
 
             throw new Exception("Unexpected");
         }
@@ -147,6 +190,21 @@ namespace SolisCore.Parser
                     isConst: _tokens[idx++].Kind == TokenKind.Const,
                     ConsumeIdent(),
                     TryConsume(Token.Assignment("="), ParseExpression));
+            }
+            // functions
+            if (Tok is { Kind: TokenKind.Fn })
+            {
+                idx++;
+
+                // function name is optional
+                Token? ident = TryIdent();
+                Consume(Token.Punctuation("("));
+
+                return new FunctionDeclaration(
+                    ParseList(end: Token.Punctuation(")"), next: Token.Punctuation(","), parse: ParseArg),
+                    ident,
+                    ParseStatementBodyBraced()
+                );
             }
 
             return ParseExpression();

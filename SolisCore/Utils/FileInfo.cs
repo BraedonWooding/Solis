@@ -12,7 +12,7 @@ namespace SolisCore.Utils
         ///       keeping it to be simple.
         /// </summary>
         private string Contents { get; }
-
+        
         public FileInfo(string name, string contents)
         {
             Name = name;

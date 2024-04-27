@@ -77,6 +77,12 @@ namespace SolisCore.Lexing
             {
                 relativeIdx += 2;
             }
+            else if (span.StartsWith("null"))
+            {
+                relativeIdx += "null".Length;
+                kind = TokenKind.ValueNull;
+                realValue = null;
+            }
             else if (span.StartsWith("true"))
             {
                 relativeIdx += "true".Length;
@@ -197,7 +203,7 @@ namespace SolisCore.Lexing
                     case 'Y':
                     case 'Z':
                     case '_':
-                        kind = TokenKind.Ident;
+                        kind = TokenKind.Identifier;
                         // TODO: Clean up this ugly statement
                         while (relativeIdx < span.Length && ((char.ToLower(span[relativeIdx]) >= 'a' && char.ToLower(span[relativeIdx]) <= 'z') ||
                             (span[relativeIdx] >= '0' && span[relativeIdx] <= '9') || span[relativeIdx] == '_'))

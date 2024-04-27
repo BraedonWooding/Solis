@@ -31,12 +31,13 @@
         // and --
         Comment,
 
-        Ident,
+        Identifier,
 
         ValueInt,
         ValueFloat,
         ValueBool,
         ValueString,
         ValueChar,
+        ValueNull,
     }
 }
