@@ -53,6 +53,8 @@ namespace SolisCore.Parser
         ValueChar,
         ValueNull,
         Function,
+        If,
+        While,
     }
 
     public interface IOperatorExpression : IEnumerable<Expression>
@@ -170,6 +172,41 @@ namespace SolisCore.Parser
         {
             Name = name;
         }
+    }
+    public class ReturnExpression : ASTNode
+    {
+        public Expression Value;
+
+        public ReturnExpression(Expression value)
+        {
+            Value = value;
+        }
+    }
+
+    public class IfExpression : AtomExpression
+    {
+        public IfExpression(Expression condition, StatementBody body) : base(AtomKind.If, null)
+        {
+            Condition = condition;
+            Body = body;
+        }
+
+        public Expression Condition { get; }
+        public StatementBody Body { get; }
+        public List<IfExpression> ElseIf { get; } = new();
+        public StatementBody? Else { get; set; }
+    }
+
+    public class WhileExpression : AtomExpression
+    {
+        public WhileExpression(Expression condition, StatementBody body) : base(AtomKind.While, null)
+        {
+            Condition = condition;
+            Body = body;
+        }
+
+        public Expression Condition { get; }
+        public StatementBody Body { get; }
     }
 
     public class FunctionDeclaration : AtomExpression

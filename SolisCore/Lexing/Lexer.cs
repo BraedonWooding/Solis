@@ -23,6 +23,11 @@ namespace SolisCore.Lexing
                 while (span[currentIdx] == '\n' || span[currentIdx] == '\r' || span[currentIdx] == ' ' || span[currentIdx] == '\t')
                 {
                     currentIdx++;
+                    if (currentIdx >= span.Length)
+                    {
+                        // early exit incase section ends with a bunch of newlines
+                        return result;
+                    }
                 }
 
                 var idx = 0;
@@ -60,18 +65,22 @@ namespace SolisCore.Lexing
                 {
                     throw new Exception("Error: ");
                 }
-                relativeIdx += end + "--]]".Length + "--[[".Length;
+                relativeIdx += end + "--]]".Length;
                 kind = TokenKind.Comment;
             }
             else if (span.StartsWith("--"))
             {
                 // skip till '\n'
-                relativeIdx += span.IndexOf("\n") + "\n".Length + "--".Length;
+                var end = span.IndexOf("\n");
+                if (end == -1)
+                {
+                    relativeIdx = span.Length;
+                }
+                else
+                {
+                    relativeIdx += end + "\n".Length;
+                }
                 kind = TokenKind.Comment;
-            }
-            else if (SingleCharTokens.TryGetValue(span[0], out kind))
-            {
-                relativeIdx += 1;
             }
             else if (span.Length >= 2 && TwoCharTokens.TryGetValue(span[0..2].ToString(), out kind))
             {
@@ -127,6 +136,10 @@ namespace SolisCore.Lexing
                 realValue = span[(relativeIdx + 1)..end].ToString();
                 relativeIdx += end + "'".Length * 2;
                 kind = TokenKind.ValueChar;
+            }
+            else if (SingleCharTokens.TryGetValue(span[0], out kind))
+            {
+                relativeIdx += 1;
             }
             else
             {

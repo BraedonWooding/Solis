@@ -20,6 +20,8 @@ namespace SolisCore.Utils
 
         public override string ToString()
         {
+            if (File == null) return "";
+
             // TODO: multi-byte chars (maybe???)
             var (line, column) = File.GetLineNumber(ByteOffset);
             return $"{File.Name}({ByteOffset}:{ByteOffset + ByteLength}) at Line {line}:{column}";

@@ -16,6 +16,11 @@ namespace Test
             const x = a * b + 1
             const y = 1 + a * b")]
         [DataRow("Complex Math", "const x = a + b * 2 + 4 / 9")]
+        [DataRow("Unary Math", @"
+            const x = -2
+            const y = -2 + 3
+            const z = -2 * - -+3
+        ")]
         public async Task TestSimpleExpressions(string name, string data)
         {
             await Verify(Parser.ParseTree(new Lexer().FileToTokens(name, data))).UseMethodName("TestSimpleExpressions_" + name);

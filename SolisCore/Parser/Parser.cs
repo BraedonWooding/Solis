@@ -1,14 +1,13 @@
 ﻿using SolisCore.Lexing;
 using System;
 using System.Collections.Generic;
-using System.Reflection;
 
 namespace SolisCore.Parser
 {
     public class Parser
     {
         private readonly List<Token> _tokens;
-        private Token? Tok =>PeekToken(0);
+        private Token? Tok => PeekToken(0);
         private int idx;
 
         public Parser(List<Token> tokens)
@@ -126,6 +125,34 @@ namespace SolisCore.Parser
                     ParseStatementBodyBraced()
                 );
             }
+            else if (Tok is { Kind: TokenKind.If })
+            {
+                idx++;
+
+                var expr = new IfExpression(ParseExpression(), ParseStatementBodyBraced());
+                // now for else if
+                while (Tok == new Token(TokenKind.Else, default) && PeekToken(1) == new Token(TokenKind.If, default))
+                {
+                    idx++;
+                    expr.ElseIf.Add(new IfExpression(ParseExpression(), ParseStatementBodyBraced()));
+                }
+                if (Tok == new Token(TokenKind.Else, default))
+                {
+                    // else statement
+                    idx++;
+                    expr.Else = ParseStatementBodyBraced();
+                }
+                // TODO: nicer errors around else {} else {} or else {} else if { } ... or whatevs
+                return expr;
+            }
+            else if (Tok is { Kind: TokenKind.While })
+            {
+                idx++;
+
+                var condition = ParseExpression();
+                var expr = new WhileExpression(condition, ParseStatementBodyBraced());
+                return expr;
+            }
 
             return ParseAtomExpression();
         }
@@ -191,14 +218,18 @@ namespace SolisCore.Parser
 
         private Expression ParseExpressionAtPrecedence(Precendence currentPrecedence)
         {
-            Expression expr = null;
-            var maybeUnaryOp = TryParseUnaryOperator();
-            while (maybeUnaryOp is (_, _, Precendence.Unary) unary)
+            // it will always have a value whereever we use it
+            Expression expr;
+            if (TryParseUnaryOperator() is (_, _, Precendence.Unary) unary)
             {
-                expr = new UnaryOperatorExpression(unary.kind, ParseExpressionAtPrecedence(currentPrecedence + 1));
+                idx++;
+                expr = new UnaryOperatorExpression(unary.kind, ParseExpressionAtPrecedence(Precendence.Unary));
+            }
+            else
+            {
+                expr = ParseSpecialCasesAndAtom();
             }
 
-            expr = ParseSpecialCasesAndAtom();
             var op = TryParseOperator();
             while (op is var (_, kind, precedence, rightAssociative) && (int)precedence < (int)currentPrecedence)
             {
@@ -218,7 +249,7 @@ namespace SolisCore.Parser
                 }
                 else if (kind == OperatorKind.Member)
                 {
-                    expr = new MemberOperatorExpression(kind, expr, ParseRepetitive(Token.Punctuation("."), ParseAtomExpression));
+                    expr = new MemberOperatorExpression(kind, expr, ParseRepetitive(Token.Punctuation("."), ParseAtomExpression, hasFirst: true));
                 }
                 else
                 {
@@ -240,9 +271,11 @@ namespace SolisCore.Parser
             return ParseExpressionAtPrecedence(Precendence.MaxPrecendence);
         }
 
-        private List<T> ParseRepetitive<T>(Token next, Func<T> parse) where T : ASTNode
+        private List<T> ParseRepetitive<T>(Token next, Func<T> parse, bool hasFirst) where T : ASTNode
         {
-            var result = new List<T>() { parse() };
+            var result = new List<T>() { };
+            if (hasFirst) result.Add(parse());
+
             while (Tok == next)
             {
                 idx++;
@@ -299,6 +332,16 @@ namespace SolisCore.Parser
                     isConst: _tokens[idx++].Kind == TokenKind.Const,
                     ConsumeIdent(),
                     TryConsume(Token.Assignment("="), ParseExpression));
+            }
+
+            if (Tok is { Kind: TokenKind.Return })
+            {
+                // I think it would be nice to have some concept of an empty return
+                // maybe "return void" at worse... or "return null"??
+                // or a special keyword like "pass"
+                // for now will require a value
+                idx++;
+                return new ReturnExpression(ParseExpression());
             }
 
             // tricky part is distinguishing between an expression and a statement for a function
