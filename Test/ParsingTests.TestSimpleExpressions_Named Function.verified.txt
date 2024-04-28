@@ -37,10 +37,10 @@
         }
       },
       Body: {
+        Statements: [],
         Type: StatementBody
       },
       Kind: Function,
-      IsParenthesed: false,
       Type: FunctionDeclaration
     }
   ],

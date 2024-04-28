@@ -12,7 +12,10 @@ namespace Test
         [DataRow("No Args Function", "fn Foo() {}")]
         [DataRow("Anonymous Function Variable", "const x = fn(a, b) {}")]
         [DataRow("Named Function", "fn a(a, b) {}")]
-        [DataRow("Simple Math", "const x = a + b * 2")]
+        [DataRow("Simple Math", @"
+            const x = a * b + 1
+            const y = 1 + a * b")]
+        [DataRow("Complex Math", "const x = a + b * 2 + 4 / 9")]
         public async Task TestSimpleExpressions(string name, string data)
         {
             await Verify(Parser.ParseTree(new Lexer().FileToTokens(name, data))).UseMethodName("TestSimpleExpressions_" + name);

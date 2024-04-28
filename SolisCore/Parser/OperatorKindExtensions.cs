@@ -8,9 +8,9 @@ namespace SolisCore.Parser
         {
             return op switch
             {
-                OperatorKind.Call => Precendence.CallAndIndex,
-                OperatorKind.Index => Precendence.CallAndIndex,
-                OperatorKind.Member => Precendence.Member,
+                OperatorKind.Call => Precendence.CallIndexMember,
+                OperatorKind.Index => Precendence.CallIndexMember,
+                OperatorKind.Member => Precendence.CallIndexMember,
                 OperatorKind.UnaryPlus => Precendence.Unary,
                 OperatorKind.UnaryMinus => Precendence.Unary,
                 OperatorKind.UnaryLogicalNegate => Precendence.Unary,

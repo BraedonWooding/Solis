@@ -1,0 +1,58 @@
+﻿{
+  Statements: [
+    {
+      IsConst: true,
+      Identifier: {
+        Kind: Identifier,
+        Value: x,
+        Span: {
+          ByteOffset: 6,
+          ByteLength: 1,
+          Serialized: Complex Math(6:7) at Line 1:7
+        }
+      },
+      IdentifierValue: x,
+      Expression: {
+        Kind: BinaryPlus,
+        Target: {
+          Value: a,
+          Type: AtomExpression
+        },
+        Arg: {
+          Kind: BinaryPlus,
+          Target: {
+            Kind: BinaryMultiply,
+            Target: {
+              Value: b,
+              Type: AtomExpression
+            },
+            Arg: {
+              Kind: ValueInt,
+              Value: 2,
+              Type: AtomExpression
+            },
+            Type: BinaryOperatorExpression
+          },
+          Arg: {
+            Kind: BinaryDivide,
+            Target: {
+              Kind: ValueInt,
+              Value: 4,
+              Type: AtomExpression
+            },
+            Arg: {
+              Kind: ValueInt,
+              Value: 9,
+              Type: AtomExpression
+            },
+            Type: BinaryOperatorExpression
+          },
+          Type: BinaryOperatorExpression
+        },
+        Type: BinaryOperatorExpression
+      },
+      Type: VariableDeclaration
+    }
+  ],
+  Type: StatementBody
+}

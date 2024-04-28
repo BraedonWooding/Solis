@@ -6,41 +6,67 @@
         Kind: Identifier,
         Value: x,
         Span: {
-          ByteOffset: 6,
+          ByteOffset: 20,
           ByteLength: 1,
-          Serialized: Simple Math(6:7) at Line 1:7
+          Serialized: Simple Math(20:21) at Line 2:20
         }
       },
       IdentifierValue: x,
       Expression: {
         Kind: BinaryPlus,
-        Arguments: [
-          {
+        Target: {
+          Kind: BinaryMultiply,
+          Target: {
             Value: a,
-            IsParenthesed: false,
             Type: AtomExpression
           },
-          {
-            Kind: BinaryMultiply,
-            Arguments: [
-              {
-                Value: b,
-                IsParenthesed: false,
-                Type: AtomExpression
-              },
-              {
-                Kind: ValueInt,
-                Value: 2,
-                IsParenthesed: false,
-                Type: AtomExpression
-              }
-            ],
-            IsParenthesed: false,
-            Type: OperatorExpression
-          }
-        ],
-        IsParenthesed: false,
-        Type: OperatorExpression
+          Arg: {
+            Value: b,
+            Type: AtomExpression
+          },
+          Type: BinaryOperatorExpression
+        },
+        Arg: {
+          Kind: ValueInt,
+          Value: 1,
+          Type: AtomExpression
+        },
+        Type: BinaryOperatorExpression
+      },
+      Type: VariableDeclaration
+    },
+    {
+      IsConst: true,
+      Identifier: {
+        Kind: Identifier,
+        Value: y,
+        Span: {
+          ByteOffset: 53,
+          ByteLength: 1,
+          Serialized: Simple Math(53:54) at Line 3:20
+        }
+      },
+      IdentifierValue: y,
+      Expression: {
+        Kind: BinaryPlus,
+        Target: {
+          Kind: ValueInt,
+          Value: 1,
+          Type: AtomExpression
+        },
+        Arg: {
+          Kind: BinaryMultiply,
+          Target: {
+            Value: a,
+            Type: AtomExpression
+          },
+          Arg: {
+            Value: b,
+            Type: AtomExpression
+          },
+          Type: BinaryOperatorExpression
+        },
+        Type: BinaryOperatorExpression
       },
       Type: VariableDeclaration
     }

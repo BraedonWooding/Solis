@@ -97,13 +97,20 @@ namespace SolisCore.Lexing
             }
             else if (span.StartsWith("\""))
             {
+                if (span.Length == 1)
+                {
+                    // then we won't have a terminating \"
+                    throw new Exception("Error: missing \"");
+                }
+
                 // TODO: Escapes
-                var end = span.IndexOf("\"");
+                var end = span[1..].IndexOf("\"");
                 if (end == -1)
                 {
-                    throw new Exception("Error: ");
+                    throw new Exception("Error: missing \"");
                 }
-                realValue = span[(relativeIdx + 1)..end].ToString();
+                // because the span above for end is [1..] we are off by one and need to increment end
+                realValue = span[(relativeIdx + 1)..(end + 1)].ToString();
                 relativeIdx += end + "\"".Length * 2;
                 kind = TokenKind.ValueString;
             }

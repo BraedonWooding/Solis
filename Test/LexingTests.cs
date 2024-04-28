@@ -12,6 +12,8 @@ namespace Test
         [DataRow("ExpFloats", "1e10 .1e24 9.8e5")]
         [DataRow("Ident", "Hello _goodbyte H_goodbye h123_2323dfsdsfdsf _ h _1")]
         [DataRow("Variable Decl", "var x = 2 const x = 3")]
+        [DataRow("String", "\"Hello!\"")]
+        [DataRow("Multiple String", "\"Hello!\"\"World\"")]
         public async Task TestSimpleExpressions(string name, string data)
         {
             await Verify(new Lexer().FileToTokens(name, data)).UseMethodName("TestSimpleExpressions_" + name);

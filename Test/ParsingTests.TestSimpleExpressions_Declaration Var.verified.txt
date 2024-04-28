@@ -1,7 +1,6 @@
 ﻿{
   Statements: [
     {
-      IsConst: false,
       Identifier: {
         Kind: Identifier,
         Value: x,

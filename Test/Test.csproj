@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -27,6 +27,26 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="..\Samples\**" Link="Samples\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ProgramTests.TestSimpleExpressions_Anonymous Function.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
+      <DependentUpon>ProgramTests.cs</DependentUpon>
+    </None>
+    <None Update="ProgramTests.TestSimpleExpressions_Declaration Var.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
+      <DependentUpon>ProgramTests.cs</DependentUpon>
+    </None>
+    <None Update="ProgramTests.TestSimpleExpressions_Named Function.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
+      <DependentUpon>ProgramTests.cs</DependentUpon>
+    </None>
+    <None Update="ProgramTests.TestSimpleExpressions_Simple Math.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
+      <DependentUpon>ProgramTests.cs</DependentUpon>
+    </None>
     <None Update="ParsingTests.TestSimpleExpressions_Ident.verified.txt">
       <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
       <DependentUpon>ParsingTests.cs</DependentUpon>

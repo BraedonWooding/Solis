@@ -1,0 +1,194 @@
+﻿{
+  fileContents:
+const console = std.io.console
+console.printline("Hello World!!"),
+  tokens: [
+    {
+      Kind: Const,
+      Value: const,
+      Span: {
+        ByteLength: 5,
+        Serialized: Samples/helloWorld.sol(0:5) at Line 1:1
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: console,
+      Span: {
+        ByteOffset: 6,
+        ByteLength: 7,
+        Serialized: Samples/helloWorld.sol(6:13) at Line 1:7
+      }
+    },
+    {
+      Kind: AssignmentSymbol,
+      Value: =,
+      Span: {
+        ByteOffset: 14,
+        ByteLength: 1,
+        Serialized: Samples/helloWorld.sol(14:15) at Line 1:15
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: std,
+      Span: {
+        ByteOffset: 16,
+        ByteLength: 3,
+        Serialized: Samples/helloWorld.sol(16:19) at Line 1:17
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: .,
+      Span: {
+        ByteOffset: 19,
+        ByteLength: 1,
+        Serialized: Samples/helloWorld.sol(19:20) at Line 1:20
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: io,
+      Span: {
+        ByteOffset: 20,
+        ByteLength: 2,
+        Serialized: Samples/helloWorld.sol(20:22) at Line 1:21
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: .,
+      Span: {
+        ByteOffset: 22,
+        ByteLength: 1,
+        Serialized: Samples/helloWorld.sol(22:23) at Line 1:23
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: console,
+      Span: {
+        ByteOffset: 23,
+        ByteLength: 7,
+        Serialized: Samples/helloWorld.sol(23:30) at Line 1:24
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: console,
+      Span: {
+        ByteOffset: 32,
+        ByteLength: 7,
+        Serialized: Samples/helloWorld.sol(32:39) at Line 2:2
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: .,
+      Span: {
+        ByteOffset: 39,
+        ByteLength: 1,
+        Serialized: Samples/helloWorld.sol(39:40) at Line 2:9
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: printline,
+      Span: {
+        ByteOffset: 40,
+        ByteLength: 9,
+        Serialized: Samples/helloWorld.sol(40:49) at Line 2:10
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: (,
+      Span: {
+        ByteOffset: 49,
+        ByteLength: 1,
+        Serialized: Samples/helloWorld.sol(49:50) at Line 2:19
+      }
+    },
+    {
+      Kind: ValueString,
+      Value: "Hello World!!",
+      RealValue: Hello World!!,
+      Span: {
+        ByteOffset: 50,
+        ByteLength: 15,
+        Serialized: Samples/helloWorld.sol(50:65) at Line 2:20
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: ),
+      Span: {
+        ByteOffset: 65,
+        ByteLength: 1,
+        Serialized: Samples/helloWorld.sol(65:66) at Line 2:35
+      }
+    }
+  ],
+  ast: {
+    Statements: [
+      {
+        IsConst: true,
+        Identifier: {
+          Kind: Identifier,
+          Value: console,
+          Span: {
+            ByteOffset: 6,
+            ByteLength: 7,
+            Serialized: Samples/helloWorld.sol(6:13) at Line 1:7
+          }
+        },
+        IdentifierValue: console,
+        Expression: {
+          Kind: Member,
+          Target: {
+            Value: std,
+            Type: AtomExpression
+          },
+          Path: [
+            {
+              Value: io,
+              Type: AtomExpression
+            },
+            {
+              Value: console,
+              Type: AtomExpression
+            }
+          ],
+          Type: MemberOperatorExpression
+        },
+        Type: VariableDeclaration
+      },
+      {
+        Target: {
+          Kind: Member,
+          Target: {
+            Value: console,
+            Type: AtomExpression
+          },
+          Path: [
+            {
+              Value: printline,
+              Type: AtomExpression
+            }
+          ],
+          Type: MemberOperatorExpression
+        },
+        Args: [
+          {
+            Kind: ValueString,
+            Value: Hello World!!,
+            Type: AtomExpression
+          }
+        ],
+        Type: CallOperatorExpression
+      }
+    ],
+    Type: StatementBody
+  }
+}

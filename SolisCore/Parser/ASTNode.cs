@@ -1,5 +1,7 @@
 ﻿using SolisCore.Lexing;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace SolisCore.Parser
@@ -53,16 +55,106 @@ namespace SolisCore.Parser
         Function,
     }
 
-    public class OperatorExpression : Expression
+    public interface IOperatorExpression : IEnumerable<Expression>
     {
-        public OperatorExpression(OperatorKind kind, List<Expression> arguments)
+        public OperatorKind Kind { get; }
+    }
+
+    public class BinaryOperatorExpression : Expression, IOperatorExpression
+    {
+        public BinaryOperatorExpression(OperatorKind kind, Expression target, Expression arg)
         {
             Kind = kind;
-            Arguments = arguments;
+            Target = target;
+            Arg = arg;
         }
 
         public OperatorKind Kind { get; }
-        public List<Expression> Arguments { get; }
+        public Expression Target { get; }
+        public Expression Arg { get; }
+
+        public IEnumerator<Expression> GetEnumerator()
+        {
+            yield return Target;
+            yield return Arg;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+    }
+
+    public class UnaryOperatorExpression : Expression, IOperatorExpression
+    {
+        public UnaryOperatorExpression(OperatorKind kind, Expression target)
+        {
+            Kind = kind;
+            Target = target;
+        }
+
+        public OperatorKind Kind { get; }
+        public Expression Target { get; }
+
+        public IEnumerator<Expression> GetEnumerator()
+        {
+            yield return Target;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+    }
+
+    public class MemberOperatorExpression : Expression, IOperatorExpression
+    {
+        public MemberOperatorExpression(OperatorKind kind, Expression target, List<AtomExpression> path)
+        {
+            Kind = kind;
+            Target = target;
+            Path = path;
+        }
+
+        public OperatorKind Kind { get; }
+        public Expression Target { get; }
+        public List<AtomExpression> Path { get; }
+
+        // note: we don't include Target in iteration
+        public IEnumerator<Expression> GetEnumerator()
+        {
+            return Path.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+    }
+
+    public class CallOperatorExpression : Expression, IOperatorExpression
+    {
+        public CallOperatorExpression(OperatorKind kind, Expression target, List<Expression> args)
+        {
+            Kind = kind;
+            Target = target;
+            Args = args;
+        }
+
+        public OperatorKind Kind { get; }
+        public Expression Target { get; }
+        public List<Expression> Args { get; }
+
+        // note: we don't include Target in iteration
+        public IEnumerator<Expression> GetEnumerator()
+        {
+            return Args.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
     }
 
     public class Expression : ASTNode

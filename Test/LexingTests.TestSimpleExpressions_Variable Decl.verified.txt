@@ -8,7 +8,7 @@
     }
   },
   {
-    Kind: Ident,
+    Kind: Identifier,
     Value: x,
     Span: {
       ByteOffset: 4,
@@ -44,7 +44,7 @@
     }
   },
   {
-    Kind: Ident,
+    Kind: Identifier,
     Value: x,
     Span: {
       ByteOffset: 16,

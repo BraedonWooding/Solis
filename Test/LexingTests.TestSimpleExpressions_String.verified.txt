@@ -1,0 +1,11 @@
+﻿[
+  {
+    Kind: ValueString,
+    Value: "Hello!",
+    RealValue: Hello!,
+    Span: {
+      ByteLength: 8,
+      Serialized: String(0:8) at Line 1:1
+    }
+  }
+]

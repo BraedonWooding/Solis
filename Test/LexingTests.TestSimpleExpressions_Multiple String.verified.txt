@@ -1,0 +1,21 @@
+﻿[
+  {
+    Kind: ValueString,
+    Value: "Hello!",
+    RealValue: Hello!,
+    Span: {
+      ByteLength: 8,
+      Serialized: Multiple String(0:8) at Line 1:1
+    }
+  },
+  {
+    Kind: ValueString,
+    Value: "World",
+    RealValue: World,
+    Span: {
+      ByteOffset: 8,
+      ByteLength: 7,
+      Serialized: Multiple String(8:15) at Line 1:9
+    }
+  }
+]

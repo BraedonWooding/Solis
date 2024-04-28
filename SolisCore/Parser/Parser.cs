@@ -1,6 +1,7 @@
 ﻿using SolisCore.Lexing;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace SolisCore.Parser
 {
@@ -79,7 +80,7 @@ namespace SolisCore.Parser
             return TryIdent() ?? throw new Exception("Requires identifier");
         }
 
-        private Expression ParseExpressionAtom()
+        private AtomExpression ParseAtomExpression()
         {
             if (Tok is Token { Kind: TokenKind.Identifier, Value: string val })
             {
@@ -91,7 +92,13 @@ namespace SolisCore.Parser
                 idx++;
                 return new AtomExpression(atomKind, realVal);
             }
-            else if (Tok == Token.Punctuation("("))
+
+            throw new NotImplementedException("Unexpected atom expr " + (Tok?.ToString() ?? "EOF"));
+        }
+
+        private Expression ParseSpecialCasesAndAtom()
+        {
+            if (Tok == Token.Punctuation("("))
             {
                 idx++;
                 // we have an (...) expression
@@ -120,23 +127,22 @@ namespace SolisCore.Parser
                 );
             }
 
-            throw new NotImplementedException("Unexpected atom expr");
+            return ParseAtomExpression();
         }
 
         private (Token token, OperatorKind kind, Precendence prec, bool rightAssociative)? TryParseOperator()
         {
-            if (Tok is Token { Kind: TokenKind.MathSymbol or TokenKind.ComparatorSymbol or TokenKind.BitwiseSymbol, Value: string opStr })
+            if (Tok is Token { Value: string opStr })
             {
-                var op = opStr switch
+                // TODO: There is a better way of writing this.
+                var maybeOp = opStr switch
                 {
-                    "+" => OperatorKind.BinaryPlus,
+                    "+" => (OperatorKind?)OperatorKind.BinaryPlus,
                     "-" => OperatorKind.BinaryMinus,
-                    
+
                     "*" => OperatorKind.BinaryMultiply,
                     "/" => OperatorKind.BinaryDivide,
                     "%" => OperatorKind.BinaryModulos,
-                    
-                    "!" => OperatorKind.UnaryLogicalNegate,
 
                     "<" => OperatorKind.LessThan,
                     ">" => OperatorKind.GreaterThan,
@@ -145,10 +151,39 @@ namespace SolisCore.Parser
                     ">=" => OperatorKind.GreaterThanOrEqual,
                     "!=" => OperatorKind.NotEqual,
 
-                    _ => throw new Exception(opStr + " is not a valid math symbol, invalid parsing logic")
-                };
+                    "." => OperatorKind.Member,
+                    "(" => OperatorKind.Call,
+                    "[" => OperatorKind.Index,
 
-                return (Tok.Value, op, op.GetOperatorPrecedence(), rightAssociative: false);
+                    _ => null
+                };
+                if (maybeOp is not OperatorKind op) return null;
+
+                return (Tok.Value, op, op.GetOperatorPrecedence(), rightAssociative: Tok.Value.Kind == TokenKind.AssignmentSymbol);
+            }
+
+            return null;
+        }
+
+        private (Token token, OperatorKind kind, Precendence prec)? TryParseUnaryOperator()
+        {
+            if (Tok is Token { Value: string opStr })
+            {
+                // TODO: There is a better way of writing this.
+                var maybeOp = opStr switch
+                {
+                    "+" => (OperatorKind?)OperatorKind.UnaryPlus,
+                    "-" => OperatorKind.UnaryMinus,
+                    "~" => OperatorKind.UnaryBitwiseNegate,
+                    "!" => OperatorKind.UnaryLogicalNegate,
+
+                    _ => null
+                };
+                if (maybeOp is not OperatorKind op) return null;
+                
+                // purely calling the function just so we make sure these are handled in the switch
+                // but the precedence should always just be Unary
+                return (Tok.Value, op, op.GetOperatorPrecedence());
             }
 
             return null;
@@ -156,15 +191,41 @@ namespace SolisCore.Parser
 
         private Expression ParseExpressionAtPrecedence(Precendence currentPrecedence)
         {
-            var expr = ParseExpressionAtom();
+            Expression expr = null;
+            var maybeUnaryOp = TryParseUnaryOperator();
+            while (maybeUnaryOp is (_, _, Precendence.Unary) unary)
+            {
+                expr = new UnaryOperatorExpression(unary.kind, ParseExpressionAtPrecedence(currentPrecedence + 1));
+            }
+
+            expr = ParseSpecialCasesAndAtom();
             var op = TryParseOperator();
-            while (op is var (_, kind, precedence, rightAssociative) && (int)precedence >= (int)currentPrecedence)
+            while (op is var (_, kind, precedence, rightAssociative) && (int)precedence < (int)currentPrecedence)
             {
                 // we need to move forward to "accept" the op
                 idx++;
 
-                var arg = ParseExpressionAtPrecedence(rightAssociative ? currentPrecedence : (Precendence)((int)currentPrecedence + 1));
-                expr = new OperatorExpression(kind, new() { expr, arg });
+                // special cases, for call/index we need a comma separated list of args (and there is a terminating symbol)
+                // and for member we compress the list down to make it easier to work with i.e. a.b.c rather than a.(b.(c))
+                // and it also handles a bunch of ugly syntax that we don't want to support (like parenthesed expressions)
+                if (kind == OperatorKind.Call)
+                {
+                    expr = new CallOperatorExpression(kind, expr, ParseList(Token.Punctuation(")"), Token.Punctuation(","), ParseExpression));
+                }
+                else if (kind == OperatorKind.Index)
+                {
+                    expr = new CallOperatorExpression(kind, expr, ParseList(Token.Punctuation("]"), Token.Punctuation(","), ParseExpression));
+                }
+                else if (kind == OperatorKind.Member)
+                {
+                    expr = new MemberOperatorExpression(kind, expr, ParseRepetitive(Token.Punctuation("."), ParseAtomExpression));
+                }
+                else
+                {
+                    var arg = ParseExpressionAtPrecedence(rightAssociative ? precedence : (Precendence)((int)precedence + 1));
+                    expr = new BinaryOperatorExpression(kind, expr, arg);
+                }
+
                 op = TryParseOperator();
             }
 
@@ -176,7 +237,19 @@ namespace SolisCore.Parser
             // handle some edge cases i.e. functions as expressions, if statement expressions (and other control flows)
 
             // we always start at 0 and climb up
-            return ParseExpressionAtPrecedence(currentPrecedence: 0);
+            return ParseExpressionAtPrecedence(Precendence.MaxPrecendence);
+        }
+
+        private List<T> ParseRepetitive<T>(Token next, Func<T> parse) where T : ASTNode
+        {
+            var result = new List<T>() { parse() };
+            while (Tok == next)
+            {
+                idx++;
+                result.Add(parse());
+            }
+
+            return result;
         }
 
         private List<T> ParseList<T>(Token end, Token next, Func<T> parse) where T : ASTNode

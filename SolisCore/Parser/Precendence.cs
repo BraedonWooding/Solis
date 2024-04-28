@@ -2,13 +2,11 @@
 {
     public enum Precendence
     {
-        CallAndIndex,
-        // TODO: Prec on this is weird
-        Member,
-        // since precedence 
+        CallIndexMember,
         Unary,
-        BinaryAdditive,
+
         BinaryMultiplicative,
+        BinaryAdditive,
         
         BinaryBitwiseAnd,
         BinaryBitwiseXor,
