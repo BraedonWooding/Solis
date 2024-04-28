@@ -3,7 +3,7 @@
     {
       IsConst: true,
       Identifier: {
-        Kind: Ident,
+        Kind: Identifier,
         Value: x,
         Span: {
           ByteOffset: 6,
@@ -16,7 +16,7 @@
         Args: [
           {
             Name: {
-              Kind: Ident,
+              Kind: Identifier,
               Value: a,
               Span: {
                 ByteOffset: 13,
@@ -28,7 +28,7 @@
           },
           {
             Name: {
-              Kind: Ident,
+              Kind: Identifier,
               Value: b,
               Span: {
                 ByteOffset: 16,
@@ -42,6 +42,8 @@
         Body: {
           Type: StatementBody
         },
+        Kind: Function,
+        IsParenthesed: false,
         Type: FunctionDeclaration
       },
       Type: VariableDeclaration

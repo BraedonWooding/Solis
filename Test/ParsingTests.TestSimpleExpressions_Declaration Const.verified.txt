@@ -3,7 +3,7 @@
     {
       IsConst: true,
       Identifier: {
-        Kind: Ident,
+        Kind: Identifier,
         Value: y,
         Span: {
           ByteOffset: 6,

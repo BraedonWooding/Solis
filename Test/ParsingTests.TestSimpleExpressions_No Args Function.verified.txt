@@ -2,7 +2,7 @@
   Statements: [
     {
       Identifier: {
-        Kind: Ident,
+        Kind: Identifier,
         Value: Foo,
         Span: {
           ByteOffset: 3,
@@ -13,6 +13,8 @@
       Body: {
         Type: StatementBody
       },
+      Kind: Function,
+      IsParenthesed: false,
       Type: FunctionDeclaration
     }
   ],

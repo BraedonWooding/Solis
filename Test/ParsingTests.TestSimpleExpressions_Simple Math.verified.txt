@@ -1,0 +1,49 @@
+﻿{
+  Statements: [
+    {
+      IsConst: true,
+      Identifier: {
+        Kind: Identifier,
+        Value: x,
+        Span: {
+          ByteOffset: 6,
+          ByteLength: 1,
+          Serialized: Simple Math(6:7) at Line 1:7
+        }
+      },
+      IdentifierValue: x,
+      Expression: {
+        Kind: BinaryPlus,
+        Arguments: [
+          {
+            Value: a,
+            IsParenthesed: false,
+            Type: AtomExpression
+          },
+          {
+            Kind: BinaryMultiply,
+            Arguments: [
+              {
+                Value: b,
+                IsParenthesed: false,
+                Type: AtomExpression
+              },
+              {
+                Kind: ValueInt,
+                Value: 2,
+                IsParenthesed: false,
+                Type: AtomExpression
+              }
+            ],
+            IsParenthesed: false,
+            Type: OperatorExpression
+          }
+        ],
+        IsParenthesed: false,
+        Type: OperatorExpression
+      },
+      Type: VariableDeclaration
+    }
+  ],
+  Type: StatementBody
+}
