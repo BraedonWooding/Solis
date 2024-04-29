@@ -1,0 +1,48 @@
+﻿{
+  Statements: [
+    {
+      Args: [
+        {
+          Name: {
+            Kind: Identifier,
+            Value: a,
+            Span: {
+              ByteOffset: 5,
+              ByteLength: 1,
+              Serialized: Named Function(5:6) at Line 1:6
+            }
+          },
+          Type: FunctionArg
+        },
+        {
+          Name: {
+            Kind: Identifier,
+            Value: b,
+            Span: {
+              ByteOffset: 8,
+              ByteLength: 1,
+              Serialized: Named Function(8:9) at Line 1:9
+            }
+          },
+          Type: FunctionArg
+        }
+      ],
+      Identifier: {
+        Kind: Identifier,
+        Value: a,
+        Span: {
+          ByteOffset: 3,
+          ByteLength: 1,
+          Serialized: Named Function(3:4) at Line 1:4
+        }
+      },
+      Body: {
+        Statements: [],
+        Type: StatementBody
+      },
+      Kind: Function,
+      Type: FunctionDeclaration
+    }
+  ],
+  Type: StatementBody
+}

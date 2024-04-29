@@ -1,0 +1,23 @@
+﻿{
+  Statements: [
+    {
+      Args: [],
+      Identifier: {
+        Kind: Identifier,
+        Value: Foo,
+        Span: {
+          ByteOffset: 3,
+          ByteLength: 3,
+          Serialized: No Args Function(3:6) at Line 1:4
+        }
+      },
+      Body: {
+        Statements: [],
+        Type: StatementBody
+      },
+      Kind: Function,
+      Type: FunctionDeclaration
+    }
+  ],
+  Type: StatementBody
+}

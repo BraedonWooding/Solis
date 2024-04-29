@@ -9,9 +9,11 @@ fn fact(n) {
 }
 
 const console = std.io.console
-console.printline(fact(5))
 console.printline(fact(0))
-console.printline(fact(10)),
+console.printline(fact(1))
+console.printline(fact(5))
+console.printline(fact(10))
+console.printline(fact(15)),
   tokens: [
     {
       Kind: Fn,
@@ -381,8 +383,8 @@ console.printline(fact(10)),
     },
     {
       Kind: ValueInt,
-      Value: 5,
-      RealValue: 5,
+      Value: 0,
+      RealValue: 0,
       Span: {
         ByteOffset: 162,
         ByteLength: 1,
@@ -463,8 +465,8 @@ console.printline(fact(10)),
     },
     {
       Kind: ValueInt,
-      Value: 0,
-      RealValue: 0,
+      Value: 1,
+      RealValue: 1,
       Span: {
         ByteOffset: 190,
         ByteLength: 1,
@@ -545,12 +547,21 @@ console.printline(fact(10)),
     },
     {
       Kind: ValueInt,
-      Value: 10,
-      RealValue: 10,
+      Value: 5,
+      RealValue: 5,
       Span: {
         ByteOffset: 218,
-        ByteLength: 2,
-        Serialized: Samples/factorial.sol(218:220) at Line 12:25
+        ByteLength: 1,
+        Serialized: Samples/factorial.sol(218:219) at Line 12:25
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: ),
+      Span: {
+        ByteOffset: 219,
+        ByteLength: 1,
+        Serialized: Samples/factorial.sol(219:220) at Line 12:26
       }
     },
     {
@@ -563,12 +574,167 @@ console.printline(fact(10)),
       }
     },
     {
+      Kind: Identifier,
+      Value: console,
+      Span: {
+        ByteOffset: 223,
+        ByteLength: 7,
+        Serialized: Samples/factorial.sol(223:230) at Line 13:2
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: .,
+      Span: {
+        ByteOffset: 230,
+        ByteLength: 1,
+        Serialized: Samples/factorial.sol(230:231) at Line 13:9
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: printline,
+      Span: {
+        ByteOffset: 231,
+        ByteLength: 9,
+        Serialized: Samples/factorial.sol(231:240) at Line 13:10
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: (,
+      Span: {
+        ByteOffset: 240,
+        ByteLength: 1,
+        Serialized: Samples/factorial.sol(240:241) at Line 13:19
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: fact,
+      Span: {
+        ByteOffset: 241,
+        ByteLength: 4,
+        Serialized: Samples/factorial.sol(241:245) at Line 13:20
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: (,
+      Span: {
+        ByteOffset: 245,
+        ByteLength: 1,
+        Serialized: Samples/factorial.sol(245:246) at Line 13:24
+      }
+    },
+    {
+      Kind: ValueInt,
+      Value: 10,
+      RealValue: 10,
+      Span: {
+        ByteOffset: 246,
+        ByteLength: 2,
+        Serialized: Samples/factorial.sol(246:248) at Line 13:25
+      }
+    },
+    {
       Kind: PunctuationSymbol,
       Value: ),
       Span: {
-        ByteOffset: 221,
+        ByteOffset: 248,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(221:222) at Line 12:28
+        Serialized: Samples/factorial.sol(248:249) at Line 13:27
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: ),
+      Span: {
+        ByteOffset: 249,
+        ByteLength: 1,
+        Serialized: Samples/factorial.sol(249:250) at Line 13:28
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: console,
+      Span: {
+        ByteOffset: 252,
+        ByteLength: 7,
+        Serialized: Samples/factorial.sol(252:259) at Line 14:2
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: .,
+      Span: {
+        ByteOffset: 259,
+        ByteLength: 1,
+        Serialized: Samples/factorial.sol(259:260) at Line 14:9
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: printline,
+      Span: {
+        ByteOffset: 260,
+        ByteLength: 9,
+        Serialized: Samples/factorial.sol(260:269) at Line 14:10
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: (,
+      Span: {
+        ByteOffset: 269,
+        ByteLength: 1,
+        Serialized: Samples/factorial.sol(269:270) at Line 14:19
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: fact,
+      Span: {
+        ByteOffset: 270,
+        ByteLength: 4,
+        Serialized: Samples/factorial.sol(270:274) at Line 14:20
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: (,
+      Span: {
+        ByteOffset: 274,
+        ByteLength: 1,
+        Serialized: Samples/factorial.sol(274:275) at Line 14:24
+      }
+    },
+    {
+      Kind: ValueInt,
+      Value: 15,
+      RealValue: 15,
+      Span: {
+        ByteOffset: 275,
+        ByteLength: 2,
+        Serialized: Samples/factorial.sol(275:277) at Line 14:25
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: ),
+      Span: {
+        ByteOffset: 277,
+        ByteLength: 1,
+        Serialized: Samples/factorial.sol(277:278) at Line 14:27
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: ),
+      Span: {
+        ByteOffset: 278,
+        ByteLength: 1,
+        Serialized: Samples/factorial.sol(278:279) at Line 14:28
       }
     }
   ],
@@ -731,7 +897,7 @@ console.printline(fact(10)),
             Args: [
               {
                 Kind: ValueInt,
-                Value: 5,
+                Value: 0,
                 Type: AtomExpression
               }
             ],
@@ -764,7 +930,40 @@ console.printline(fact(10)),
             Args: [
               {
                 Kind: ValueInt,
-                Value: 0,
+                Value: 1,
+                Type: AtomExpression
+              }
+            ],
+            Type: CallOperatorExpression
+          }
+        ],
+        Type: CallOperatorExpression
+      },
+      {
+        Target: {
+          Kind: Member,
+          Target: {
+            Value: console,
+            Type: AtomExpression
+          },
+          Path: [
+            {
+              Value: printline,
+              Type: AtomExpression
+            }
+          ],
+          Type: MemberOperatorExpression
+        },
+        Args: [
+          {
+            Target: {
+              Value: fact,
+              Type: AtomExpression
+            },
+            Args: [
+              {
+                Kind: ValueInt,
+                Value: 5,
                 Type: AtomExpression
               }
             ],
@@ -805,8 +1004,48 @@ console.printline(fact(10)),
           }
         ],
         Type: CallOperatorExpression
+      },
+      {
+        Target: {
+          Kind: Member,
+          Target: {
+            Value: console,
+            Type: AtomExpression
+          },
+          Path: [
+            {
+              Value: printline,
+              Type: AtomExpression
+            }
+          ],
+          Type: MemberOperatorExpression
+        },
+        Args: [
+          {
+            Target: {
+              Value: fact,
+              Type: AtomExpression
+            },
+            Args: [
+              {
+                Kind: ValueInt,
+                Value: 15,
+                Type: AtomExpression
+              }
+            ],
+            Type: CallOperatorExpression
+          }
+        ],
+        Type: CallOperatorExpression
       }
     ],
     Type: StatementBody
-  }
+  },
+  consoleLogs: [
+    1,
+    1,
+    120,
+    3628800,
+    2004310016
+  ]
 }

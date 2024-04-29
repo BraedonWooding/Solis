@@ -1,0 +1,37 @@
+﻿{
+  Statements: [
+    {
+      Args: [
+        {
+          Name: {
+            Kind: Ident,
+            Value: a,
+            Span: {
+              ByteOffset: 3,
+              ByteLength: 1,
+              Serialized: Anonymous Function(3:4) at Line 1:4
+            }
+          },
+          Type: FunctionArg
+        },
+        {
+          Name: {
+            Kind: Ident,
+            Value: b,
+            Span: {
+              ByteOffset: 6,
+              ByteLength: 1,
+              Serialized: Anonymous Function(6:7) at Line 1:7
+            }
+          },
+          Type: FunctionArg
+        }
+      ],
+      Body: {
+        Type: StatementBody
+      },
+      Type: FunctionDeclaration
+    }
+  ],
+  Type: StatementBody
+}

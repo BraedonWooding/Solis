@@ -7,6 +7,8 @@ fn fact(n) {
 }
 
 const console = std.io.console
-console.printline(fact(5))
 console.printline(fact(0))
+console.printline(fact(1))
+console.printline(fact(5))
 console.printline(fact(10))
+console.printline(fact(15))

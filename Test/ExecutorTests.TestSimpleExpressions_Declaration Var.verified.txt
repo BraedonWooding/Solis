@@ -1,0 +1,18 @@
+﻿{
+  Statements: [
+    {
+      Identifier: {
+        Kind: Identifier,
+        Value: x,
+        Span: {
+          ByteOffset: 4,
+          ByteLength: 1,
+          Serialized: Declaration Var(4:5) at Line 1:5
+        }
+      },
+      IdentifierValue: x,
+      Type: VariableDeclaration
+    }
+  ],
+  Type: StatementBody
+}

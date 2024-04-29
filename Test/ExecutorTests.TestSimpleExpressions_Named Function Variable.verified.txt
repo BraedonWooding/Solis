@@ -1,0 +1,60 @@
+﻿{
+  Statements: [
+    {
+      IsConst: true,
+      Identifier: {
+        Kind: Ident,
+        Value: x,
+        Span: {
+          ByteOffset: 6,
+          ByteLength: 1,
+          Serialized: Named Function Variable(6:7) at Line 1:7
+        }
+      },
+      IdentifierValue: x,
+      Expression: {
+        Args: [
+          {
+            Name: {
+              Kind: Ident,
+              Value: a,
+              Span: {
+                ByteOffset: 15,
+                ByteLength: 1,
+                Serialized: Named Function Variable(15:16) at Line 1:16
+              }
+            },
+            Type: FunctionArg
+          },
+          {
+            Name: {
+              Kind: Ident,
+              Value: b,
+              Span: {
+                ByteOffset: 18,
+                ByteLength: 1,
+                Serialized: Named Function Variable(18:19) at Line 1:19
+              }
+            },
+            Type: FunctionArg
+          }
+        ],
+        Identifier: {
+          Kind: Ident,
+          Value: b,
+          Span: {
+            ByteOffset: 13,
+            ByteLength: 1,
+            Serialized: Named Function Variable(13:14) at Line 1:14
+          }
+        },
+        Body: {
+          Type: StatementBody
+        },
+        Type: FunctionDeclaration
+      },
+      Type: VariableDeclaration
+    }
+  ],
+  Type: StatementBody
+}

@@ -190,5 +190,8 @@ console.printline("Hello World!!"),
       }
     ],
     Type: StatementBody
-  }
+  },
+  consoleLogs: [
+    Hello World!!
+  ]
 }

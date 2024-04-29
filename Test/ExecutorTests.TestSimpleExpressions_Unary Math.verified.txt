@@ -1,0 +1,104 @@
+﻿{
+  Statements: [
+    {
+      IsConst: true,
+      Identifier: {
+        Kind: Identifier,
+        Value: x,
+        Span: {
+          ByteOffset: 20,
+          ByteLength: 1,
+          Serialized: Unary Math(20:21) at Line 2:20
+        }
+      },
+      IdentifierValue: x,
+      Expression: {
+        Kind: UnaryMinus,
+        Target: {
+          Kind: ValueInt,
+          Value: 2,
+          Type: AtomExpression
+        },
+        Type: UnaryOperatorExpression
+      },
+      Type: VariableDeclaration
+    },
+    {
+      IsConst: true,
+      Identifier: {
+        Kind: Identifier,
+        Value: y,
+        Span: {
+          ByteOffset: 46,
+          ByteLength: 1,
+          Serialized: Unary Math(46:47) at Line 3:20
+        }
+      },
+      IdentifierValue: y,
+      Expression: {
+        Kind: BinaryPlus,
+        Target: {
+          Kind: UnaryMinus,
+          Target: {
+            Kind: ValueInt,
+            Value: 2,
+            Type: AtomExpression
+          },
+          Type: UnaryOperatorExpression
+        },
+        Arg: {
+          Kind: ValueInt,
+          Value: 3,
+          Type: AtomExpression
+        },
+        Type: BinaryOperatorExpression
+      },
+      Type: VariableDeclaration
+    },
+    {
+      IsConst: true,
+      Identifier: {
+        Kind: Identifier,
+        Value: z,
+        Span: {
+          ByteOffset: 76,
+          ByteLength: 1,
+          Serialized: Unary Math(76:77) at Line 4:20
+        }
+      },
+      IdentifierValue: z,
+      Expression: {
+        Kind: BinaryMultiply,
+        Target: {
+          Kind: UnaryMinus,
+          Target: {
+            Kind: ValueInt,
+            Value: 2,
+            Type: AtomExpression
+          },
+          Type: UnaryOperatorExpression
+        },
+        Arg: {
+          Kind: UnaryMinus,
+          Target: {
+            Kind: UnaryMinus,
+            Target: {
+              Kind: UnaryPlus,
+              Target: {
+                Kind: ValueInt,
+                Value: 3,
+                Type: AtomExpression
+              },
+              Type: UnaryOperatorExpression
+            },
+            Type: UnaryOperatorExpression
+          },
+          Type: UnaryOperatorExpression
+        },
+        Type: BinaryOperatorExpression
+      },
+      Type: VariableDeclaration
+    }
+  ],
+  Type: StatementBody
+}

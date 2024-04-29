@@ -1,0 +1,359 @@
+﻿{
+  fileContents:
+const console = std.io.console
+console.printline("HEY")
+console.printline(0)
+console.printline(1),
+  tokens: [
+    {
+      Kind: Const,
+      Value: const,
+      Span: {
+        ByteLength: 5,
+        Serialized: Samples/printLine.sol(0:5) at Line 1:1
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: console,
+      Span: {
+        ByteOffset: 6,
+        ByteLength: 7,
+        Serialized: Samples/printLine.sol(6:13) at Line 1:7
+      }
+    },
+    {
+      Kind: AssignmentSymbol,
+      Value: =,
+      Span: {
+        ByteOffset: 14,
+        ByteLength: 1,
+        Serialized: Samples/printLine.sol(14:15) at Line 1:15
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: std,
+      Span: {
+        ByteOffset: 16,
+        ByteLength: 3,
+        Serialized: Samples/printLine.sol(16:19) at Line 1:17
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: .,
+      Span: {
+        ByteOffset: 19,
+        ByteLength: 1,
+        Serialized: Samples/printLine.sol(19:20) at Line 1:20
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: io,
+      Span: {
+        ByteOffset: 20,
+        ByteLength: 2,
+        Serialized: Samples/printLine.sol(20:22) at Line 1:21
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: .,
+      Span: {
+        ByteOffset: 22,
+        ByteLength: 1,
+        Serialized: Samples/printLine.sol(22:23) at Line 1:23
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: console,
+      Span: {
+        ByteOffset: 23,
+        ByteLength: 7,
+        Serialized: Samples/printLine.sol(23:30) at Line 1:24
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: console,
+      Span: {
+        ByteOffset: 32,
+        ByteLength: 7,
+        Serialized: Samples/printLine.sol(32:39) at Line 2:2
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: .,
+      Span: {
+        ByteOffset: 39,
+        ByteLength: 1,
+        Serialized: Samples/printLine.sol(39:40) at Line 2:9
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: printline,
+      Span: {
+        ByteOffset: 40,
+        ByteLength: 9,
+        Serialized: Samples/printLine.sol(40:49) at Line 2:10
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: (,
+      Span: {
+        ByteOffset: 49,
+        ByteLength: 1,
+        Serialized: Samples/printLine.sol(49:50) at Line 2:19
+      }
+    },
+    {
+      Kind: ValueString,
+      Value: "HEY",
+      RealValue: HEY,
+      Span: {
+        ByteOffset: 50,
+        ByteLength: 5,
+        Serialized: Samples/printLine.sol(50:55) at Line 2:20
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: ),
+      Span: {
+        ByteOffset: 55,
+        ByteLength: 1,
+        Serialized: Samples/printLine.sol(55:56) at Line 2:25
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: console,
+      Span: {
+        ByteOffset: 58,
+        ByteLength: 7,
+        Serialized: Samples/printLine.sol(58:65) at Line 3:2
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: .,
+      Span: {
+        ByteOffset: 65,
+        ByteLength: 1,
+        Serialized: Samples/printLine.sol(65:66) at Line 3:9
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: printline,
+      Span: {
+        ByteOffset: 66,
+        ByteLength: 9,
+        Serialized: Samples/printLine.sol(66:75) at Line 3:10
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: (,
+      Span: {
+        ByteOffset: 75,
+        ByteLength: 1,
+        Serialized: Samples/printLine.sol(75:76) at Line 3:19
+      }
+    },
+    {
+      Kind: ValueInt,
+      Value: 0,
+      RealValue: 0,
+      Span: {
+        ByteOffset: 76,
+        ByteLength: 1,
+        Serialized: Samples/printLine.sol(76:77) at Line 3:20
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: ),
+      Span: {
+        ByteOffset: 77,
+        ByteLength: 1,
+        Serialized: Samples/printLine.sol(77:78) at Line 3:21
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: console,
+      Span: {
+        ByteOffset: 80,
+        ByteLength: 7,
+        Serialized: Samples/printLine.sol(80:87) at Line 4:2
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: .,
+      Span: {
+        ByteOffset: 87,
+        ByteLength: 1,
+        Serialized: Samples/printLine.sol(87:88) at Line 4:9
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: printline,
+      Span: {
+        ByteOffset: 88,
+        ByteLength: 9,
+        Serialized: Samples/printLine.sol(88:97) at Line 4:10
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: (,
+      Span: {
+        ByteOffset: 97,
+        ByteLength: 1,
+        Serialized: Samples/printLine.sol(97:98) at Line 4:19
+      }
+    },
+    {
+      Kind: ValueInt,
+      Value: 1,
+      RealValue: 1,
+      Span: {
+        ByteOffset: 98,
+        ByteLength: 1,
+        Serialized: Samples/printLine.sol(98:99) at Line 4:20
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: ),
+      Span: {
+        ByteOffset: 99,
+        ByteLength: 1,
+        Serialized: Samples/printLine.sol(99:100) at Line 4:21
+      }
+    }
+  ],
+  ast: {
+    Statements: [
+      {
+        IsConst: true,
+        Identifier: {
+          Kind: Identifier,
+          Value: console,
+          Span: {
+            ByteOffset: 6,
+            ByteLength: 7,
+            Serialized: Samples/printLine.sol(6:13) at Line 1:7
+          }
+        },
+        IdentifierValue: console,
+        Expression: {
+          Kind: Member,
+          Target: {
+            Value: std,
+            Type: AtomExpression
+          },
+          Path: [
+            {
+              Value: io,
+              Type: AtomExpression
+            },
+            {
+              Value: console,
+              Type: AtomExpression
+            }
+          ],
+          Type: MemberOperatorExpression
+        },
+        Type: VariableDeclaration
+      },
+      {
+        Target: {
+          Kind: Member,
+          Target: {
+            Value: console,
+            Type: AtomExpression
+          },
+          Path: [
+            {
+              Value: printline,
+              Type: AtomExpression
+            }
+          ],
+          Type: MemberOperatorExpression
+        },
+        Args: [
+          {
+            Kind: ValueString,
+            Value: HEY,
+            Type: AtomExpression
+          }
+        ],
+        Type: CallOperatorExpression
+      },
+      {
+        Target: {
+          Kind: Member,
+          Target: {
+            Value: console,
+            Type: AtomExpression
+          },
+          Path: [
+            {
+              Value: printline,
+              Type: AtomExpression
+            }
+          ],
+          Type: MemberOperatorExpression
+        },
+        Args: [
+          {
+            Kind: ValueInt,
+            Value: 0,
+            Type: AtomExpression
+          }
+        ],
+        Type: CallOperatorExpression
+      },
+      {
+        Target: {
+          Kind: Member,
+          Target: {
+            Value: console,
+            Type: AtomExpression
+          },
+          Path: [
+            {
+              Value: printline,
+              Type: AtomExpression
+            }
+          ],
+          Type: MemberOperatorExpression
+        },
+        Args: [
+          {
+            Kind: ValueInt,
+            Value: 1,
+            Type: AtomExpression
+          }
+        ],
+        Type: CallOperatorExpression
+      }
+    ],
+    Type: StatementBody
+  },
+  consoleLogs: [
+    HEY,
+    0,
+    1
+  ]
+}

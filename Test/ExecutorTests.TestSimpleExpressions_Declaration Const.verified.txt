@@ -1,0 +1,19 @@
+﻿{
+  Statements: [
+    {
+      IsConst: true,
+      Identifier: {
+        Kind: Identifier,
+        Value: y,
+        Span: {
+          ByteOffset: 6,
+          ByteLength: 1,
+          Serialized: Declaration Const(6:7) at Line 1:7
+        }
+      },
+      IdentifierValue: y,
+      Type: VariableDeclaration
+    }
+  ],
+  Type: StatementBody
+}
