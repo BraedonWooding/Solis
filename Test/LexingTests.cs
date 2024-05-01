@@ -14,6 +14,8 @@ namespace Test
         [DataRow("Variable Decl", "var x = 2 const x = 3")]
         [DataRow("String", "\"Hello!\"")]
         [DataRow("Multiple String", "\"Hello!\"\"World\"")]
+        [DataRow("Reserved words", "if while in")]
+        [DataRow("NonReserved words", "ifa whilea ina")]
         public async Task TestSimpleExpressions(string name, string data)
         {
             await Verify(new Lexer().FileToTokens(name, data)).UseMethodName("TestSimpleExpressions_" + name);

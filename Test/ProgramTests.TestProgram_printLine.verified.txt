@@ -273,8 +273,7 @@ console.printline(1),
             }
           ],
           Type: MemberOperatorExpression
-        },
-        Type: VariableDeclaration
+        }
       },
       {
         Target: {

@@ -11,6 +11,19 @@
           Serialized: Declaration Const(6:7) at Line 1:7
         }
       },
+      Type: {
+        Identifier: {
+          Kind: Identifier,
+          Value: int,
+          Span: {
+            ByteOffset: 9,
+            ByteLength: 3,
+            Serialized: Declaration Const(9:12) at Line 1:10
+          }
+        },
+        GenericTypes: [],
+        Type: TypeAst
+      },
       IdentifierValue: y
     }
   ],

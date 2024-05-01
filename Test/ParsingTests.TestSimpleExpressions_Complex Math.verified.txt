@@ -50,8 +50,7 @@
           Type: BinaryOperatorExpression
         },
         Type: BinaryOperatorExpression
-      },
-      Type: VariableDeclaration
+      }
     }
   ],
   Type: StatementBody

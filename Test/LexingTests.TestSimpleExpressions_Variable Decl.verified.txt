@@ -39,8 +39,9 @@
     Kind: Const,
     Value: const,
     Span: {
+      ByteOffset: 10,
       ByteLength: 5,
-      Serialized: Variable Decl(0:5) at Line 1:1
+      Serialized: Variable Decl(10:15) at Line 1:11
     }
   },
   {

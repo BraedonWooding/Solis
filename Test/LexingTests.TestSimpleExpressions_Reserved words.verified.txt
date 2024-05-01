@@ -1,0 +1,28 @@
+﻿[
+  {
+    Kind: If,
+    Value: if,
+    Span: {
+      ByteLength: 2,
+      Serialized: Reserved words(0:2) at Line 1:1
+    }
+  },
+  {
+    Kind: While,
+    Value: while,
+    Span: {
+      ByteOffset: 3,
+      ByteLength: 5,
+      Serialized: Reserved words(3:8) at Line 1:4
+    }
+  },
+  {
+    Kind: In,
+    Value: in,
+    Span: {
+      ByteOffset: 9,
+      ByteLength: 2,
+      Serialized: Reserved words(9:11) at Line 1:10
+    }
+  }
+]

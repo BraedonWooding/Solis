@@ -23,6 +23,19 @@
                 ByteLength: 1,
                 Serialized: Anonymous Function Variable(13:14) at Line 1:14
               }
+            },
+            Type: {
+              Identifier: {
+                Kind: Identifier,
+                Value: int,
+                Span: {
+                  ByteOffset: 16,
+                  ByteLength: 3,
+                  Serialized: Anonymous Function Variable(16:19) at Line 1:17
+                }
+              },
+              GenericTypes: [],
+              Type: TypeAst
             }
           },
           {
@@ -30,10 +43,23 @@
               Kind: Identifier,
               Value: b,
               Span: {
-                ByteOffset: 16,
+                ByteOffset: 21,
                 ByteLength: 1,
-                Serialized: Anonymous Function Variable(16:17) at Line 1:17
+                Serialized: Anonymous Function Variable(21:22) at Line 1:22
               }
+            },
+            Type: {
+              Identifier: {
+                Kind: Identifier,
+                Value: int,
+                Span: {
+                  ByteOffset: 24,
+                  ByteLength: 3,
+                  Serialized: Anonymous Function Variable(24:27) at Line 1:25
+                }
+              },
+              GenericTypes: [],
+              Type: TypeAst
             }
           }
         ],

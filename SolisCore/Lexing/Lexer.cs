@@ -46,16 +46,8 @@ namespace SolisCore.Lexing
                 throw new Exception("Require at-least one item in span");
             }
 
-            var idx = relativeIdx;
-            // 8 chars is the longest token
-            // this could be made to be more performant but shrug
-            var longest = span[..Math.Min(8, span.Length)].ToString();
-            if (SimpleTokens.FirstOrDefault(x => longest.StartsWith(x.ToString().ToLower())) is var kind && kind != TokenKind.Unknown)
-            {
-                relativeIdx += kind.ToString().Length;
-                return new Token(kind, new(fileName, idx, relativeIdx - idx));
-            }
-
+            TokenKind kind;
+            
             var realValue = (object?)null;
             if (span.StartsWith("--[["))
             {
@@ -230,6 +222,7 @@ namespace SolisCore.Lexing
                         {
                             relativeIdx++;
                         }
+
                         break;
                     default:
                         throw new Exception("Unexpected rest of string: " + span[relativeIdx..].ToString());
@@ -237,6 +230,11 @@ namespace SolisCore.Lexing
             }
 
             var value = span[..relativeIdx].ToString();
+            if (kind == TokenKind.Identifier && ReservedIdentifiers.FirstOrDefault(x => value == x.ToString().ToLowerInvariant()) is var reservedKind && reservedKind != TokenKind.Unknown)
+            {
+                kind = reservedKind;
+            }
+
             return new Token(kind, value, realValue, new(fileName, currentIdx, relativeIdx));
         }
 
@@ -345,7 +343,7 @@ namespace SolisCore.Lexing
             ["||"] = TokenKind.ComparatorSymbol,
         };
 
-        public HashSet<TokenKind> SimpleTokens = new HashSet<TokenKind>()
+        public HashSet<TokenKind> ReservedIdentifiers = new HashSet<TokenKind>()
         {
             TokenKind.Var,
             TokenKind.Const,

@@ -72,8 +72,9 @@ console.printline(fact(15)),
       Kind: If,
       Value: if,
       Span: {
+        ByteOffset: 18,
         ByteLength: 2,
-        Serialized: Samples/factorial.sol(0:2) at Line 1:1
+        Serialized: Samples/factorial.sol(18:20) at Line 2:6
       }
     },
     {
@@ -117,8 +118,9 @@ console.printline(fact(15)),
       Kind: Return,
       Value: return,
       Span: {
+        ByteOffset: 39,
         ByteLength: 6,
-        Serialized: Samples/factorial.sol(0:6) at Line 1:1
+        Serialized: Samples/factorial.sol(39:45) at Line 3:10
       }
     },
     {
@@ -144,8 +146,9 @@ console.printline(fact(15)),
       Kind: Else,
       Value: else,
       Span: {
+        ByteOffset: 55,
         ByteLength: 4,
-        Serialized: Samples/factorial.sol(0:4) at Line 1:1
+        Serialized: Samples/factorial.sol(55:59) at Line 4:8
       }
     },
     {
@@ -161,8 +164,9 @@ console.printline(fact(15)),
       Kind: Return,
       Value: return,
       Span: {
+        ByteOffset: 71,
         ByteLength: 6,
-        Serialized: Samples/factorial.sol(0:6) at Line 1:1
+        Serialized: Samples/factorial.sol(71:77) at Line 5:10
       }
     },
     {
@@ -260,8 +264,9 @@ console.printline(fact(15)),
       Kind: Const,
       Value: const,
       Span: {
+        ByteOffset: 107,
         ByteLength: 5,
-        Serialized: Samples/factorial.sol(0:5) at Line 1:1
+        Serialized: Samples/factorial.sol(107:112) at Line 9:2
       }
     },
     {
@@ -751,8 +756,7 @@ console.printline(fact(15)),
                 ByteLength: 1,
                 Serialized: Samples/factorial.sol(8:9) at Line 1:9
               }
-            },
-            Type: FunctionArg
+            }
           }
         ],
         Identifier: {
@@ -870,8 +874,7 @@ console.printline(fact(15)),
             }
           ],
           Type: MemberOperatorExpression
-        },
-        Type: VariableDeclaration
+        }
       },
       {
         Target: {

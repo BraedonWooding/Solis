@@ -28,8 +28,9 @@ console.printline(fib(20)),
       Kind: Fn,
       Value: fn,
       Span: {
+        ByteOffset: 33,
         ByteLength: 2,
-        Serialized: Samples/fibonacci.sol(0:2) at Line 1:1
+        Serialized: Samples/fibonacci.sol(33:35) at Line 2:2
       }
     },
     {
@@ -81,8 +82,9 @@ console.printline(fib(20)),
       Kind: If,
       Value: if,
       Span: {
+        ByteOffset: 50,
         ByteLength: 2,
-        Serialized: Samples/fibonacci.sol(0:2) at Line 1:1
+        Serialized: Samples/fibonacci.sol(50:52) at Line 3:6
       }
     },
     {
@@ -144,8 +146,9 @@ console.printline(fib(20)),
       Kind: Return,
       Value: return,
       Span: {
+        ByteOffset: 64,
         ByteLength: 6,
-        Serialized: Samples/fibonacci.sol(0:6) at Line 1:1
+        Serialized: Samples/fibonacci.sol(64:70) at Line 3:20
       }
     },
     {
@@ -171,8 +174,9 @@ console.printline(fib(20)),
       Kind: If,
       Value: if,
       Span: {
+        ByteOffset: 80,
         ByteLength: 2,
-        Serialized: Samples/fibonacci.sol(0:2) at Line 1:1
+        Serialized: Samples/fibonacci.sol(80:82) at Line 4:6
       }
     },
     {
@@ -234,8 +238,9 @@ console.printline(fib(20)),
       Kind: Return,
       Value: return,
       Span: {
+        ByteOffset: 94,
         ByteLength: 6,
-        Serialized: Samples/fibonacci.sol(0:6) at Line 1:1
+        Serialized: Samples/fibonacci.sol(94:100) at Line 4:20
       }
     },
     {
@@ -261,8 +266,9 @@ console.printline(fib(20)),
       Kind: Return,
       Value: return,
       Span: {
+        ByteOffset: 110,
         ByteLength: 6,
-        Serialized: Samples/fibonacci.sol(0:6) at Line 1:1
+        Serialized: Samples/fibonacci.sol(110:116) at Line 5:6
       }
     },
     {
@@ -397,8 +403,9 @@ console.printline(fib(20)),
       Kind: Const,
       Value: const,
       Span: {
+        ByteOffset: 147,
         ByteLength: 5,
-        Serialized: Samples/fibonacci.sol(0:5) at Line 1:1
+        Serialized: Samples/fibonacci.sol(147:152) at Line 8:2
       }
     },
     {
@@ -888,8 +895,7 @@ console.printline(fib(20)),
                 ByteLength: 1,
                 Serialized: Samples/fibonacci.sol(40:41) at Line 2:9
               }
-            },
-            Type: FunctionArg
+            }
           }
         ],
         Identifier: {
@@ -1053,8 +1059,7 @@ console.printline(fib(20)),
             }
           ],
           Type: MemberOperatorExpression
-        },
-        Type: VariableDeclaration
+        }
       },
       {
         Target: {

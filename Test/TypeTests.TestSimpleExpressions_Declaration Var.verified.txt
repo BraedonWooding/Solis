@@ -1,0 +1,30 @@
+﻿{
+  Statements: [
+    {
+      Identifier: {
+        Kind: Identifier,
+        Value: x,
+        Span: {
+          ByteOffset: 4,
+          ByteLength: 1,
+          Serialized: Declaration Var(4:5) at Line 1:5
+        }
+      },
+      Type: {
+        Identifier: {
+          Kind: Identifier,
+          Value: int,
+          Span: {
+            ByteOffset: 7,
+            ByteLength: 3,
+            Serialized: Declaration Var(7:10) at Line 1:8
+          }
+        },
+        GenericTypes: [],
+        Type: TypeAst
+      },
+      IdentifierValue: x
+    }
+  ],
+  Type: StatementBody
+}

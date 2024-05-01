@@ -71,6 +71,46 @@
       <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
       <DependentUpon>ExecutorTests.cs</DependentUpon>
     </None>
+    <None Update="TypeTests.TestSimpleExpressions_Anonymous Function Variable.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
+      <DependentUpon>TypeTests.cs</DependentUpon>
+    </None>
+    <None Update="TypeTests.TestSimpleExpressions_Anonymous Function.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
+      <DependentUpon>TypeTests.cs</DependentUpon>
+    </None>
+    <None Update="TypeTests.TestSimpleExpressions_Complex Math.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
+      <DependentUpon>TypeTests.cs</DependentUpon>
+    </None>
+    <None Update="TypeTests.TestSimpleExpressions_Declaration Const.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
+      <DependentUpon>TypeTests.cs</DependentUpon>
+    </None>
+    <None Update="TypeTests.TestSimpleExpressions_Declaration Var.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
+      <DependentUpon>TypeTests.cs</DependentUpon>
+    </None>
+    <None Update="TypeTests.TestSimpleExpressions_Named Function Variable.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
+      <DependentUpon>TypeTests.cs</DependentUpon>
+    </None>
+    <None Update="TypeTests.TestSimpleExpressions_Named Function.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
+      <DependentUpon>TypeTests.cs</DependentUpon>
+    </None>
+    <None Update="TypeTests.TestSimpleExpressions_No Args Function.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
+      <DependentUpon>TypeTests.cs</DependentUpon>
+    </None>
+    <None Update="TypeTests.TestSimpleExpressions_Simple Math.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
+      <DependentUpon>TypeTests.cs</DependentUpon>
+    </None>
+    <None Update="TypeTests.TestSimpleExpressions_Unary Math.verified.txt">
+      <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
+      <DependentUpon>TypeTests.cs</DependentUpon>
+    </None>
     <None Update="ProgramTests.TestSimpleExpressions_Anonymous Function.verified.txt">
       <ParentFile>$([System.String]::Copy('%(FileName)').Split('.')[0])</ParentFile>
       <DependentUpon>ProgramTests.cs</DependentUpon>

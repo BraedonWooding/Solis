@@ -32,8 +32,7 @@
           Type: AtomExpression
         },
         Type: BinaryOperatorExpression
-      },
-      Type: VariableDeclaration
+      }
     },
     {
       IsConst: true,
@@ -67,8 +66,7 @@
           Type: BinaryOperatorExpression
         },
         Type: BinaryOperatorExpression
-      },
-      Type: VariableDeclaration
+      }
     }
   ],
   Type: StatementBody

@@ -1,0 +1,28 @@
+﻿[
+  {
+    Kind: Identifier,
+    Value: ifa,
+    Span: {
+      ByteLength: 3,
+      Serialized: NonReserved words(0:3) at Line 1:1
+    }
+  },
+  {
+    Kind: Identifier,
+    Value: whilea,
+    Span: {
+      ByteOffset: 4,
+      ByteLength: 6,
+      Serialized: NonReserved words(4:10) at Line 1:5
+    }
+  },
+  {
+    Kind: Identifier,
+    Value: ina,
+    Span: {
+      ByteOffset: 11,
+      ByteLength: 3,
+      Serialized: NonReserved words(11:14) at Line 1:12
+    }
+  }
+]

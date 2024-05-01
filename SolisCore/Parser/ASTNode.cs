@@ -1,4 +1,5 @@
-﻿using SolisCore.Lexing;
+﻿using SolisCore.Executors;
+using SolisCore.Lexing;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -18,13 +19,15 @@ namespace SolisCore.Parser
     {
         public bool IsConst { get; }
         public Token Identifier { get; }
+        public TypeAst? Type { get; }
         public string IdentifierValue => Identifier.Value;
         public ASTNode? Expression { get; }
 
-        public VariableDeclaration(bool isConst, Token identifier, ASTNode? expression = null)
+        public VariableDeclaration(bool isConst, Token identifier, TypeAst? type, ASTNode? expression = null)
         {
             IsConst = isConst;
             Identifier = identifier;
+            Type = type;
             Expression = expression;
         }
     }
@@ -165,10 +168,12 @@ namespace SolisCore.Parser
     public class FunctionArg : ASTNode
     {
         public Token Name { get; }
+        public TypeAst? Type { get; }
 
-        public FunctionArg(Token name)
+        public FunctionArg(Token name, TypeAst? type)
         {
             Name = name;
+            Type = type;
         }
     }
     public class ReturnExpression : ASTNode
@@ -205,6 +210,18 @@ namespace SolisCore.Parser
 
         public Expression Condition { get; }
         public StatementBody Body { get; }
+    }
+
+    public class TypeAst : ASTNode
+    {
+        public TypeAst(Token identifier, List<TypeAst> genericTypes)
+        {
+            Identifier = identifier;
+            GenericTypes = genericTypes;
+        }
+
+        public Token Identifier { get; }
+        public List<TypeAst> GenericTypes { get; }
     }
 
     public class FunctionDeclaration : AtomExpression

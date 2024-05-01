@@ -11,8 +11,7 @@
               ByteLength: 1,
               Serialized: Named Function(5:6) at Line 1:6
             }
-          },
-          Type: FunctionArg
+          }
         },
         {
           Name: {
@@ -23,8 +22,7 @@
               ByteLength: 1,
               Serialized: Named Function(8:9) at Line 1:9
             }
-          },
-          Type: FunctionArg
+          }
         }
       ],
       Identifier: {

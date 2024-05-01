@@ -20,8 +20,7 @@
           Type: AtomExpression
         },
         Type: UnaryOperatorExpression
-      },
-      Type: VariableDeclaration
+      }
     },
     {
       IsConst: true,
@@ -52,8 +51,7 @@
           Type: AtomExpression
         },
         Type: BinaryOperatorExpression
-      },
-      Type: VariableDeclaration
+      }
     },
     {
       IsConst: true,
@@ -96,8 +94,7 @@
           Type: UnaryOperatorExpression
         },
         Type: BinaryOperatorExpression
-      },
-      Type: VariableDeclaration
+      }
     }
   ],
   Type: StatementBody

@@ -53,9 +53,9 @@ namespace SolisCore.Parser
             idx++;
         }
 
-        private ASTNode? TryConsume(Token condition, Func<ASTNode> result)
+        private T? TryConsume<T>(Token condition, Func<T> result)
         {
-            if (Tok != condition) return null;
+            if (Tok != condition) return default;
 
             // move one token (note: this requires condition to be 1 token)
             idx++;
@@ -320,7 +320,19 @@ namespace SolisCore.Parser
 
         private FunctionArg ParseArg()
         {
-            return new FunctionArg(ConsumeIdent());
+            return new FunctionArg(ConsumeIdent(), TryConsume(Token.Punctuation(":"), ParseType));
+        }
+
+        private TypeAst ParseType()
+        {
+            // types always have an identifier
+            // i.e. "int", "Array[int]"
+            var ident = ConsumeIdent();
+            var args = TryConsume(Token.Punctuation("["), () => ParseList(Token.Punctuation("]"), Token.Punctuation(","), ParseType));
+
+            // for now we'll default construct it to an empty type
+            // but maybe?? we can avoid this to save on the allocation
+            return new TypeAst(ident, args ?? new());
         }
 
         private ASTNode ParseStatement()
@@ -331,6 +343,7 @@ namespace SolisCore.Parser
                 return new VariableDeclaration(
                     isConst: _tokens[idx++].Kind == TokenKind.Const,
                     ConsumeIdent(),
+                    TryConsume(Token.Punctuation(":"), ParseType),
                     TryConsume(Token.Assignment("="), ParseExpression));
             }
 

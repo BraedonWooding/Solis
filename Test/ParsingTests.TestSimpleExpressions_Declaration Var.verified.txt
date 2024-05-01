@@ -10,8 +10,7 @@
           Serialized: Declaration Var(4:5) at Line 1:5
         }
       },
-      IdentifierValue: x,
-      Type: VariableDeclaration
+      IdentifierValue: x
     }
   ],
   Type: StatementBody

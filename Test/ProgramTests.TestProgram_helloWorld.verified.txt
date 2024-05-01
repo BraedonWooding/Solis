@@ -161,8 +161,7 @@ console.printline("Hello World!!"),
             }
           ],
           Type: MemberOperatorExpression
-        },
-        Type: VariableDeclaration
+        }
       },
       {
         Target: {
