@@ -8,11 +8,11 @@ fn fib(n) {
 }
 
 const console = std.io.console
-console.printline(fact(5))
-console.printline(fact(0))
-console.printline(fact(1))
-console.printline(fact(2))
-console.printline(fact(10)),
+console.printline(fib(5))
+console.printline(fib(0))
+console.printline(fib(1))
+console.printline(fib(2))
+console.printline(fib(20)),
   tokens: [
     {
       Kind: Comment,
@@ -502,16 +502,26 @@ console.printline(fact(10)),
     },
     {
       Kind: Identifier,
-      Value: fact,
+      Value: fib,
       Span: {
         ByteOffset: 197,
-        ByteLength: 4,
-        Serialized: Samples/fibonacci.sol(197:201) at Line 9:20
+        ByteLength: 3,
+        Serialized: Samples/fibonacci.sol(197:200) at Line 9:20
       }
     },
     {
       Kind: PunctuationSymbol,
       Value: (,
+      Span: {
+        ByteOffset: 200,
+        ByteLength: 1,
+        Serialized: Samples/fibonacci.sol(200:201) at Line 9:23
+      }
+    },
+    {
+      Kind: ValueInt,
+      Value: 5,
+      RealValue: 5,
       Span: {
         ByteOffset: 201,
         ByteLength: 1,
@@ -519,9 +529,8 @@ console.printline(fact(10)),
       }
     },
     {
-      Kind: ValueInt,
-      Value: 5,
-      RealValue: 5,
+      Kind: PunctuationSymbol,
+      Value: ),
       Span: {
         ByteOffset: 202,
         ByteLength: 1,
@@ -538,66 +547,57 @@ console.printline(fact(10)),
       }
     },
     {
-      Kind: PunctuationSymbol,
-      Value: ),
-      Span: {
-        ByteOffset: 204,
-        ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(204:205) at Line 9:27
-      }
-    },
-    {
       Kind: Identifier,
       Value: console,
       Span: {
-        ByteOffset: 207,
+        ByteOffset: 206,
         ByteLength: 7,
-        Serialized: Samples/fibonacci.sol(207:214) at Line 10:2
+        Serialized: Samples/fibonacci.sol(206:213) at Line 10:2
       }
     },
     {
       Kind: PunctuationSymbol,
       Value: .,
       Span: {
-        ByteOffset: 214,
+        ByteOffset: 213,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(214:215) at Line 10:9
+        Serialized: Samples/fibonacci.sol(213:214) at Line 10:9
       }
     },
     {
       Kind: Identifier,
       Value: printline,
       Span: {
-        ByteOffset: 215,
+        ByteOffset: 214,
         ByteLength: 9,
-        Serialized: Samples/fibonacci.sol(215:224) at Line 10:10
+        Serialized: Samples/fibonacci.sol(214:223) at Line 10:10
       }
     },
     {
       Kind: PunctuationSymbol,
       Value: (,
       Span: {
-        ByteOffset: 224,
+        ByteOffset: 223,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(224:225) at Line 10:19
+        Serialized: Samples/fibonacci.sol(223:224) at Line 10:19
       }
     },
     {
       Kind: Identifier,
-      Value: fact,
+      Value: fib,
       Span: {
-        ByteOffset: 225,
-        ByteLength: 4,
-        Serialized: Samples/fibonacci.sol(225:229) at Line 10:20
+        ByteOffset: 224,
+        ByteLength: 3,
+        Serialized: Samples/fibonacci.sol(224:227) at Line 10:20
       }
     },
     {
       Kind: PunctuationSymbol,
       Value: (,
       Span: {
-        ByteOffset: 229,
+        ByteOffset: 227,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(229:230) at Line 10:24
+        Serialized: Samples/fibonacci.sol(227:228) at Line 10:23
       }
     },
     {
@@ -605,81 +605,81 @@ console.printline(fact(10)),
       Value: 0,
       RealValue: 0,
       Span: {
+        ByteOffset: 228,
+        ByteLength: 1,
+        Serialized: Samples/fibonacci.sol(228:229) at Line 10:24
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: ),
+      Span: {
+        ByteOffset: 229,
+        ByteLength: 1,
+        Serialized: Samples/fibonacci.sol(229:230) at Line 10:25
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: ),
+      Span: {
         ByteOffset: 230,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(230:231) at Line 10:25
-      }
-    },
-    {
-      Kind: PunctuationSymbol,
-      Value: ),
-      Span: {
-        ByteOffset: 231,
-        ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(231:232) at Line 10:26
-      }
-    },
-    {
-      Kind: PunctuationSymbol,
-      Value: ),
-      Span: {
-        ByteOffset: 232,
-        ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(232:233) at Line 10:27
+        Serialized: Samples/fibonacci.sol(230:231) at Line 10:26
       }
     },
     {
       Kind: Identifier,
       Value: console,
       Span: {
-        ByteOffset: 235,
+        ByteOffset: 233,
         ByteLength: 7,
-        Serialized: Samples/fibonacci.sol(235:242) at Line 11:2
+        Serialized: Samples/fibonacci.sol(233:240) at Line 11:2
       }
     },
     {
       Kind: PunctuationSymbol,
       Value: .,
       Span: {
-        ByteOffset: 242,
+        ByteOffset: 240,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(242:243) at Line 11:9
+        Serialized: Samples/fibonacci.sol(240:241) at Line 11:9
       }
     },
     {
       Kind: Identifier,
       Value: printline,
       Span: {
-        ByteOffset: 243,
+        ByteOffset: 241,
         ByteLength: 9,
-        Serialized: Samples/fibonacci.sol(243:252) at Line 11:10
+        Serialized: Samples/fibonacci.sol(241:250) at Line 11:10
       }
     },
     {
       Kind: PunctuationSymbol,
       Value: (,
       Span: {
-        ByteOffset: 252,
+        ByteOffset: 250,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(252:253) at Line 11:19
+        Serialized: Samples/fibonacci.sol(250:251) at Line 11:19
       }
     },
     {
       Kind: Identifier,
-      Value: fact,
+      Value: fib,
       Span: {
-        ByteOffset: 253,
-        ByteLength: 4,
-        Serialized: Samples/fibonacci.sol(253:257) at Line 11:20
+        ByteOffset: 251,
+        ByteLength: 3,
+        Serialized: Samples/fibonacci.sol(251:254) at Line 11:20
       }
     },
     {
       Kind: PunctuationSymbol,
       Value: (,
       Span: {
-        ByteOffset: 257,
+        ByteOffset: 254,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(257:258) at Line 11:24
+        Serialized: Samples/fibonacci.sol(254:255) at Line 11:23
       }
     },
     {
@@ -687,81 +687,81 @@ console.printline(fact(10)),
       Value: 1,
       RealValue: 1,
       Span: {
-        ByteOffset: 258,
+        ByteOffset: 255,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(258:259) at Line 11:25
+        Serialized: Samples/fibonacci.sol(255:256) at Line 11:24
       }
     },
     {
       Kind: PunctuationSymbol,
       Value: ),
       Span: {
-        ByteOffset: 259,
+        ByteOffset: 256,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(259:260) at Line 11:26
+        Serialized: Samples/fibonacci.sol(256:257) at Line 11:25
       }
     },
     {
       Kind: PunctuationSymbol,
       Value: ),
       Span: {
-        ByteOffset: 260,
+        ByteOffset: 257,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(260:261) at Line 11:27
+        Serialized: Samples/fibonacci.sol(257:258) at Line 11:26
       }
     },
     {
       Kind: Identifier,
       Value: console,
       Span: {
-        ByteOffset: 263,
+        ByteOffset: 260,
         ByteLength: 7,
-        Serialized: Samples/fibonacci.sol(263:270) at Line 12:2
+        Serialized: Samples/fibonacci.sol(260:267) at Line 12:2
       }
     },
     {
       Kind: PunctuationSymbol,
       Value: .,
       Span: {
-        ByteOffset: 270,
+        ByteOffset: 267,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(270:271) at Line 12:9
+        Serialized: Samples/fibonacci.sol(267:268) at Line 12:9
       }
     },
     {
       Kind: Identifier,
       Value: printline,
       Span: {
-        ByteOffset: 271,
+        ByteOffset: 268,
         ByteLength: 9,
-        Serialized: Samples/fibonacci.sol(271:280) at Line 12:10
+        Serialized: Samples/fibonacci.sol(268:277) at Line 12:10
       }
     },
     {
       Kind: PunctuationSymbol,
       Value: (,
       Span: {
-        ByteOffset: 280,
+        ByteOffset: 277,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(280:281) at Line 12:19
+        Serialized: Samples/fibonacci.sol(277:278) at Line 12:19
       }
     },
     {
       Kind: Identifier,
-      Value: fact,
+      Value: fib,
       Span: {
-        ByteOffset: 281,
-        ByteLength: 4,
-        Serialized: Samples/fibonacci.sol(281:285) at Line 12:20
+        ByteOffset: 278,
+        ByteLength: 3,
+        Serialized: Samples/fibonacci.sol(278:281) at Line 12:20
       }
     },
     {
       Kind: PunctuationSymbol,
       Value: (,
       Span: {
-        ByteOffset: 285,
+        ByteOffset: 281,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(285:286) at Line 12:24
+        Serialized: Samples/fibonacci.sol(281:282) at Line 12:23
       }
     },
     {
@@ -769,54 +769,72 @@ console.printline(fact(10)),
       Value: 2,
       RealValue: 2,
       Span: {
-        ByteOffset: 286,
+        ByteOffset: 282,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(286:287) at Line 12:25
+        Serialized: Samples/fibonacci.sol(282:283) at Line 12:24
       }
     },
     {
       Kind: PunctuationSymbol,
       Value: ),
       Span: {
-        ByteOffset: 287,
+        ByteOffset: 283,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(287:288) at Line 12:26
+        Serialized: Samples/fibonacci.sol(283:284) at Line 12:25
       }
     },
     {
       Kind: PunctuationSymbol,
       Value: ),
       Span: {
-        ByteOffset: 288,
+        ByteOffset: 284,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(288:289) at Line 12:27
+        Serialized: Samples/fibonacci.sol(284:285) at Line 12:26
       }
     },
     {
       Kind: Identifier,
       Value: console,
       Span: {
-        ByteOffset: 291,
+        ByteOffset: 287,
         ByteLength: 7,
-        Serialized: Samples/fibonacci.sol(291:298) at Line 13:2
+        Serialized: Samples/fibonacci.sol(287:294) at Line 13:2
       }
     },
     {
       Kind: PunctuationSymbol,
       Value: .,
       Span: {
-        ByteOffset: 298,
+        ByteOffset: 294,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(298:299) at Line 13:9
+        Serialized: Samples/fibonacci.sol(294:295) at Line 13:9
       }
     },
     {
       Kind: Identifier,
       Value: printline,
       Span: {
-        ByteOffset: 299,
+        ByteOffset: 295,
         ByteLength: 9,
-        Serialized: Samples/fibonacci.sol(299:308) at Line 13:10
+        Serialized: Samples/fibonacci.sol(295:304) at Line 13:10
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      Value: (,
+      Span: {
+        ByteOffset: 304,
+        ByteLength: 1,
+        Serialized: Samples/fibonacci.sol(304:305) at Line 13:19
+      }
+    },
+    {
+      Kind: Identifier,
+      Value: fib,
+      Span: {
+        ByteOffset: 305,
+        ByteLength: 3,
+        Serialized: Samples/fibonacci.sol(305:308) at Line 13:20
       }
     },
     {
@@ -825,53 +843,35 @@ console.printline(fact(10)),
       Span: {
         ByteOffset: 308,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(308:309) at Line 13:19
-      }
-    },
-    {
-      Kind: Identifier,
-      Value: fact,
-      Span: {
-        ByteOffset: 309,
-        ByteLength: 4,
-        Serialized: Samples/fibonacci.sol(309:313) at Line 13:20
-      }
-    },
-    {
-      Kind: PunctuationSymbol,
-      Value: (,
-      Span: {
-        ByteOffset: 313,
-        ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(313:314) at Line 13:24
+        Serialized: Samples/fibonacci.sol(308:309) at Line 13:23
       }
     },
     {
       Kind: ValueInt,
-      Value: 10,
-      RealValue: 10,
+      Value: 20,
+      RealValue: 20,
       Span: {
-        ByteOffset: 314,
+        ByteOffset: 309,
         ByteLength: 2,
-        Serialized: Samples/fibonacci.sol(314:316) at Line 13:25
+        Serialized: Samples/fibonacci.sol(309:311) at Line 13:24
       }
     },
     {
       Kind: PunctuationSymbol,
       Value: ),
       Span: {
-        ByteOffset: 316,
+        ByteOffset: 311,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(316:317) at Line 13:27
+        Serialized: Samples/fibonacci.sol(311:312) at Line 13:26
       }
     },
     {
       Kind: PunctuationSymbol,
       Value: ),
       Span: {
-        ByteOffset: 317,
+        ByteOffset: 312,
         ByteLength: 1,
-        Serialized: Samples/fibonacci.sol(317:318) at Line 13:28
+        Serialized: Samples/fibonacci.sol(312:313) at Line 13:27
       }
     }
   ],
@@ -1074,7 +1074,7 @@ console.printline(fact(10)),
         Args: [
           {
             Target: {
-              Value: fact,
+              Value: fib,
               Type: AtomExpression
             },
             Args: [
@@ -1107,7 +1107,7 @@ console.printline(fact(10)),
         Args: [
           {
             Target: {
-              Value: fact,
+              Value: fib,
               Type: AtomExpression
             },
             Args: [
@@ -1140,7 +1140,7 @@ console.printline(fact(10)),
         Args: [
           {
             Target: {
-              Value: fact,
+              Value: fib,
               Type: AtomExpression
             },
             Args: [
@@ -1173,7 +1173,7 @@ console.printline(fact(10)),
         Args: [
           {
             Target: {
-              Value: fact,
+              Value: fib,
               Type: AtomExpression
             },
             Args: [
@@ -1206,13 +1206,13 @@ console.printline(fact(10)),
         Args: [
           {
             Target: {
-              Value: fact,
+              Value: fib,
               Type: AtomExpression
             },
             Args: [
               {
                 Kind: ValueInt,
-                Value: 10,
+                Value: 20,
                 Type: AtomExpression
               }
             ],
@@ -1223,5 +1223,12 @@ console.printline(fact(10)),
       }
     ],
     Type: StatementBody
-  }
+  },
+  consoleLogs: [
+    5,
+    0,
+    1,
+    1,
+    6765
+  ]
 }

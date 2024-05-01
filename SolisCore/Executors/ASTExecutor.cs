@@ -22,11 +22,6 @@ namespace SolisCore.Executors
             return Eval((FunctionDeclaration)Scope.GlobalVariables[functionName], args);
         }
 
-        private dynamic? Eval(Delegate call, dynamic?[] args)
-        {
-            return call.DynamicInvoke(args.Select(arg => (object?)arg).ToArray());
-        }
-
         private dynamic? Eval(FunctionDeclaration decl, dynamic?[] args)
         {
             // add scope
@@ -87,6 +82,32 @@ namespace SolisCore.Executors
             }
         }
 
+        private dynamic? Eval(CallOperatorExpression callop)
+        {
+            if (callop.Kind == OperatorKind.Call)
+            {
+                var target = Eval(callop.Target)!;
+                var args = callop.Args.Select(x => Eval(x)).ToArray();
+                if (target is Delegate d)
+                {
+                    return d.DynamicInvoke(args);
+                }
+                else if (target is FunctionDeclaration decl)
+                {
+                    return Eval(decl, args);
+                }
+                else if (target is IdentifierValue val)
+                {
+                    throw new Exception("No function for " + val.CurrentPath);
+                }
+                else
+                {
+                    throw new Exception($"Invalid Target Type: " + ((object)target).GetType().Name);
+                }
+            }
+            throw new NotImplementedException();
+        }
+
         private dynamic? Eval(Expression expr)
         {
             return expr switch
@@ -97,12 +118,7 @@ namespace SolisCore.Executors
                     { Kind: OperatorKind.Member } => Scope.LookupVariable(memberop.Path.Select(path => (string)path.Value!).ToList(), Eval(memberop.Target)),
                     _ => throw new NotImplementedException(),
                 },
-                CallOperatorExpression callop => callop.Kind switch
-                {
-                    OperatorKind.Call => Eval(Eval(callop.Target)!, callop.Args.Select(x => Eval(x)).ToArray()),
-                    OperatorKind.Index => throw new NotImplementedException(),
-                    _ => throw new NotImplementedException(),
-                },
+                CallOperatorExpression callop => Eval(callop),
                 IfExpression ifExpr => Eval(ifExpr),
                 WhileExpression whileExpr => Eval(whileExpr),
                 BinaryOperatorExpression binop => binop.Kind switch

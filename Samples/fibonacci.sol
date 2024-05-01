@@ -6,7 +6,8 @@ fn fib(n) {
 }
 
 const console = std.io.console
-console.printline(fact(5))
-console.printline(fact(0))
-console.printline(fact(1))
-console.printline(fact(2))
+console.printline(fib(5))
+console.printline(fib(0))
+console.printline(fib(1))
+console.printline(fib(2))
+console.printline(fib(20))
