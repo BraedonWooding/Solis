@@ -5,29 +5,31 @@
         {
           Name: {
             Kind: Identifier,
-            Value: a,
+            SourceValue: a,
             Span: {
               ByteOffset: 5,
               ByteLength: 1,
               Serialized: Named Function(5:6) at Line 1:6
             }
-          }
+          },
+          AstKind: FunctionArg
         },
         {
           Name: {
             Kind: Identifier,
-            Value: b,
+            SourceValue: b,
             Span: {
               ByteOffset: 8,
               ByteLength: 1,
               Serialized: Named Function(8:9) at Line 1:9
             }
-          }
+          },
+          AstKind: FunctionArg
         }
       ],
       Identifier: {
         Kind: Identifier,
-        Value: a,
+        SourceValue: a,
         Span: {
           ByteOffset: 3,
           ByteLength: 1,
@@ -36,11 +38,11 @@
       },
       Body: {
         Statements: [],
-        Type: StatementBody
+        AstKind: StatementBody
       },
       Kind: Function,
-      Type: FunctionDeclaration
+      AstKind: FunctionDeclaration
     }
   ],
-  Type: StatementBody
+  AstKind: StatementBody
 }

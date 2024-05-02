@@ -81,12 +81,12 @@ namespace SolisCore.Parser
 
         private AtomExpression ParseAtomExpression()
         {
-            if (Tok is Token { Kind: TokenKind.Identifier, Value: string val })
+            if (Tok is Token { Kind: TokenKind.Identifier, SourceValue: string val })
             {
                 idx++;
                 return new AtomExpression(AtomKind.Identifier, val);
             }
-            else if (Tok is Token { Kind: TokenKind kind, RealValue: var realVal } && Enum.TryParse<AtomKind>(kind.ToString(), out var atomKind))
+            else if (Tok is Token { Kind: TokenKind kind, ParsedValue: var realVal } && Enum.TryParse<AtomKind>(kind.ToString(), out var atomKind))
             {
                 idx++;
                 return new AtomExpression(atomKind, realVal);
@@ -159,7 +159,7 @@ namespace SolisCore.Parser
 
         private (Token token, OperatorKind kind, Precendence prec, bool rightAssociative)? TryParseOperator()
         {
-            if (Tok is Token { Value: string opStr })
+            if (Tok is Token { SourceValue: string opStr })
             {
                 // TODO: There is a better way of writing this.
                 var maybeOp = opStr switch
@@ -194,7 +194,7 @@ namespace SolisCore.Parser
 
         private (Token token, OperatorKind kind, Precendence prec)? TryParseUnaryOperator()
         {
-            if (Tok is Token { Value: string opStr })
+            if (Tok is Token { SourceValue: string opStr })
             {
                 // TODO: There is a better way of writing this.
                 var maybeOp = opStr switch

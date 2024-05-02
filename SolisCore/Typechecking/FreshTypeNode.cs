@@ -9,5 +9,10 @@
         /// File scoped "unique" id for this node
         /// </summary>
         public int Id { get; }
+
+        public FreshTypeNode(int id)
+        {
+            Id = id;
+        }
     }
 }

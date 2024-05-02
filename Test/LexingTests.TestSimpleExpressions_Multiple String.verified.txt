@@ -1,8 +1,8 @@
 ﻿[
   {
     Kind: ValueString,
-    Value: "Hello!",
-    RealValue: Hello!,
+    SourceValue: "Hello!",
+    ParsedValue: Hello!,
     Span: {
       ByteLength: 8,
       Serialized: Multiple String(0:8) at Line 1:1
@@ -10,8 +10,8 @@
   },
   {
     Kind: ValueString,
-    Value: "World",
-    RealValue: World,
+    SourceValue: "World",
+    ParsedValue: World,
     Span: {
       ByteOffset: 8,
       ByteLength: 7,

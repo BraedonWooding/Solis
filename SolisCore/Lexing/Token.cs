@@ -6,32 +6,32 @@ namespace SolisCore.Lexing
     public readonly struct Token : IEquatable<Token>
     {
         public readonly TokenKind Kind;
-        public readonly string Value;
-        // Stores the actual raw value in the file i.e. "0xff" (Value) vs 16 (RealValue)
+        public readonly string SourceValue;
+        // Stores the actual raw value in the file i.e. "0xff" (Value) vs 16 (ParsedValue)
         // for most characters this is null.
-        public readonly object? RealValue;
+        public readonly object? ParsedValue;
         public readonly FileSpan Span;
 
         public Token(TokenKind kind, FileSpan span)
         {
             Kind = kind;
-            Value = kind.ToString().ToLower();
-            RealValue = null;
+            SourceValue = kind.ToString().ToLower();
+            ParsedValue = null;
             Span = span;
         }
 
         public Token(TokenKind kind, string value, object? realValue, FileSpan span)
         {
             Kind = kind;
-            Value = value;
-            RealValue = realValue;
+            SourceValue = value;
+            ParsedValue = realValue;
             Span = span;
         }
 
         public override string ToString()
         {
             // TODO: There is a better way then just checking bytelength == 0
-            return $"Token({Kind}: {Value}){(Span.ByteLength == 0 ? Span.ToString() : "")}";
+            return $"Token({Kind}: {SourceValue}){(Span.ByteLength == 0 ? Span.ToString() : "")}";
         }
 
         public static Token Punctuation(string symbol)
@@ -67,12 +67,12 @@ namespace SolisCore.Lexing
         public bool Equals(Token other)
         {
             return Kind == other.Kind &&
-                   Value == other.Value;
+                   SourceValue == other.SourceValue;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Kind, Value);
+            return HashCode.Combine(Kind, SourceValue);
         }
 
         public static bool operator ==(Token left, Token right)

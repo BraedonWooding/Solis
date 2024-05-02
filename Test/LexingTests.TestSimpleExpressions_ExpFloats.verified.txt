@@ -1,8 +1,8 @@
 ﻿[
   {
     Kind: ValueFloat,
-    Value: 1e10,
-    RealValue: 1E+10,
+    SourceValue: 1e10,
+    ParsedValue: 1E+10,
     Span: {
       ByteLength: 4,
       Serialized: ExpFloats(0:4) at Line 1:1
@@ -10,8 +10,8 @@
   },
   {
     Kind: ValueFloat,
-    Value: .1e24,
-    RealValue: 1E+23,
+    SourceValue: .1e24,
+    ParsedValue: 1E+23,
     Span: {
       ByteOffset: 5,
       ByteLength: 5,
@@ -20,8 +20,8 @@
   },
   {
     Kind: ValueFloat,
-    Value: 9.8e5,
-    RealValue: 980000.0,
+    SourceValue: 9.8e5,
+    ParsedValue: 980000.0,
     Span: {
       ByteOffset: 11,
       ByteLength: 5,

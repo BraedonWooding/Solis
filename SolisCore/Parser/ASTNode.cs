@@ -7,7 +7,13 @@ namespace SolisCore.Parser
 {
     public class ASTNode
     {
-        public string Type => GetType().Name;
+        public string AstKind => GetType().Name;
+        public TypeAst? TypeAnnotation { get; set; }
+
+        public ASTNode(TypeAst? typeAnnotation = null)
+        {
+            TypeAnnotation = typeAnnotation;
+        }
     }
 
     public class StatementBody : ASTNode
@@ -19,15 +25,14 @@ namespace SolisCore.Parser
     {
         public bool IsConst { get; }
         public Token Identifier { get; }
-        public TypeAst? Type { get; }
-        public string IdentifierValue => Identifier.Value;
+
+        public string IdentifierValue => Identifier.SourceValue;
         public ASTNode? Expression { get; }
 
-        public VariableDeclaration(bool isConst, Token identifier, TypeAst? type, ASTNode? expression = null)
+        public VariableDeclaration(bool isConst, Token identifier, TypeAst? type, ASTNode? expression = null) : base(type)
         {
             IsConst = isConst;
             Identifier = identifier;
-            Type = type;
             Expression = expression;
         }
     }
@@ -168,14 +173,13 @@ namespace SolisCore.Parser
     public class FunctionArg : ASTNode
     {
         public Token Name { get; }
-        public TypeAst? Type { get; }
 
-        public FunctionArg(Token name, TypeAst? type)
+        public FunctionArg(Token name, TypeAst? type) : base(type)
         {
             Name = name;
-            Type = type;
         }
     }
+
     public class ReturnExpression : ASTNode
     {
         public Expression Value;

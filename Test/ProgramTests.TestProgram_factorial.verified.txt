@@ -17,7 +17,7 @@ console.printline(fact(15)),
   tokens: [
     {
       Kind: Fn,
-      Value: fn,
+      SourceValue: fn,
       Span: {
         ByteLength: 2,
         Serialized: Samples/factorial.sol(0:2) at Line 1:1
@@ -25,7 +25,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: fact,
+      SourceValue: fact,
       Span: {
         ByteOffset: 3,
         ByteLength: 4,
@@ -34,7 +34,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: (,
+      SourceValue: (,
       Span: {
         ByteOffset: 7,
         ByteLength: 1,
@@ -43,7 +43,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: n,
+      SourceValue: n,
       Span: {
         ByteOffset: 8,
         ByteLength: 1,
@@ -52,7 +52,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: ),
+      SourceValue: ),
       Span: {
         ByteOffset: 9,
         ByteLength: 1,
@@ -61,7 +61,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: {,
+      SourceValue: {,
       Span: {
         ByteOffset: 11,
         ByteLength: 1,
@@ -70,7 +70,7 @@ console.printline(fact(15)),
     },
     {
       Kind: If,
-      Value: if,
+      SourceValue: if,
       Span: {
         ByteOffset: 18,
         ByteLength: 2,
@@ -79,7 +79,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: n,
+      SourceValue: n,
       Span: {
         ByteOffset: 21,
         ByteLength: 1,
@@ -88,7 +88,7 @@ console.printline(fact(15)),
     },
     {
       Kind: ComparatorSymbol,
-      Value: ==,
+      SourceValue: ==,
       Span: {
         ByteOffset: 23,
         ByteLength: 2,
@@ -97,8 +97,8 @@ console.printline(fact(15)),
     },
     {
       Kind: ValueInt,
-      Value: 0,
-      RealValue: 0,
+      SourceValue: 0,
+      ParsedValue: 0,
       Span: {
         ByteOffset: 26,
         ByteLength: 1,
@@ -107,7 +107,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: {,
+      SourceValue: {,
       Span: {
         ByteOffset: 28,
         ByteLength: 1,
@@ -116,7 +116,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Return,
-      Value: return,
+      SourceValue: return,
       Span: {
         ByteOffset: 39,
         ByteLength: 6,
@@ -125,8 +125,8 @@ console.printline(fact(15)),
     },
     {
       Kind: ValueInt,
-      Value: 1,
-      RealValue: 1,
+      SourceValue: 1,
+      ParsedValue: 1,
       Span: {
         ByteOffset: 46,
         ByteLength: 1,
@@ -135,7 +135,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: },
+      SourceValue: },
       Span: {
         ByteOffset: 53,
         ByteLength: 1,
@@ -144,7 +144,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Else,
-      Value: else,
+      SourceValue: else,
       Span: {
         ByteOffset: 55,
         ByteLength: 4,
@@ -153,7 +153,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: {,
+      SourceValue: {,
       Span: {
         ByteOffset: 60,
         ByteLength: 1,
@@ -162,7 +162,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Return,
-      Value: return,
+      SourceValue: return,
       Span: {
         ByteOffset: 71,
         ByteLength: 6,
@@ -171,7 +171,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: n,
+      SourceValue: n,
       Span: {
         ByteOffset: 78,
         ByteLength: 1,
@@ -180,7 +180,7 @@ console.printline(fact(15)),
     },
     {
       Kind: MathSymbol,
-      Value: *,
+      SourceValue: *,
       Span: {
         ByteOffset: 80,
         ByteLength: 1,
@@ -189,7 +189,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: fact,
+      SourceValue: fact,
       Span: {
         ByteOffset: 82,
         ByteLength: 4,
@@ -198,7 +198,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: (,
+      SourceValue: (,
       Span: {
         ByteOffset: 86,
         ByteLength: 1,
@@ -207,7 +207,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: n,
+      SourceValue: n,
       Span: {
         ByteOffset: 87,
         ByteLength: 1,
@@ -216,7 +216,7 @@ console.printline(fact(15)),
     },
     {
       Kind: MathSymbol,
-      Value: -,
+      SourceValue: -,
       Span: {
         ByteOffset: 89,
         ByteLength: 1,
@@ -225,8 +225,8 @@ console.printline(fact(15)),
     },
     {
       Kind: ValueInt,
-      Value: 1,
-      RealValue: 1,
+      SourceValue: 1,
+      ParsedValue: 1,
       Span: {
         ByteOffset: 91,
         ByteLength: 1,
@@ -235,7 +235,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: ),
+      SourceValue: ),
       Span: {
         ByteOffset: 92,
         ByteLength: 1,
@@ -244,7 +244,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: },
+      SourceValue: },
       Span: {
         ByteOffset: 99,
         ByteLength: 1,
@@ -253,7 +253,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: },
+      SourceValue: },
       Span: {
         ByteOffset: 102,
         ByteLength: 1,
@@ -262,7 +262,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Const,
-      Value: const,
+      SourceValue: const,
       Span: {
         ByteOffset: 107,
         ByteLength: 5,
@@ -271,7 +271,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: console,
+      SourceValue: console,
       Span: {
         ByteOffset: 113,
         ByteLength: 7,
@@ -280,7 +280,7 @@ console.printline(fact(15)),
     },
     {
       Kind: AssignmentSymbol,
-      Value: =,
+      SourceValue: =,
       Span: {
         ByteOffset: 121,
         ByteLength: 1,
@@ -289,7 +289,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: std,
+      SourceValue: std,
       Span: {
         ByteOffset: 123,
         ByteLength: 3,
@@ -298,7 +298,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: .,
+      SourceValue: .,
       Span: {
         ByteOffset: 126,
         ByteLength: 1,
@@ -307,7 +307,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: io,
+      SourceValue: io,
       Span: {
         ByteOffset: 127,
         ByteLength: 2,
@@ -316,7 +316,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: .,
+      SourceValue: .,
       Span: {
         ByteOffset: 129,
         ByteLength: 1,
@@ -325,7 +325,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: console,
+      SourceValue: console,
       Span: {
         ByteOffset: 130,
         ByteLength: 7,
@@ -334,7 +334,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: console,
+      SourceValue: console,
       Span: {
         ByteOffset: 139,
         ByteLength: 7,
@@ -343,7 +343,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: .,
+      SourceValue: .,
       Span: {
         ByteOffset: 146,
         ByteLength: 1,
@@ -352,7 +352,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: printline,
+      SourceValue: printline,
       Span: {
         ByteOffset: 147,
         ByteLength: 9,
@@ -361,7 +361,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: (,
+      SourceValue: (,
       Span: {
         ByteOffset: 156,
         ByteLength: 1,
@@ -370,7 +370,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: fact,
+      SourceValue: fact,
       Span: {
         ByteOffset: 157,
         ByteLength: 4,
@@ -379,7 +379,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: (,
+      SourceValue: (,
       Span: {
         ByteOffset: 161,
         ByteLength: 1,
@@ -388,8 +388,8 @@ console.printline(fact(15)),
     },
     {
       Kind: ValueInt,
-      Value: 0,
-      RealValue: 0,
+      SourceValue: 0,
+      ParsedValue: 0,
       Span: {
         ByteOffset: 162,
         ByteLength: 1,
@@ -398,7 +398,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: ),
+      SourceValue: ),
       Span: {
         ByteOffset: 163,
         ByteLength: 1,
@@ -407,7 +407,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: ),
+      SourceValue: ),
       Span: {
         ByteOffset: 164,
         ByteLength: 1,
@@ -416,7 +416,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: console,
+      SourceValue: console,
       Span: {
         ByteOffset: 167,
         ByteLength: 7,
@@ -425,7 +425,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: .,
+      SourceValue: .,
       Span: {
         ByteOffset: 174,
         ByteLength: 1,
@@ -434,7 +434,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: printline,
+      SourceValue: printline,
       Span: {
         ByteOffset: 175,
         ByteLength: 9,
@@ -443,7 +443,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: (,
+      SourceValue: (,
       Span: {
         ByteOffset: 184,
         ByteLength: 1,
@@ -452,7 +452,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: fact,
+      SourceValue: fact,
       Span: {
         ByteOffset: 185,
         ByteLength: 4,
@@ -461,7 +461,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: (,
+      SourceValue: (,
       Span: {
         ByteOffset: 189,
         ByteLength: 1,
@@ -470,8 +470,8 @@ console.printline(fact(15)),
     },
     {
       Kind: ValueInt,
-      Value: 1,
-      RealValue: 1,
+      SourceValue: 1,
+      ParsedValue: 1,
       Span: {
         ByteOffset: 190,
         ByteLength: 1,
@@ -480,7 +480,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: ),
+      SourceValue: ),
       Span: {
         ByteOffset: 191,
         ByteLength: 1,
@@ -489,7 +489,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: ),
+      SourceValue: ),
       Span: {
         ByteOffset: 192,
         ByteLength: 1,
@@ -498,7 +498,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: console,
+      SourceValue: console,
       Span: {
         ByteOffset: 195,
         ByteLength: 7,
@@ -507,7 +507,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: .,
+      SourceValue: .,
       Span: {
         ByteOffset: 202,
         ByteLength: 1,
@@ -516,7 +516,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: printline,
+      SourceValue: printline,
       Span: {
         ByteOffset: 203,
         ByteLength: 9,
@@ -525,7 +525,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: (,
+      SourceValue: (,
       Span: {
         ByteOffset: 212,
         ByteLength: 1,
@@ -534,7 +534,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: fact,
+      SourceValue: fact,
       Span: {
         ByteOffset: 213,
         ByteLength: 4,
@@ -543,7 +543,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: (,
+      SourceValue: (,
       Span: {
         ByteOffset: 217,
         ByteLength: 1,
@@ -552,8 +552,8 @@ console.printline(fact(15)),
     },
     {
       Kind: ValueInt,
-      Value: 5,
-      RealValue: 5,
+      SourceValue: 5,
+      ParsedValue: 5,
       Span: {
         ByteOffset: 218,
         ByteLength: 1,
@@ -562,7 +562,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: ),
+      SourceValue: ),
       Span: {
         ByteOffset: 219,
         ByteLength: 1,
@@ -571,7 +571,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: ),
+      SourceValue: ),
       Span: {
         ByteOffset: 220,
         ByteLength: 1,
@@ -580,7 +580,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: console,
+      SourceValue: console,
       Span: {
         ByteOffset: 223,
         ByteLength: 7,
@@ -589,7 +589,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: .,
+      SourceValue: .,
       Span: {
         ByteOffset: 230,
         ByteLength: 1,
@@ -598,7 +598,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: printline,
+      SourceValue: printline,
       Span: {
         ByteOffset: 231,
         ByteLength: 9,
@@ -607,7 +607,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: (,
+      SourceValue: (,
       Span: {
         ByteOffset: 240,
         ByteLength: 1,
@@ -616,7 +616,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: fact,
+      SourceValue: fact,
       Span: {
         ByteOffset: 241,
         ByteLength: 4,
@@ -625,7 +625,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: (,
+      SourceValue: (,
       Span: {
         ByteOffset: 245,
         ByteLength: 1,
@@ -634,8 +634,8 @@ console.printline(fact(15)),
     },
     {
       Kind: ValueInt,
-      Value: 10,
-      RealValue: 10,
+      SourceValue: 10,
+      ParsedValue: 10,
       Span: {
         ByteOffset: 246,
         ByteLength: 2,
@@ -644,7 +644,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: ),
+      SourceValue: ),
       Span: {
         ByteOffset: 248,
         ByteLength: 1,
@@ -653,7 +653,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: ),
+      SourceValue: ),
       Span: {
         ByteOffset: 249,
         ByteLength: 1,
@@ -662,7 +662,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: console,
+      SourceValue: console,
       Span: {
         ByteOffset: 252,
         ByteLength: 7,
@@ -671,7 +671,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: .,
+      SourceValue: .,
       Span: {
         ByteOffset: 259,
         ByteLength: 1,
@@ -680,7 +680,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: printline,
+      SourceValue: printline,
       Span: {
         ByteOffset: 260,
         ByteLength: 9,
@@ -689,7 +689,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: (,
+      SourceValue: (,
       Span: {
         ByteOffset: 269,
         ByteLength: 1,
@@ -698,7 +698,7 @@ console.printline(fact(15)),
     },
     {
       Kind: Identifier,
-      Value: fact,
+      SourceValue: fact,
       Span: {
         ByteOffset: 270,
         ByteLength: 4,
@@ -707,7 +707,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: (,
+      SourceValue: (,
       Span: {
         ByteOffset: 274,
         ByteLength: 1,
@@ -716,8 +716,8 @@ console.printline(fact(15)),
     },
     {
       Kind: ValueInt,
-      Value: 15,
-      RealValue: 15,
+      SourceValue: 15,
+      ParsedValue: 15,
       Span: {
         ByteOffset: 275,
         ByteLength: 2,
@@ -726,7 +726,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: ),
+      SourceValue: ),
       Span: {
         ByteOffset: 277,
         ByteLength: 1,
@@ -735,7 +735,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      Value: ),
+      SourceValue: ),
       Span: {
         ByteOffset: 278,
         ByteLength: 1,
@@ -750,18 +750,19 @@ console.printline(fact(15)),
           {
             Name: {
               Kind: Identifier,
-              Value: n,
+              SourceValue: n,
               Span: {
                 ByteOffset: 8,
                 ByteLength: 1,
                 Serialized: Samples/factorial.sol(8:9) at Line 1:9
               }
-            }
+            },
+            AstKind: FunctionArg
           }
         ],
         Identifier: {
           Kind: Identifier,
-          Value: fact,
+          SourceValue: fact,
           Span: {
             ByteOffset: 3,
             ByteLength: 4,
@@ -775,14 +776,14 @@ console.printline(fact(15)),
                 Kind: Equal,
                 Target: {
                   Value: n,
-                  Type: AtomExpression
+                  AstKind: AtomExpression
                 },
                 Arg: {
                   Kind: ValueInt,
                   Value: 0,
-                  Type: AtomExpression
+                  AstKind: AtomExpression
                 },
-                Type: BinaryOperatorExpression
+                AstKind: BinaryOperatorExpression
               },
               Body: {
                 Statements: [
@@ -790,12 +791,12 @@ console.printline(fact(15)),
                     Value: {
                       Kind: ValueInt,
                       Value: 1,
-                      Type: AtomExpression
+                      AstKind: AtomExpression
                     },
-                    Type: ReturnExpression
+                    AstKind: ReturnExpression
                   }
                 ],
-                Type: StatementBody
+                AstKind: StatementBody
               },
               ElseIf: [],
               Else: {
@@ -805,51 +806,51 @@ console.printline(fact(15)),
                       Kind: BinaryMultiply,
                       Target: {
                         Value: n,
-                        Type: AtomExpression
+                        AstKind: AtomExpression
                       },
                       Arg: {
                         Target: {
                           Value: fact,
-                          Type: AtomExpression
+                          AstKind: AtomExpression
                         },
                         Args: [
                           {
                             Kind: BinaryMinus,
                             Target: {
                               Value: n,
-                              Type: AtomExpression
+                              AstKind: AtomExpression
                             },
                             Arg: {
                               Kind: ValueInt,
                               Value: 1,
-                              Type: AtomExpression
+                              AstKind: AtomExpression
                             },
-                            Type: BinaryOperatorExpression
+                            AstKind: BinaryOperatorExpression
                           }
                         ],
-                        Type: CallOperatorExpression
+                        AstKind: CallOperatorExpression
                       },
-                      Type: BinaryOperatorExpression
+                      AstKind: BinaryOperatorExpression
                     },
-                    Type: ReturnExpression
+                    AstKind: ReturnExpression
                   }
                 ],
-                Type: StatementBody
+                AstKind: StatementBody
               },
               Kind: If,
-              Type: IfExpression
+              AstKind: IfExpression
             }
           ],
-          Type: StatementBody
+          AstKind: StatementBody
         },
         Kind: Function,
-        Type: FunctionDeclaration
+        AstKind: FunctionDeclaration
       },
       {
         IsConst: true,
         Identifier: {
           Kind: Identifier,
-          Value: console,
+          SourceValue: console,
           Span: {
             ByteOffset: 113,
             ByteLength: 7,
@@ -861,188 +862,189 @@ console.printline(fact(15)),
           Kind: Member,
           Target: {
             Value: std,
-            Type: AtomExpression
+            AstKind: AtomExpression
           },
           Path: [
             {
               Value: io,
-              Type: AtomExpression
+              AstKind: AtomExpression
             },
             {
               Value: console,
-              Type: AtomExpression
+              AstKind: AtomExpression
             }
           ],
-          Type: MemberOperatorExpression
-        }
+          AstKind: MemberOperatorExpression
+        },
+        AstKind: VariableDeclaration
       },
       {
         Target: {
           Kind: Member,
           Target: {
             Value: console,
-            Type: AtomExpression
+            AstKind: AtomExpression
           },
           Path: [
             {
               Value: printline,
-              Type: AtomExpression
+              AstKind: AtomExpression
             }
           ],
-          Type: MemberOperatorExpression
+          AstKind: MemberOperatorExpression
         },
         Args: [
           {
             Target: {
               Value: fact,
-              Type: AtomExpression
+              AstKind: AtomExpression
             },
             Args: [
               {
                 Kind: ValueInt,
                 Value: 0,
-                Type: AtomExpression
+                AstKind: AtomExpression
               }
             ],
-            Type: CallOperatorExpression
+            AstKind: CallOperatorExpression
           }
         ],
-        Type: CallOperatorExpression
+        AstKind: CallOperatorExpression
       },
       {
         Target: {
           Kind: Member,
           Target: {
             Value: console,
-            Type: AtomExpression
+            AstKind: AtomExpression
           },
           Path: [
             {
               Value: printline,
-              Type: AtomExpression
+              AstKind: AtomExpression
             }
           ],
-          Type: MemberOperatorExpression
+          AstKind: MemberOperatorExpression
         },
         Args: [
           {
             Target: {
               Value: fact,
-              Type: AtomExpression
+              AstKind: AtomExpression
             },
             Args: [
               {
                 Kind: ValueInt,
                 Value: 1,
-                Type: AtomExpression
+                AstKind: AtomExpression
               }
             ],
-            Type: CallOperatorExpression
+            AstKind: CallOperatorExpression
           }
         ],
-        Type: CallOperatorExpression
+        AstKind: CallOperatorExpression
       },
       {
         Target: {
           Kind: Member,
           Target: {
             Value: console,
-            Type: AtomExpression
+            AstKind: AtomExpression
           },
           Path: [
             {
               Value: printline,
-              Type: AtomExpression
+              AstKind: AtomExpression
             }
           ],
-          Type: MemberOperatorExpression
+          AstKind: MemberOperatorExpression
         },
         Args: [
           {
             Target: {
               Value: fact,
-              Type: AtomExpression
+              AstKind: AtomExpression
             },
             Args: [
               {
                 Kind: ValueInt,
                 Value: 5,
-                Type: AtomExpression
+                AstKind: AtomExpression
               }
             ],
-            Type: CallOperatorExpression
+            AstKind: CallOperatorExpression
           }
         ],
-        Type: CallOperatorExpression
+        AstKind: CallOperatorExpression
       },
       {
         Target: {
           Kind: Member,
           Target: {
             Value: console,
-            Type: AtomExpression
+            AstKind: AtomExpression
           },
           Path: [
             {
               Value: printline,
-              Type: AtomExpression
+              AstKind: AtomExpression
             }
           ],
-          Type: MemberOperatorExpression
+          AstKind: MemberOperatorExpression
         },
         Args: [
           {
             Target: {
               Value: fact,
-              Type: AtomExpression
+              AstKind: AtomExpression
             },
             Args: [
               {
                 Kind: ValueInt,
                 Value: 10,
-                Type: AtomExpression
+                AstKind: AtomExpression
               }
             ],
-            Type: CallOperatorExpression
+            AstKind: CallOperatorExpression
           }
         ],
-        Type: CallOperatorExpression
+        AstKind: CallOperatorExpression
       },
       {
         Target: {
           Kind: Member,
           Target: {
             Value: console,
-            Type: AtomExpression
+            AstKind: AtomExpression
           },
           Path: [
             {
               Value: printline,
-              Type: AtomExpression
+              AstKind: AtomExpression
             }
           ],
-          Type: MemberOperatorExpression
+          AstKind: MemberOperatorExpression
         },
         Args: [
           {
             Target: {
               Value: fact,
-              Type: AtomExpression
+              AstKind: AtomExpression
             },
             Args: [
               {
                 Kind: ValueInt,
                 Value: 15,
-                Type: AtomExpression
+                AstKind: AtomExpression
               }
             ],
-            Type: CallOperatorExpression
+            AstKind: CallOperatorExpression
           }
         ],
-        Type: CallOperatorExpression
+        AstKind: CallOperatorExpression
       }
     ],
-    Type: StatementBody
+    AstKind: StatementBody
   },
   consoleLogs: [
     1,

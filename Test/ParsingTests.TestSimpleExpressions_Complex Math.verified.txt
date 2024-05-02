@@ -4,7 +4,7 @@
       IsConst: true,
       Identifier: {
         Kind: Identifier,
-        Value: x,
+        SourceValue: x,
         Span: {
           ByteOffset: 6,
           ByteLength: 1,
@@ -16,7 +16,7 @@
         Kind: BinaryPlus,
         Target: {
           Value: a,
-          Type: AtomExpression
+          AstKind: AtomExpression
         },
         Arg: {
           Kind: BinaryPlus,
@@ -24,34 +24,35 @@
             Kind: BinaryMultiply,
             Target: {
               Value: b,
-              Type: AtomExpression
+              AstKind: AtomExpression
             },
             Arg: {
               Kind: ValueInt,
               Value: 2,
-              Type: AtomExpression
+              AstKind: AtomExpression
             },
-            Type: BinaryOperatorExpression
+            AstKind: BinaryOperatorExpression
           },
           Arg: {
             Kind: BinaryDivide,
             Target: {
               Kind: ValueInt,
               Value: 4,
-              Type: AtomExpression
+              AstKind: AtomExpression
             },
             Arg: {
               Kind: ValueInt,
               Value: 9,
-              Type: AtomExpression
+              AstKind: AtomExpression
             },
-            Type: BinaryOperatorExpression
+            AstKind: BinaryOperatorExpression
           },
-          Type: BinaryOperatorExpression
+          AstKind: BinaryOperatorExpression
         },
-        Type: BinaryOperatorExpression
-      }
+        AstKind: BinaryOperatorExpression
+      },
+      AstKind: VariableDeclaration
     }
   ],
-  Type: StatementBody
+  AstKind: StatementBody
 }

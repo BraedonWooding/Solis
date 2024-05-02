@@ -4,7 +4,7 @@
       IsConst: true,
       Identifier: {
         Kind: Identifier,
-        Value: x,
+        SourceValue: x,
         Span: {
           ByteOffset: 6,
           ByteLength: 1,
@@ -17,17 +17,18 @@
           {
             Name: {
               Kind: Identifier,
-              Value: a,
+              SourceValue: a,
               Span: {
                 ByteOffset: 13,
                 ByteLength: 1,
                 Serialized: Anonymous Function Variable(13:14) at Line 1:14
               }
             },
-            Type: {
+            AstKind: FunctionArg,
+            TypeAnnotation: {
               Identifier: {
                 Kind: Identifier,
-                Value: int,
+                SourceValue: int,
                 Span: {
                   ByteOffset: 16,
                   ByteLength: 3,
@@ -35,23 +36,24 @@
                 }
               },
               GenericTypes: [],
-              Type: TypeAst
+              AstKind: TypeAst
             }
           },
           {
             Name: {
               Kind: Identifier,
-              Value: b,
+              SourceValue: b,
               Span: {
                 ByteOffset: 21,
                 ByteLength: 1,
                 Serialized: Anonymous Function Variable(21:22) at Line 1:22
               }
             },
-            Type: {
+            AstKind: FunctionArg,
+            TypeAnnotation: {
               Identifier: {
                 Kind: Identifier,
-                Value: int,
+                SourceValue: int,
                 Span: {
                   ByteOffset: 24,
                   ByteLength: 3,
@@ -59,18 +61,19 @@
                 }
               },
               GenericTypes: [],
-              Type: TypeAst
+              AstKind: TypeAst
             }
           }
         ],
         Body: {
           Statements: [],
-          Type: StatementBody
+          AstKind: StatementBody
         },
         Kind: Function,
-        Type: FunctionDeclaration
-      }
+        AstKind: FunctionDeclaration
+      },
+      AstKind: VariableDeclaration
     }
   ],
-  Type: StatementBody
+  AstKind: StatementBody
 }

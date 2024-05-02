@@ -1,4 +1,5 @@
 ﻿using SolisCore.Executors;
+using SolisCore.Lexing;
 using System.Collections.Generic;
 
 namespace SolisCore.Typechecking
@@ -8,13 +9,13 @@ namespace SolisCore.Typechecking
     /// </summary>
     public class VariableTypeNode : TypeNode
     {
-        public VariableTypeNode(IdentifierValue identifier, List<TypeNode> genericArgs)
+        public VariableTypeNode(Token identifier, List<TypeNode> genericArgs)
         {
             Identifier = identifier;
             GenericArgs = genericArgs;
         }
 
-        public IdentifierValue Identifier { get; }
+        public Token Identifier { get; }
         public List<TypeNode> GenericArgs { get; }
     }
 }

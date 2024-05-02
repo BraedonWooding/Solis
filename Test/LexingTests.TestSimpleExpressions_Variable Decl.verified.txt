@@ -1,7 +1,7 @@
 ﻿[
   {
     Kind: Var,
-    Value: var,
+    SourceValue: var,
     Span: {
       ByteLength: 3,
       Serialized: Variable Decl(0:3) at Line 1:1
@@ -9,7 +9,7 @@
   },
   {
     Kind: Identifier,
-    Value: x,
+    SourceValue: x,
     Span: {
       ByteOffset: 4,
       ByteLength: 1,
@@ -18,7 +18,7 @@
   },
   {
     Kind: AssignmentSymbol,
-    Value: =,
+    SourceValue: =,
     Span: {
       ByteOffset: 6,
       ByteLength: 1,
@@ -27,8 +27,8 @@
   },
   {
     Kind: ValueInt,
-    Value: 2,
-    RealValue: 2,
+    SourceValue: 2,
+    ParsedValue: 2,
     Span: {
       ByteOffset: 8,
       ByteLength: 1,
@@ -37,7 +37,7 @@
   },
   {
     Kind: Const,
-    Value: const,
+    SourceValue: const,
     Span: {
       ByteOffset: 10,
       ByteLength: 5,
@@ -46,7 +46,7 @@
   },
   {
     Kind: Identifier,
-    Value: x,
+    SourceValue: x,
     Span: {
       ByteOffset: 16,
       ByteLength: 1,
@@ -55,7 +55,7 @@
   },
   {
     Kind: AssignmentSymbol,
-    Value: =,
+    SourceValue: =,
     Span: {
       ByteOffset: 18,
       ByteLength: 1,
@@ -64,8 +64,8 @@
   },
   {
     Kind: ValueInt,
-    Value: 3,
-    RealValue: 3,
+    SourceValue: 3,
+    ParsedValue: 3,
     Span: {
       ByteOffset: 20,
       ByteLength: 1,

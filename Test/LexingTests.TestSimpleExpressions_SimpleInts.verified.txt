@@ -1,8 +1,8 @@
 ﻿[
   {
     Kind: ValueInt,
-    Value: 1,
-    RealValue: 1,
+    SourceValue: 1,
+    ParsedValue: 1,
     Span: {
       ByteLength: 1,
       Serialized: SimpleInts(0:1) at Line 1:1
@@ -10,8 +10,8 @@
   },
   {
     Kind: ValueInt,
-    Value: 2,
-    RealValue: 2,
+    SourceValue: 2,
+    ParsedValue: 2,
     Span: {
       ByteOffset: 2,
       ByteLength: 1,
@@ -20,8 +20,8 @@
   },
   {
     Kind: ValueInt,
-    Value: 3,
-    RealValue: 3,
+    SourceValue: 3,
+    ParsedValue: 3,
     Span: {
       ByteOffset: 4,
       ByteLength: 1,
@@ -30,8 +30,8 @@
   },
   {
     Kind: ValueInt,
-    Value: 4,
-    RealValue: 4,
+    SourceValue: 4,
+    ParsedValue: 4,
     Span: {
       ByteOffset: 6,
       ByteLength: 1,
@@ -40,8 +40,8 @@
   },
   {
     Kind: ValueInt,
-    Value: 5,
-    RealValue: 5,
+    SourceValue: 5,
+    ParsedValue: 5,
     Span: {
       ByteOffset: 8,
       ByteLength: 1,
@@ -50,8 +50,8 @@
   },
   {
     Kind: ValueInt,
-    Value: 6,
-    RealValue: 6,
+    SourceValue: 6,
+    ParsedValue: 6,
     Span: {
       ByteOffset: 10,
       ByteLength: 1,
@@ -60,8 +60,8 @@
   },
   {
     Kind: ValueInt,
-    Value: 7,
-    RealValue: 7,
+    SourceValue: 7,
+    ParsedValue: 7,
     Span: {
       ByteOffset: 12,
       ByteLength: 1,
@@ -70,8 +70,8 @@
   },
   {
     Kind: ValueInt,
-    Value: 8,
-    RealValue: 8,
+    SourceValue: 8,
+    ParsedValue: 8,
     Span: {
       ByteOffset: 14,
       ByteLength: 1,
@@ -80,8 +80,8 @@
   },
   {
     Kind: ValueInt,
-    Value: 9,
-    RealValue: 9,
+    SourceValue: 9,
+    ParsedValue: 9,
     Span: {
       ByteOffset: 16,
       ByteLength: 1,
@@ -90,8 +90,8 @@
   },
   {
     Kind: ValueInt,
-    Value: 0,
-    RealValue: 0,
+    SourceValue: 0,
+    ParsedValue: 0,
     Span: {
       ByteOffset: 18,
       ByteLength: 1,

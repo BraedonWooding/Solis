@@ -1,7 +1,7 @@
 ﻿[
   {
     Kind: Identifier,
-    Value: Hello,
+    SourceValue: Hello,
     Span: {
       ByteLength: 5,
       Serialized: Ident(0:5) at Line 1:1
@@ -9,7 +9,7 @@
   },
   {
     Kind: Identifier,
-    Value: _goodbyte,
+    SourceValue: _goodbyte,
     Span: {
       ByteOffset: 6,
       ByteLength: 9,
@@ -18,7 +18,7 @@
   },
   {
     Kind: Identifier,
-    Value: H_goodbye,
+    SourceValue: H_goodbye,
     Span: {
       ByteOffset: 16,
       ByteLength: 9,
@@ -27,7 +27,7 @@
   },
   {
     Kind: Identifier,
-    Value: h123_2323dfsdsfdsf,
+    SourceValue: h123_2323dfsdsfdsf,
     Span: {
       ByteOffset: 26,
       ByteLength: 18,
@@ -36,7 +36,7 @@
   },
   {
     Kind: Identifier,
-    Value: _,
+    SourceValue: _,
     Span: {
       ByteOffset: 45,
       ByteLength: 1,
@@ -45,7 +45,7 @@
   },
   {
     Kind: Identifier,
-    Value: h,
+    SourceValue: h,
     Span: {
       ByteOffset: 47,
       ByteLength: 1,
@@ -54,7 +54,7 @@
   },
   {
     Kind: Identifier,
-    Value: _1,
+    SourceValue: _1,
     Span: {
       ByteOffset: 49,
       ByteLength: 2,

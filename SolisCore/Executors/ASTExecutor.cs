@@ -32,9 +32,9 @@ namespace SolisCore.Executors
             }
             for (int i = 0; i < args.Length; i++)
             {
-                variables[decl.Args[i].Name.Value] = args[i];
+                variables[decl.Args[i].Name.SourceValue] = args[i];
             }
-            Scope.Current.Push((decl.Identifier?.Value ?? "Anonymous", variables));
+            Scope.Current.Push((decl.Identifier?.SourceValue ?? "Anonymous", variables));
             var result = ExecuteStatementBody(decl.Body);
             var scope = Scope.Current.Pop();
             // todo; validation of scope name
@@ -168,7 +168,7 @@ namespace SolisCore.Executors
                 }
                 else if (statement is FunctionDeclaration decl)
                 {
-                    Scope.GlobalVariables.Add(decl.Identifier?.Value ?? "Anonymous", decl);
+                    Scope.GlobalVariables.Add(decl.Identifier?.SourceValue ?? "Anonymous", decl);
                 }
                 else if (statement is Expression expr)
                 {

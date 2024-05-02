@@ -4,7 +4,7 @@
       IsConst: true,
       Identifier: {
         Kind: Identifier,
-        Value: x,
+        SourceValue: x,
         Span: {
           ByteOffset: 6,
           ByteLength: 1,
@@ -17,34 +17,37 @@
           {
             Name: {
               Kind: Identifier,
-              Value: a,
+              SourceValue: a,
               Span: {
                 ByteOffset: 13,
                 ByteLength: 1,
                 Serialized: Anonymous Function Variable(13:14) at Line 1:14
               }
-            }
+            },
+            AstKind: FunctionArg
           },
           {
             Name: {
               Kind: Identifier,
-              Value: b,
+              SourceValue: b,
               Span: {
                 ByteOffset: 16,
                 ByteLength: 1,
                 Serialized: Anonymous Function Variable(16:17) at Line 1:17
               }
-            }
+            },
+            AstKind: FunctionArg
           }
         ],
         Body: {
           Statements: [],
-          Type: StatementBody
+          AstKind: StatementBody
         },
         Kind: Function,
-        Type: FunctionDeclaration
-      }
+        AstKind: FunctionDeclaration
+      },
+      AstKind: VariableDeclaration
     }
   ],
-  Type: StatementBody
+  AstKind: StatementBody
 }

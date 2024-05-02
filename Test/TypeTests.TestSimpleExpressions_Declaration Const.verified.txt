@@ -4,17 +4,19 @@
       IsConst: true,
       Identifier: {
         Kind: Identifier,
-        Value: y,
+        SourceValue: y,
         Span: {
           ByteOffset: 6,
           ByteLength: 1,
           Serialized: Declaration Const(6:7) at Line 1:7
         }
       },
-      Type: {
+      IdentifierValue: y,
+      AstKind: VariableDeclaration,
+      TypeAnnotation: {
         Identifier: {
           Kind: Identifier,
-          Value: int,
+          SourceValue: int,
           Span: {
             ByteOffset: 9,
             ByteLength: 3,
@@ -22,10 +24,9 @@
           }
         },
         GenericTypes: [],
-        Type: TypeAst
-      },
-      IdentifierValue: y
+        AstKind: TypeAst
+      }
     }
   ],
-  Type: StatementBody
+  AstKind: StatementBody
 }

@@ -4,7 +4,7 @@
       Args: [],
       Identifier: {
         Kind: Identifier,
-        Value: Foo,
+        SourceValue: Foo,
         Span: {
           ByteOffset: 3,
           ByteLength: 3,
@@ -13,11 +13,11 @@
       },
       Body: {
         Statements: [],
-        Type: StatementBody
+        AstKind: StatementBody
       },
       Kind: Function,
-      Type: FunctionDeclaration
+      AstKind: FunctionDeclaration
     }
   ],
-  Type: StatementBody
+  AstKind: StatementBody
 }

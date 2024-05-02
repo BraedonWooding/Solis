@@ -3,17 +3,19 @@
     {
       Identifier: {
         Kind: Identifier,
-        Value: x,
+        SourceValue: x,
         Span: {
           ByteOffset: 4,
           ByteLength: 1,
           Serialized: Declaration Var(4:5) at Line 1:5
         }
       },
-      Type: {
+      IdentifierValue: x,
+      AstKind: VariableDeclaration,
+      TypeAnnotation: {
         Identifier: {
           Kind: Identifier,
-          Value: int,
+          SourceValue: int,
           Span: {
             ByteOffset: 7,
             ByteLength: 3,
@@ -21,10 +23,9 @@
           }
         },
         GenericTypes: [],
-        Type: TypeAst
-      },
-      IdentifierValue: x
+        AstKind: TypeAst
+      }
     }
   ],
-  Type: StatementBody
+  AstKind: StatementBody
 }

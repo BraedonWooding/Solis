@@ -4,7 +4,7 @@
       IsConst: true,
       Identifier: {
         Kind: Identifier,
-        Value: x,
+        SourceValue: x,
         Span: {
           ByteOffset: 20,
           ByteLength: 1,
@@ -17,16 +17,17 @@
         Target: {
           Kind: ValueInt,
           Value: 2,
-          Type: AtomExpression
+          AstKind: AtomExpression
         },
-        Type: UnaryOperatorExpression
-      }
+        AstKind: UnaryOperatorExpression
+      },
+      AstKind: VariableDeclaration
     },
     {
       IsConst: true,
       Identifier: {
         Kind: Identifier,
-        Value: y,
+        SourceValue: y,
         Span: {
           ByteOffset: 46,
           ByteLength: 1,
@@ -41,23 +42,24 @@
           Target: {
             Kind: ValueInt,
             Value: 2,
-            Type: AtomExpression
+            AstKind: AtomExpression
           },
-          Type: UnaryOperatorExpression
+          AstKind: UnaryOperatorExpression
         },
         Arg: {
           Kind: ValueInt,
           Value: 3,
-          Type: AtomExpression
+          AstKind: AtomExpression
         },
-        Type: BinaryOperatorExpression
-      }
+        AstKind: BinaryOperatorExpression
+      },
+      AstKind: VariableDeclaration
     },
     {
       IsConst: true,
       Identifier: {
         Kind: Identifier,
-        Value: z,
+        SourceValue: z,
         Span: {
           ByteOffset: 76,
           ByteLength: 1,
@@ -72,9 +74,9 @@
           Target: {
             Kind: ValueInt,
             Value: 2,
-            Type: AtomExpression
+            AstKind: AtomExpression
           },
-          Type: UnaryOperatorExpression
+          AstKind: UnaryOperatorExpression
         },
         Arg: {
           Kind: UnaryMinus,
@@ -85,17 +87,18 @@
               Target: {
                 Kind: ValueInt,
                 Value: 3,
-                Type: AtomExpression
+                AstKind: AtomExpression
               },
-              Type: UnaryOperatorExpression
+              AstKind: UnaryOperatorExpression
             },
-            Type: UnaryOperatorExpression
+            AstKind: UnaryOperatorExpression
           },
-          Type: UnaryOperatorExpression
+          AstKind: UnaryOperatorExpression
         },
-        Type: BinaryOperatorExpression
-      }
+        AstKind: BinaryOperatorExpression
+      },
+      AstKind: VariableDeclaration
     }
   ],
-  Type: StatementBody
+  AstKind: StatementBody
 }

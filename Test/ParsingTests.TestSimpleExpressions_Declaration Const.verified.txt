@@ -4,15 +4,16 @@
       IsConst: true,
       Identifier: {
         Kind: Identifier,
-        Value: y,
+        SourceValue: y,
         Span: {
           ByteOffset: 6,
           ByteLength: 1,
           Serialized: Declaration Const(6:7) at Line 1:7
         }
       },
-      IdentifierValue: y
+      IdentifierValue: y,
+      AstKind: VariableDeclaration
     }
   ],
-  Type: StatementBody
+  AstKind: StatementBody
 }

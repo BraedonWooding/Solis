@@ -3,15 +3,16 @@
     {
       Identifier: {
         Kind: Identifier,
-        Value: x,
+        SourceValue: x,
         Span: {
           ByteOffset: 4,
           ByteLength: 1,
           Serialized: Declaration Var(4:5) at Line 1:5
         }
       },
-      IdentifierValue: x
+      IdentifierValue: x,
+      AstKind: VariableDeclaration
     }
   ],
-  Type: StatementBody
+  AstKind: StatementBody
 }

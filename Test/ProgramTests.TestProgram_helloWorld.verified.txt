@@ -5,7 +5,7 @@ console.printline("Hello World!!"),
   tokens: [
     {
       Kind: Const,
-      Value: const,
+      SourceValue: const,
       Span: {
         ByteLength: 5,
         Serialized: Samples/helloWorld.sol(0:5) at Line 1:1
@@ -13,7 +13,7 @@ console.printline("Hello World!!"),
     },
     {
       Kind: Identifier,
-      Value: console,
+      SourceValue: console,
       Span: {
         ByteOffset: 6,
         ByteLength: 7,
@@ -22,7 +22,7 @@ console.printline("Hello World!!"),
     },
     {
       Kind: AssignmentSymbol,
-      Value: =,
+      SourceValue: =,
       Span: {
         ByteOffset: 14,
         ByteLength: 1,
@@ -31,7 +31,7 @@ console.printline("Hello World!!"),
     },
     {
       Kind: Identifier,
-      Value: std,
+      SourceValue: std,
       Span: {
         ByteOffset: 16,
         ByteLength: 3,
@@ -40,7 +40,7 @@ console.printline("Hello World!!"),
     },
     {
       Kind: PunctuationSymbol,
-      Value: .,
+      SourceValue: .,
       Span: {
         ByteOffset: 19,
         ByteLength: 1,
@@ -49,7 +49,7 @@ console.printline("Hello World!!"),
     },
     {
       Kind: Identifier,
-      Value: io,
+      SourceValue: io,
       Span: {
         ByteOffset: 20,
         ByteLength: 2,
@@ -58,7 +58,7 @@ console.printline("Hello World!!"),
     },
     {
       Kind: PunctuationSymbol,
-      Value: .,
+      SourceValue: .,
       Span: {
         ByteOffset: 22,
         ByteLength: 1,
@@ -67,7 +67,7 @@ console.printline("Hello World!!"),
     },
     {
       Kind: Identifier,
-      Value: console,
+      SourceValue: console,
       Span: {
         ByteOffset: 23,
         ByteLength: 7,
@@ -76,7 +76,7 @@ console.printline("Hello World!!"),
     },
     {
       Kind: Identifier,
-      Value: console,
+      SourceValue: console,
       Span: {
         ByteOffset: 32,
         ByteLength: 7,
@@ -85,7 +85,7 @@ console.printline("Hello World!!"),
     },
     {
       Kind: PunctuationSymbol,
-      Value: .,
+      SourceValue: .,
       Span: {
         ByteOffset: 39,
         ByteLength: 1,
@@ -94,7 +94,7 @@ console.printline("Hello World!!"),
     },
     {
       Kind: Identifier,
-      Value: printline,
+      SourceValue: printline,
       Span: {
         ByteOffset: 40,
         ByteLength: 9,
@@ -103,7 +103,7 @@ console.printline("Hello World!!"),
     },
     {
       Kind: PunctuationSymbol,
-      Value: (,
+      SourceValue: (,
       Span: {
         ByteOffset: 49,
         ByteLength: 1,
@@ -112,8 +112,8 @@ console.printline("Hello World!!"),
     },
     {
       Kind: ValueString,
-      Value: "Hello World!!",
-      RealValue: Hello World!!,
+      SourceValue: "Hello World!!",
+      ParsedValue: Hello World!!,
       Span: {
         ByteOffset: 50,
         ByteLength: 15,
@@ -122,7 +122,7 @@ console.printline("Hello World!!"),
     },
     {
       Kind: PunctuationSymbol,
-      Value: ),
+      SourceValue: ),
       Span: {
         ByteOffset: 65,
         ByteLength: 1,
@@ -136,7 +136,7 @@ console.printline("Hello World!!"),
         IsConst: true,
         Identifier: {
           Kind: Identifier,
-          Value: console,
+          SourceValue: console,
           Span: {
             ByteOffset: 6,
             ByteLength: 7,
@@ -148,47 +148,48 @@ console.printline("Hello World!!"),
           Kind: Member,
           Target: {
             Value: std,
-            Type: AtomExpression
+            AstKind: AtomExpression
           },
           Path: [
             {
               Value: io,
-              Type: AtomExpression
+              AstKind: AtomExpression
             },
             {
               Value: console,
-              Type: AtomExpression
+              AstKind: AtomExpression
             }
           ],
-          Type: MemberOperatorExpression
-        }
+          AstKind: MemberOperatorExpression
+        },
+        AstKind: VariableDeclaration
       },
       {
         Target: {
           Kind: Member,
           Target: {
             Value: console,
-            Type: AtomExpression
+            AstKind: AtomExpression
           },
           Path: [
             {
               Value: printline,
-              Type: AtomExpression
+              AstKind: AtomExpression
             }
           ],
-          Type: MemberOperatorExpression
+          AstKind: MemberOperatorExpression
         },
         Args: [
           {
             Kind: ValueString,
             Value: Hello World!!,
-            Type: AtomExpression
+            AstKind: AtomExpression
           }
         ],
-        Type: CallOperatorExpression
+        AstKind: CallOperatorExpression
       }
     ],
-    Type: StatementBody
+    AstKind: StatementBody
   },
   consoleLogs: [
     Hello World!!
