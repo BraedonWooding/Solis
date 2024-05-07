@@ -34,6 +34,11 @@ namespace SolisCore.Lexing
             return $"Token({Kind}: {SourceValue}){(Span.ByteLength == 0 ? Span.ToString() : "")}";
         }
 
+        public static Token Identifier(string ident)
+        {
+            return new Token(TokenKind.Identifier, ident, null, new());
+        }
+
         public static Token Punctuation(string symbol)
         {
             return new Token(TokenKind.PunctuationSymbol, symbol, null, new FileSpan());

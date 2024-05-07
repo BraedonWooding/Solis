@@ -1,4 +1,6 @@
-﻿using SolisCore.Parser;
+﻿using Microsoft.CodeAnalysis;
+using SolisCore.Lexing;
+using SolisCore.Parser;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +18,7 @@ namespace SolisCore.Typechecking
         /// 
         /// This is a chainable lookup i.e. A -> B -> C -> int or something.
         /// </summary>
-        public List<TypeNode> FreshNodes { get; } = new();
+        public List<TypeAst> FreshNodes { get; } = new();
 
         public Stack<Scope> Scopes { get; } = new();
 
@@ -24,13 +26,21 @@ namespace SolisCore.Typechecking
 
         public TypeChecker() { }
 
-        public TypeNode ResolveType(TypeAst? ast)
+        public TypeAst ResolveFunctionType(FunctionDeclaration decl)
         {
-            TypeNode type;
+            // we map functions to a generic type that is `Fn[Tuple[...], Ret]`
+            var args = new TypeAst(Token.Identifier("Tuple"), decl.Args.Select(arg => ResolveType(arg.TypeAnnotation)).ToList());
+            var fnType = new TypeAst(Token.Identifier("Fn"), new() { args, ResolveType(decl.ReturnType) });
+            return fnType;
+        }
+
+        public TypeAst ResolveType(TypeAst? ast)
+        {
+            TypeAst type;
 
             if (ast == null)
             {
-                type = new FreshTypeNode(FreshNodes.Count);
+                type = new FreshTypeAst(FreshNodes.Count);
                 FreshNodes.Add(type);
             }
             else
@@ -52,7 +62,7 @@ namespace SolisCore.Typechecking
                 //               this allows arbitrary tuple packs for example Fn[Tuple[int, int], int] would be add(a: int, b: int): int
                 //               and can be written simpler as just Fn[(int, int), int]
 
-                type = new VariableTypeNode(ast.Identifier, ast.GenericTypes.Select(ResolveType).ToList());
+                type = new TypeAst(ast.Identifier, ast.GenericArgs.Select(ResolveType).ToList());
 
                 // first handle simple case
                 if (DefinedTypes.TryGetValue(ast.Identifier.SourceValue, out var definedType))
@@ -81,6 +91,14 @@ namespace SolisCore.Typechecking
 
             switch (expr)
             {
+                case ReturnExpression ret:
+                    {
+                        // find function scope
+                        var fnScope = (FunctionDeclaration?)Scopes.FirstOrDefault(s => s.Owner is FunctionDeclaration)?.Owner;
+
+
+                        break;
+                    }
                 case AtomExpression atom:
                     {
                         var type = atom.Kind switch
@@ -108,9 +126,9 @@ namespace SolisCore.Typechecking
             }
         }
 
-        public void TypeCheckDocument(StatementBody topLevel)
+        public void TypeCheckStatement(StatementBody topLevel, ASTNode? owner = null)
         {
-            Scopes.Push(new());
+            Scopes.Push(new(owner));
 
             foreach (var statement in topLevel.Statements)
             {
@@ -118,14 +136,19 @@ namespace SolisCore.Typechecking
                 {
                     case VariableDeclaration decl:
                         {
-                            Scopes.Peek().Types[decl.IdentifierValue] = ResolveType(decl.TypeAnnotation);
-                            // if we have a value
+                            Scopes.Peek().Types[decl.IdentifierValue] = decl.TypeAnnotation = ResolveType(decl.TypeAnnotation);
                             TypeCheckExpr(decl.Expression);
 
                             break;
                         }
                     case FunctionDeclaration decl:
                         {
+                            decl.TypeAnnotation = ResolveFunctionType(decl);
+                            if (decl.Identifier is { SourceValue: var ident })
+                            {
+                                Scopes.Peek().Types[ident] = decl.TypeAnnotation;
+                            }
+                            TypeCheckStatement(decl.Body, decl);
 
                             break;
                         }
@@ -139,6 +162,13 @@ namespace SolisCore.Typechecking
 
     public class Scope
     {
-        public Dictionary<string, TypeNode> Types { get; } = new();
+        public Scope(ASTNode? owner = null)
+        {
+            Owner = owner;
+        }
+
+        public ASTNode? Owner { get; }
+
+        public Dictionary<string, TypeAst> Types { get; } = new();
     }
 }

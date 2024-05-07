@@ -1,5 +1,6 @@
 ﻿using SolisCore.Executors;
 using SolisCore.Lexing;
+using SolisCore.Typechecking;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -216,29 +217,19 @@ namespace SolisCore.Parser
         public StatementBody Body { get; }
     }
 
-    public class TypeAst : ASTNode
-    {
-        public TypeAst(Token identifier, List<TypeAst> genericTypes)
-        {
-            Identifier = identifier;
-            GenericTypes = genericTypes;
-        }
-
-        public Token Identifier { get; }
-        public List<TypeAst> GenericTypes { get; }
-    }
-
     public class FunctionDeclaration : AtomExpression
     {
         public List<FunctionArg> Args { get; }
         public Token? Identifier { get; }
         public StatementBody Body { get; }
+        public TypeAst? ReturnType { get; }
 
-        public FunctionDeclaration(List<FunctionArg> args, Token? identifier, StatementBody body) : base(AtomKind.Function, null)
+        public FunctionDeclaration(List<FunctionArg> args, Token? identifier, StatementBody body, TypeAst? returnType) : base(AtomKind.Function, null)
         {
             Args = args;
             Identifier = identifier;
             Body = body;
+            ReturnType = returnType;
         }
     }
 }
