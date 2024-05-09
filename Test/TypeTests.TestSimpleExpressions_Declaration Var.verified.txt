@@ -13,6 +13,7 @@
       IdentifierValue: x,
       AstKind: VariableDeclaration,
       TypeAnnotation: {
+        Type: TypeAst,
         Identifier: {
           Kind: Identifier,
           SourceValue: int,
@@ -22,8 +23,7 @@
             Serialized: Declaration Var(7:10) at Line 1:8
           }
         },
-        GenericTypes: [],
-        AstKind: TypeAst
+        GenericArgs: []
       }
     }
   ],

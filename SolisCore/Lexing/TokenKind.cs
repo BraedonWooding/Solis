@@ -39,5 +39,6 @@
         ValueString,
         ValueChar,
         ValueNull,
+        LogicalSymbol,
     }
 }

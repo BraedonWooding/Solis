@@ -1,0 +1,26 @@
+﻿{
+  TypeA: {
+    Type: TypeAst,
+    Identifier: {
+      Kind: Identifier,
+      SourceValue: int
+    },
+    GenericArgs: []
+  },
+  TypeB: {
+    Type: FreshTypeAst,
+    Identifier: {
+      Kind: Identifier,
+      SourceValue: 0
+    },
+    GenericArgs: []
+  },
+  UnificationResult: {
+    Type: TypeAst,
+    Identifier: {
+      Kind: Identifier,
+      SourceValue: int
+    },
+    GenericArgs: []
+  }
+}

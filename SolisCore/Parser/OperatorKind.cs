@@ -1,4 +1,6 @@
-﻿namespace SolisCore.Parser
+﻿using SolisCore.Lexing;
+
+namespace SolisCore.Parser
 {
     // Ordered roughly in precedence order
     public enum OperatorKind

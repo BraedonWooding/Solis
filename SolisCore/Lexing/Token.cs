@@ -54,6 +54,11 @@ namespace SolisCore.Lexing
             return new Token(TokenKind.MathSymbol, symbol, null, new FileSpan());
         }
 
+        public static Token Logical(string symbol)
+        {
+            return new Token(TokenKind.LogicalSymbol, symbol, null, new FileSpan());
+        }
+
         public static Token Compare(string symbol)
         {
             return new Token(TokenKind.ComparatorSymbol, symbol, null, new FileSpan());

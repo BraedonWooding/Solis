@@ -13,14 +13,17 @@
       },
       IdentifierValue: x,
       Expression: {
+        KindGroup: MathSymbol,
         Kind: BinaryPlus,
         Target: {
           Value: a,
           AstKind: AtomExpression
         },
         Arg: {
+          KindGroup: MathSymbol,
           Kind: BinaryPlus,
           Target: {
+            KindGroup: MathSymbol,
             Kind: BinaryMultiply,
             Target: {
               Value: b,
@@ -34,6 +37,7 @@
             AstKind: BinaryOperatorExpression
           },
           Arg: {
+            KindGroup: MathSymbol,
             Kind: BinaryDivide,
             Target: {
               Kind: ValueInt,

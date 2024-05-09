@@ -1,0 +1,128 @@
+﻿{
+  TypeA: {
+    Type: TypeAst,
+    Identifier: {
+      Kind: Identifier,
+      SourceValue: Fn
+    },
+    GenericArgs: [
+      {
+        Type: TypeAst,
+        Identifier: {
+          Kind: Identifier,
+          SourceValue: Tuple
+        },
+        GenericArgs: [
+          {
+            Type: TypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: int
+            },
+            GenericArgs: []
+          },
+          {
+            Type: TypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: float
+            },
+            GenericArgs: []
+          }
+        ]
+      },
+      {
+        Type: TypeAst,
+        Identifier: {
+          Kind: Identifier,
+          SourceValue: float
+        },
+        GenericArgs: []
+      }
+    ]
+  },
+  TypeB: {
+    Type: TypeAst,
+    Identifier: {
+      Kind: Identifier,
+      SourceValue: Fn
+    },
+    GenericArgs: [
+      {
+        Type: TypeAst,
+        Identifier: {
+          Kind: Identifier,
+          SourceValue: Tuple
+        },
+        GenericArgs: [
+          {
+            Type: TypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: int
+            },
+            GenericArgs: []
+          },
+          {
+            Type: TypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: float
+            },
+            GenericArgs: []
+          }
+        ]
+      },
+      {
+        Type: TypeAst,
+        Identifier: {
+          Kind: Identifier,
+          SourceValue: float
+        },
+        GenericArgs: []
+      }
+    ]
+  },
+  UnificationResult: {
+    Type: TypeAst,
+    Identifier: {
+      Kind: Identifier,
+      SourceValue: Fn
+    },
+    GenericArgs: [
+      {
+        Type: TypeAst,
+        Identifier: {
+          Kind: Identifier,
+          SourceValue: Tuple
+        },
+        GenericArgs: [
+          {
+            Type: TypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: int
+            },
+            GenericArgs: []
+          },
+          {
+            Type: TypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: float
+            },
+            GenericArgs: []
+          }
+        ]
+      },
+      {
+        Type: TypeAst,
+        Identifier: {
+          Kind: Identifier,
+          SourceValue: float
+        },
+        GenericArgs: []
+      }
+    ]
+  }
+}

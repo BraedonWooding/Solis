@@ -272,9 +272,27 @@ console.printline(1),
               AstKind: AtomExpression
             }
           ],
-          AstKind: MemberOperatorExpression
+          AstKind: MemberOperatorExpression,
+          TypeAnnotation: {
+            Id: 1,
+            Type: FreshTypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: 1
+            },
+            GenericArgs: []
+          }
         },
-        AstKind: VariableDeclaration
+        AstKind: VariableDeclaration,
+        TypeAnnotation: {
+          Id: 1,
+          Type: FreshTypeAst,
+          Identifier: {
+            Kind: Identifier,
+            SourceValue: 1
+          },
+          GenericArgs: []
+        }
       },
       {
         Target: {
@@ -289,16 +307,42 @@ console.printline(1),
               AstKind: AtomExpression
             }
           ],
-          AstKind: MemberOperatorExpression
+          AstKind: MemberOperatorExpression,
+          TypeAnnotation: {
+            Id: 2,
+            Type: FreshTypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: 2
+            },
+            GenericArgs: []
+          }
         },
         Args: [
           {
             Kind: ValueString,
             Value: HEY,
-            AstKind: AtomExpression
+            AstKind: AtomExpression,
+            TypeAnnotation: {
+              Type: TypeAst,
+              Identifier: {
+                Kind: Identifier,
+                SourceValue: string
+              },
+              GenericArgs: []
+            }
           }
         ],
-        AstKind: CallOperatorExpression
+        AstKind: CallOperatorExpression,
+        TypeAnnotation: {
+          Id: 3,
+          Type: FreshTypeAst,
+          Identifier: {
+            Kind: Identifier,
+            SourceValue: 3
+          },
+          GenericArgs: []
+        }
       },
       {
         Target: {
@@ -313,16 +357,42 @@ console.printline(1),
               AstKind: AtomExpression
             }
           ],
-          AstKind: MemberOperatorExpression
+          AstKind: MemberOperatorExpression,
+          TypeAnnotation: {
+            Id: 4,
+            Type: FreshTypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: 4
+            },
+            GenericArgs: []
+          }
         },
         Args: [
           {
             Kind: ValueInt,
             Value: 0,
-            AstKind: AtomExpression
+            AstKind: AtomExpression,
+            TypeAnnotation: {
+              Type: TypeAst,
+              Identifier: {
+                Kind: Identifier,
+                SourceValue: int
+              },
+              GenericArgs: []
+            }
           }
         ],
-        AstKind: CallOperatorExpression
+        AstKind: CallOperatorExpression,
+        TypeAnnotation: {
+          Id: 5,
+          Type: FreshTypeAst,
+          Identifier: {
+            Kind: Identifier,
+            SourceValue: 5
+          },
+          GenericArgs: []
+        }
       },
       {
         Target: {
@@ -337,16 +407,42 @@ console.printline(1),
               AstKind: AtomExpression
             }
           ],
-          AstKind: MemberOperatorExpression
+          AstKind: MemberOperatorExpression,
+          TypeAnnotation: {
+            Id: 6,
+            Type: FreshTypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: 6
+            },
+            GenericArgs: []
+          }
         },
         Args: [
           {
             Kind: ValueInt,
             Value: 1,
-            AstKind: AtomExpression
+            AstKind: AtomExpression,
+            TypeAnnotation: {
+              Type: TypeAst,
+              Identifier: {
+                Kind: Identifier,
+                SourceValue: int
+              },
+              GenericArgs: []
+            }
           }
         ],
-        AstKind: CallOperatorExpression
+        AstKind: CallOperatorExpression,
+        TypeAnnotation: {
+          Id: 7,
+          Type: FreshTypeAst,
+          Identifier: {
+            Kind: Identifier,
+            SourceValue: 7
+          },
+          GenericArgs: []
+        }
       }
     ],
     AstKind: StatementBody

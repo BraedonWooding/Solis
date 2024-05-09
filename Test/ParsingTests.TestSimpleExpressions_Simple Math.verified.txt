@@ -13,8 +13,10 @@
       },
       IdentifierValue: x,
       Expression: {
+        KindGroup: MathSymbol,
         Kind: BinaryPlus,
         Target: {
+          KindGroup: MathSymbol,
           Kind: BinaryMultiply,
           Target: {
             Value: a,
@@ -48,6 +50,7 @@
       },
       IdentifierValue: y,
       Expression: {
+        KindGroup: MathSymbol,
         Kind: BinaryPlus,
         Target: {
           Kind: ValueInt,
@@ -55,6 +58,7 @@
           AstKind: AtomExpression
         },
         Arg: {
+          KindGroup: MathSymbol,
           Kind: BinaryMultiply,
           Target: {
             Value: a,

@@ -36,6 +36,7 @@
       },
       IdentifierValue: y,
       Expression: {
+        KindGroup: MathSymbol,
         Kind: BinaryPlus,
         Target: {
           Kind: UnaryMinus,
@@ -68,6 +69,7 @@
       },
       IdentifierValue: z,
       Expression: {
+        KindGroup: MathSymbol,
         Kind: BinaryMultiply,
         Target: {
           Kind: UnaryMinus,

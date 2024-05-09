@@ -339,8 +339,9 @@ namespace SolisCore.Lexing
             [">="] = TokenKind.ComparatorSymbol,
             ["=="] = TokenKind.ComparatorSymbol,
             ["!="] = TokenKind.ComparatorSymbol,
-            ["&&"] = TokenKind.ComparatorSymbol,
-            ["||"] = TokenKind.ComparatorSymbol,
+
+            ["&&"] = TokenKind.LogicalSymbol,
+            ["||"] = TokenKind.LogicalSymbol,
         };
 
         public HashSet<TokenKind> ReservedIdentifiers = new HashSet<TokenKind>()

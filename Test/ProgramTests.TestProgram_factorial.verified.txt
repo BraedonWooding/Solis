@@ -1,6 +1,6 @@
 ﻿{
   fileContents:
-fn fact(n) {
+fn fact(n: int): int {
     if n == 0 {
         return 1
     } else {
@@ -52,7 +52,7 @@ console.printline(fact(15)),
     },
     {
       Kind: PunctuationSymbol,
-      SourceValue: ),
+      SourceValue: :,
       Span: {
         ByteOffset: 9,
         ByteLength: 1,
@@ -60,39 +60,75 @@ console.printline(fact(15)),
       }
     },
     {
+      Kind: Identifier,
+      SourceValue: int,
+      Span: {
+        ByteOffset: 11,
+        ByteLength: 3,
+        Serialized: Samples/factorial.sol(11:14) at Line 1:12
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      SourceValue: ),
+      Span: {
+        ByteOffset: 14,
+        ByteLength: 1,
+        Serialized: Samples/factorial.sol(14:15) at Line 1:15
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      SourceValue: :,
+      Span: {
+        ByteOffset: 15,
+        ByteLength: 1,
+        Serialized: Samples/factorial.sol(15:16) at Line 1:16
+      }
+    },
+    {
+      Kind: Identifier,
+      SourceValue: int,
+      Span: {
+        ByteOffset: 17,
+        ByteLength: 3,
+        Serialized: Samples/factorial.sol(17:20) at Line 1:18
+      }
+    },
+    {
       Kind: PunctuationSymbol,
       SourceValue: {,
       Span: {
-        ByteOffset: 11,
+        ByteOffset: 21,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(11:12) at Line 1:12
+        Serialized: Samples/factorial.sol(21:22) at Line 1:22
       }
     },
     {
       Kind: If,
       SourceValue: if,
       Span: {
-        ByteOffset: 18,
+        ByteOffset: 28,
         ByteLength: 2,
-        Serialized: Samples/factorial.sol(18:20) at Line 2:6
+        Serialized: Samples/factorial.sol(28:30) at Line 2:6
       }
     },
     {
       Kind: Identifier,
       SourceValue: n,
       Span: {
-        ByteOffset: 21,
+        ByteOffset: 31,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(21:22) at Line 2:9
+        Serialized: Samples/factorial.sol(31:32) at Line 2:9
       }
     },
     {
       Kind: ComparatorSymbol,
       SourceValue: ==,
       Span: {
-        ByteOffset: 23,
+        ByteOffset: 33,
         ByteLength: 2,
-        Serialized: Samples/factorial.sol(23:25) at Line 2:11
+        Serialized: Samples/factorial.sol(33:35) at Line 2:11
       }
     },
     {
@@ -100,27 +136,27 @@ console.printline(fact(15)),
       SourceValue: 0,
       ParsedValue: 0,
       Span: {
-        ByteOffset: 26,
+        ByteOffset: 36,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(26:27) at Line 2:14
+        Serialized: Samples/factorial.sol(36:37) at Line 2:14
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: {,
       Span: {
-        ByteOffset: 28,
+        ByteOffset: 38,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(28:29) at Line 2:16
+        Serialized: Samples/factorial.sol(38:39) at Line 2:16
       }
     },
     {
       Kind: Return,
       SourceValue: return,
       Span: {
-        ByteOffset: 39,
+        ByteOffset: 49,
         ByteLength: 6,
-        Serialized: Samples/factorial.sol(39:45) at Line 3:10
+        Serialized: Samples/factorial.sol(49:55) at Line 3:10
       }
     },
     {
@@ -128,99 +164,99 @@ console.printline(fact(15)),
       SourceValue: 1,
       ParsedValue: 1,
       Span: {
-        ByteOffset: 46,
+        ByteOffset: 56,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(46:47) at Line 3:17
+        Serialized: Samples/factorial.sol(56:57) at Line 3:17
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: },
       Span: {
-        ByteOffset: 53,
+        ByteOffset: 63,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(53:54) at Line 4:6
+        Serialized: Samples/factorial.sol(63:64) at Line 4:6
       }
     },
     {
       Kind: Else,
       SourceValue: else,
       Span: {
-        ByteOffset: 55,
+        ByteOffset: 65,
         ByteLength: 4,
-        Serialized: Samples/factorial.sol(55:59) at Line 4:8
+        Serialized: Samples/factorial.sol(65:69) at Line 4:8
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: {,
       Span: {
-        ByteOffset: 60,
+        ByteOffset: 70,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(60:61) at Line 4:13
+        Serialized: Samples/factorial.sol(70:71) at Line 4:13
       }
     },
     {
       Kind: Return,
       SourceValue: return,
       Span: {
-        ByteOffset: 71,
+        ByteOffset: 81,
         ByteLength: 6,
-        Serialized: Samples/factorial.sol(71:77) at Line 5:10
+        Serialized: Samples/factorial.sol(81:87) at Line 5:10
       }
     },
     {
       Kind: Identifier,
       SourceValue: n,
       Span: {
-        ByteOffset: 78,
+        ByteOffset: 88,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(78:79) at Line 5:17
+        Serialized: Samples/factorial.sol(88:89) at Line 5:17
       }
     },
     {
       Kind: MathSymbol,
       SourceValue: *,
       Span: {
-        ByteOffset: 80,
+        ByteOffset: 90,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(80:81) at Line 5:19
+        Serialized: Samples/factorial.sol(90:91) at Line 5:19
       }
     },
     {
       Kind: Identifier,
       SourceValue: fact,
       Span: {
-        ByteOffset: 82,
+        ByteOffset: 92,
         ByteLength: 4,
-        Serialized: Samples/factorial.sol(82:86) at Line 5:21
+        Serialized: Samples/factorial.sol(92:96) at Line 5:21
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: (,
       Span: {
-        ByteOffset: 86,
+        ByteOffset: 96,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(86:87) at Line 5:25
+        Serialized: Samples/factorial.sol(96:97) at Line 5:25
       }
     },
     {
       Kind: Identifier,
       SourceValue: n,
       Span: {
-        ByteOffset: 87,
+        ByteOffset: 97,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(87:88) at Line 5:26
+        Serialized: Samples/factorial.sol(97:98) at Line 5:26
       }
     },
     {
       Kind: MathSymbol,
       SourceValue: -,
       Span: {
-        ByteOffset: 89,
+        ByteOffset: 99,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(89:90) at Line 5:28
+        Serialized: Samples/factorial.sol(99:100) at Line 5:28
       }
     },
     {
@@ -228,162 +264,162 @@ console.printline(fact(15)),
       SourceValue: 1,
       ParsedValue: 1,
       Span: {
-        ByteOffset: 91,
+        ByteOffset: 101,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(91:92) at Line 5:30
+        Serialized: Samples/factorial.sol(101:102) at Line 5:30
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: ),
       Span: {
-        ByteOffset: 92,
-        ByteLength: 1,
-        Serialized: Samples/factorial.sol(92:93) at Line 5:31
-      }
-    },
-    {
-      Kind: PunctuationSymbol,
-      SourceValue: },
-      Span: {
-        ByteOffset: 99,
-        ByteLength: 1,
-        Serialized: Samples/factorial.sol(99:100) at Line 6:6
-      }
-    },
-    {
-      Kind: PunctuationSymbol,
-      SourceValue: },
-      Span: {
         ByteOffset: 102,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(102:103) at Line 7:2
+        Serialized: Samples/factorial.sol(102:103) at Line 5:31
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      SourceValue: },
+      Span: {
+        ByteOffset: 109,
+        ByteLength: 1,
+        Serialized: Samples/factorial.sol(109:110) at Line 6:6
+      }
+    },
+    {
+      Kind: PunctuationSymbol,
+      SourceValue: },
+      Span: {
+        ByteOffset: 112,
+        ByteLength: 1,
+        Serialized: Samples/factorial.sol(112:113) at Line 7:2
       }
     },
     {
       Kind: Const,
       SourceValue: const,
       Span: {
-        ByteOffset: 107,
+        ByteOffset: 117,
         ByteLength: 5,
-        Serialized: Samples/factorial.sol(107:112) at Line 9:2
+        Serialized: Samples/factorial.sol(117:122) at Line 9:2
       }
     },
     {
       Kind: Identifier,
       SourceValue: console,
       Span: {
-        ByteOffset: 113,
+        ByteOffset: 123,
         ByteLength: 7,
-        Serialized: Samples/factorial.sol(113:120) at Line 9:8
+        Serialized: Samples/factorial.sol(123:130) at Line 9:8
       }
     },
     {
       Kind: AssignmentSymbol,
       SourceValue: =,
       Span: {
-        ByteOffset: 121,
+        ByteOffset: 131,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(121:122) at Line 9:16
+        Serialized: Samples/factorial.sol(131:132) at Line 9:16
       }
     },
     {
       Kind: Identifier,
       SourceValue: std,
       Span: {
-        ByteOffset: 123,
+        ByteOffset: 133,
         ByteLength: 3,
-        Serialized: Samples/factorial.sol(123:126) at Line 9:18
+        Serialized: Samples/factorial.sol(133:136) at Line 9:18
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: .,
       Span: {
-        ByteOffset: 126,
+        ByteOffset: 136,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(126:127) at Line 9:21
+        Serialized: Samples/factorial.sol(136:137) at Line 9:21
       }
     },
     {
       Kind: Identifier,
       SourceValue: io,
       Span: {
-        ByteOffset: 127,
+        ByteOffset: 137,
         ByteLength: 2,
-        Serialized: Samples/factorial.sol(127:129) at Line 9:22
+        Serialized: Samples/factorial.sol(137:139) at Line 9:22
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: .,
-      Span: {
-        ByteOffset: 129,
-        ByteLength: 1,
-        Serialized: Samples/factorial.sol(129:130) at Line 9:24
-      }
-    },
-    {
-      Kind: Identifier,
-      SourceValue: console,
-      Span: {
-        ByteOffset: 130,
-        ByteLength: 7,
-        Serialized: Samples/factorial.sol(130:137) at Line 9:25
-      }
-    },
-    {
-      Kind: Identifier,
-      SourceValue: console,
       Span: {
         ByteOffset: 139,
+        ByteLength: 1,
+        Serialized: Samples/factorial.sol(139:140) at Line 9:24
+      }
+    },
+    {
+      Kind: Identifier,
+      SourceValue: console,
+      Span: {
+        ByteOffset: 140,
         ByteLength: 7,
-        Serialized: Samples/factorial.sol(139:146) at Line 10:2
+        Serialized: Samples/factorial.sol(140:147) at Line 9:25
+      }
+    },
+    {
+      Kind: Identifier,
+      SourceValue: console,
+      Span: {
+        ByteOffset: 149,
+        ByteLength: 7,
+        Serialized: Samples/factorial.sol(149:156) at Line 10:2
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: .,
       Span: {
-        ByteOffset: 146,
+        ByteOffset: 156,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(146:147) at Line 10:9
+        Serialized: Samples/factorial.sol(156:157) at Line 10:9
       }
     },
     {
       Kind: Identifier,
       SourceValue: printline,
       Span: {
-        ByteOffset: 147,
+        ByteOffset: 157,
         ByteLength: 9,
-        Serialized: Samples/factorial.sol(147:156) at Line 10:10
+        Serialized: Samples/factorial.sol(157:166) at Line 10:10
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: (,
       Span: {
-        ByteOffset: 156,
+        ByteOffset: 166,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(156:157) at Line 10:19
+        Serialized: Samples/factorial.sol(166:167) at Line 10:19
       }
     },
     {
       Kind: Identifier,
       SourceValue: fact,
       Span: {
-        ByteOffset: 157,
+        ByteOffset: 167,
         ByteLength: 4,
-        Serialized: Samples/factorial.sol(157:161) at Line 10:20
+        Serialized: Samples/factorial.sol(167:171) at Line 10:20
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: (,
       Span: {
-        ByteOffset: 161,
+        ByteOffset: 171,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(161:162) at Line 10:24
+        Serialized: Samples/factorial.sol(171:172) at Line 10:24
       }
     },
     {
@@ -391,81 +427,81 @@ console.printline(fact(15)),
       SourceValue: 0,
       ParsedValue: 0,
       Span: {
-        ByteOffset: 162,
+        ByteOffset: 172,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(162:163) at Line 10:25
+        Serialized: Samples/factorial.sol(172:173) at Line 10:25
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: ),
       Span: {
-        ByteOffset: 163,
+        ByteOffset: 173,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(163:164) at Line 10:26
+        Serialized: Samples/factorial.sol(173:174) at Line 10:26
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: ),
       Span: {
-        ByteOffset: 164,
+        ByteOffset: 174,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(164:165) at Line 10:27
+        Serialized: Samples/factorial.sol(174:175) at Line 10:27
       }
     },
     {
       Kind: Identifier,
       SourceValue: console,
       Span: {
-        ByteOffset: 167,
+        ByteOffset: 177,
         ByteLength: 7,
-        Serialized: Samples/factorial.sol(167:174) at Line 11:2
+        Serialized: Samples/factorial.sol(177:184) at Line 11:2
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: .,
       Span: {
-        ByteOffset: 174,
+        ByteOffset: 184,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(174:175) at Line 11:9
+        Serialized: Samples/factorial.sol(184:185) at Line 11:9
       }
     },
     {
       Kind: Identifier,
       SourceValue: printline,
       Span: {
-        ByteOffset: 175,
+        ByteOffset: 185,
         ByteLength: 9,
-        Serialized: Samples/factorial.sol(175:184) at Line 11:10
+        Serialized: Samples/factorial.sol(185:194) at Line 11:10
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: (,
       Span: {
-        ByteOffset: 184,
+        ByteOffset: 194,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(184:185) at Line 11:19
+        Serialized: Samples/factorial.sol(194:195) at Line 11:19
       }
     },
     {
       Kind: Identifier,
       SourceValue: fact,
       Span: {
-        ByteOffset: 185,
+        ByteOffset: 195,
         ByteLength: 4,
-        Serialized: Samples/factorial.sol(185:189) at Line 11:20
+        Serialized: Samples/factorial.sol(195:199) at Line 11:20
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: (,
       Span: {
-        ByteOffset: 189,
+        ByteOffset: 199,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(189:190) at Line 11:24
+        Serialized: Samples/factorial.sol(199:200) at Line 11:24
       }
     },
     {
@@ -473,81 +509,81 @@ console.printline(fact(15)),
       SourceValue: 1,
       ParsedValue: 1,
       Span: {
-        ByteOffset: 190,
+        ByteOffset: 200,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(190:191) at Line 11:25
+        Serialized: Samples/factorial.sol(200:201) at Line 11:25
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: ),
       Span: {
-        ByteOffset: 191,
+        ByteOffset: 201,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(191:192) at Line 11:26
+        Serialized: Samples/factorial.sol(201:202) at Line 11:26
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: ),
       Span: {
-        ByteOffset: 192,
+        ByteOffset: 202,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(192:193) at Line 11:27
+        Serialized: Samples/factorial.sol(202:203) at Line 11:27
       }
     },
     {
       Kind: Identifier,
       SourceValue: console,
       Span: {
-        ByteOffset: 195,
+        ByteOffset: 205,
         ByteLength: 7,
-        Serialized: Samples/factorial.sol(195:202) at Line 12:2
+        Serialized: Samples/factorial.sol(205:212) at Line 12:2
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: .,
       Span: {
-        ByteOffset: 202,
+        ByteOffset: 212,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(202:203) at Line 12:9
+        Serialized: Samples/factorial.sol(212:213) at Line 12:9
       }
     },
     {
       Kind: Identifier,
       SourceValue: printline,
       Span: {
-        ByteOffset: 203,
+        ByteOffset: 213,
         ByteLength: 9,
-        Serialized: Samples/factorial.sol(203:212) at Line 12:10
+        Serialized: Samples/factorial.sol(213:222) at Line 12:10
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: (,
       Span: {
-        ByteOffset: 212,
+        ByteOffset: 222,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(212:213) at Line 12:19
+        Serialized: Samples/factorial.sol(222:223) at Line 12:19
       }
     },
     {
       Kind: Identifier,
       SourceValue: fact,
       Span: {
-        ByteOffset: 213,
+        ByteOffset: 223,
         ByteLength: 4,
-        Serialized: Samples/factorial.sol(213:217) at Line 12:20
+        Serialized: Samples/factorial.sol(223:227) at Line 12:20
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: (,
       Span: {
-        ByteOffset: 217,
+        ByteOffset: 227,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(217:218) at Line 12:24
+        Serialized: Samples/factorial.sol(227:228) at Line 12:24
       }
     },
     {
@@ -555,81 +591,81 @@ console.printline(fact(15)),
       SourceValue: 5,
       ParsedValue: 5,
       Span: {
-        ByteOffset: 218,
+        ByteOffset: 228,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(218:219) at Line 12:25
+        Serialized: Samples/factorial.sol(228:229) at Line 12:25
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: ),
       Span: {
-        ByteOffset: 219,
+        ByteOffset: 229,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(219:220) at Line 12:26
+        Serialized: Samples/factorial.sol(229:230) at Line 12:26
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: ),
       Span: {
-        ByteOffset: 220,
+        ByteOffset: 230,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(220:221) at Line 12:27
+        Serialized: Samples/factorial.sol(230:231) at Line 12:27
       }
     },
     {
       Kind: Identifier,
       SourceValue: console,
       Span: {
-        ByteOffset: 223,
+        ByteOffset: 233,
         ByteLength: 7,
-        Serialized: Samples/factorial.sol(223:230) at Line 13:2
+        Serialized: Samples/factorial.sol(233:240) at Line 13:2
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: .,
       Span: {
-        ByteOffset: 230,
+        ByteOffset: 240,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(230:231) at Line 13:9
+        Serialized: Samples/factorial.sol(240:241) at Line 13:9
       }
     },
     {
       Kind: Identifier,
       SourceValue: printline,
       Span: {
-        ByteOffset: 231,
+        ByteOffset: 241,
         ByteLength: 9,
-        Serialized: Samples/factorial.sol(231:240) at Line 13:10
+        Serialized: Samples/factorial.sol(241:250) at Line 13:10
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: (,
       Span: {
-        ByteOffset: 240,
+        ByteOffset: 250,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(240:241) at Line 13:19
+        Serialized: Samples/factorial.sol(250:251) at Line 13:19
       }
     },
     {
       Kind: Identifier,
       SourceValue: fact,
       Span: {
-        ByteOffset: 241,
+        ByteOffset: 251,
         ByteLength: 4,
-        Serialized: Samples/factorial.sol(241:245) at Line 13:20
+        Serialized: Samples/factorial.sol(251:255) at Line 13:20
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: (,
       Span: {
-        ByteOffset: 245,
+        ByteOffset: 255,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(245:246) at Line 13:24
+        Serialized: Samples/factorial.sol(255:256) at Line 13:24
       }
     },
     {
@@ -637,81 +673,81 @@ console.printline(fact(15)),
       SourceValue: 10,
       ParsedValue: 10,
       Span: {
-        ByteOffset: 246,
+        ByteOffset: 256,
         ByteLength: 2,
-        Serialized: Samples/factorial.sol(246:248) at Line 13:25
+        Serialized: Samples/factorial.sol(256:258) at Line 13:25
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: ),
       Span: {
-        ByteOffset: 248,
+        ByteOffset: 258,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(248:249) at Line 13:27
+        Serialized: Samples/factorial.sol(258:259) at Line 13:27
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: ),
       Span: {
-        ByteOffset: 249,
+        ByteOffset: 259,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(249:250) at Line 13:28
+        Serialized: Samples/factorial.sol(259:260) at Line 13:28
       }
     },
     {
       Kind: Identifier,
       SourceValue: console,
       Span: {
-        ByteOffset: 252,
+        ByteOffset: 262,
         ByteLength: 7,
-        Serialized: Samples/factorial.sol(252:259) at Line 14:2
+        Serialized: Samples/factorial.sol(262:269) at Line 14:2
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: .,
       Span: {
-        ByteOffset: 259,
+        ByteOffset: 269,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(259:260) at Line 14:9
+        Serialized: Samples/factorial.sol(269:270) at Line 14:9
       }
     },
     {
       Kind: Identifier,
       SourceValue: printline,
       Span: {
-        ByteOffset: 260,
+        ByteOffset: 270,
         ByteLength: 9,
-        Serialized: Samples/factorial.sol(260:269) at Line 14:10
+        Serialized: Samples/factorial.sol(270:279) at Line 14:10
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: (,
       Span: {
-        ByteOffset: 269,
+        ByteOffset: 279,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(269:270) at Line 14:19
+        Serialized: Samples/factorial.sol(279:280) at Line 14:19
       }
     },
     {
       Kind: Identifier,
       SourceValue: fact,
       Span: {
-        ByteOffset: 270,
+        ByteOffset: 280,
         ByteLength: 4,
-        Serialized: Samples/factorial.sol(270:274) at Line 14:20
+        Serialized: Samples/factorial.sol(280:284) at Line 14:20
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: (,
       Span: {
-        ByteOffset: 274,
+        ByteOffset: 284,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(274:275) at Line 14:24
+        Serialized: Samples/factorial.sol(284:285) at Line 14:24
       }
     },
     {
@@ -719,27 +755,27 @@ console.printline(fact(15)),
       SourceValue: 15,
       ParsedValue: 15,
       Span: {
-        ByteOffset: 275,
+        ByteOffset: 285,
         ByteLength: 2,
-        Serialized: Samples/factorial.sol(275:277) at Line 14:25
+        Serialized: Samples/factorial.sol(285:287) at Line 14:25
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: ),
       Span: {
-        ByteOffset: 277,
+        ByteOffset: 287,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(277:278) at Line 14:27
+        Serialized: Samples/factorial.sol(287:288) at Line 14:27
       }
     },
     {
       Kind: PunctuationSymbol,
       SourceValue: ),
       Span: {
-        ByteOffset: 278,
+        ByteOffset: 288,
         ByteLength: 1,
-        Serialized: Samples/factorial.sol(278:279) at Line 14:28
+        Serialized: Samples/factorial.sol(288:289) at Line 14:28
       }
     }
   ],
@@ -757,7 +793,20 @@ console.printline(fact(15)),
                 Serialized: Samples/factorial.sol(8:9) at Line 1:9
               }
             },
-            AstKind: FunctionArg
+            AstKind: FunctionArg,
+            TypeAnnotation: {
+              Type: TypeAst,
+              Identifier: {
+                Kind: Identifier,
+                SourceValue: int,
+                Span: {
+                  ByteOffset: 11,
+                  ByteLength: 3,
+                  Serialized: Samples/factorial.sol(11:14) at Line 1:12
+                }
+              },
+              GenericArgs: []
+            }
           }
         ],
         Identifier: {
@@ -773,17 +822,42 @@ console.printline(fact(15)),
           Statements: [
             {
               Condition: {
+                KindGroup: ComparatorSymbol,
                 Kind: Equal,
                 Target: {
                   Value: n,
-                  AstKind: AtomExpression
+                  AstKind: AtomExpression,
+                  TypeAnnotation: {
+                    Type: FreshTypeAst,
+                    Identifier: {
+                      Kind: Identifier,
+                      SourceValue: 0
+                    },
+                    GenericArgs: []
+                  }
                 },
                 Arg: {
                   Kind: ValueInt,
                   Value: 0,
-                  AstKind: AtomExpression
+                  AstKind: AtomExpression,
+                  TypeAnnotation: {
+                    Type: TypeAst,
+                    Identifier: {
+                      Kind: Identifier,
+                      SourceValue: int
+                    },
+                    GenericArgs: []
+                  }
                 },
-                AstKind: BinaryOperatorExpression
+                AstKind: BinaryOperatorExpression,
+                TypeAnnotation: {
+                  Type: TypeAst,
+                  Identifier: {
+                    Kind: Identifier,
+                    SourceValue: bool
+                  },
+                  GenericArgs: []
+                }
               },
               Body: {
                 Statements: [
@@ -791,7 +865,15 @@ console.printline(fact(15)),
                     Value: {
                       Kind: ValueInt,
                       Value: 1,
-                      AstKind: AtomExpression
+                      AstKind: AtomExpression,
+                      TypeAnnotation: {
+                        Type: TypeAst,
+                        Identifier: {
+                          Kind: Identifier,
+                          SourceValue: int
+                        },
+                        GenericArgs: []
+                      }
                     },
                     AstKind: ReturnExpression
                   }
@@ -803,34 +885,133 @@ console.printline(fact(15)),
                 Statements: [
                   {
                     Value: {
+                      KindGroup: MathSymbol,
                       Kind: BinaryMultiply,
                       Target: {
                         Value: n,
-                        AstKind: AtomExpression
+                        AstKind: AtomExpression,
+                        TypeAnnotation: {
+                          Type: FreshTypeAst,
+                          Identifier: {
+                            Kind: Identifier,
+                            SourceValue: 0
+                          },
+                          GenericArgs: []
+                        }
                       },
                       Arg: {
                         Target: {
                           Value: fact,
-                          AstKind: AtomExpression
+                          AstKind: AtomExpression,
+                          TypeAnnotation: {
+                            Type: TypeAst,
+                            Identifier: {
+                              Kind: Identifier,
+                              SourceValue: Fn
+                            },
+                            GenericArgs: [
+                              {
+                                Type: TypeAst,
+                                Identifier: {
+                                  Kind: Identifier,
+                                  SourceValue: Tuple
+                                },
+                                GenericArgs: [
+                                  {
+                                    Type: TypeAst,
+                                    Identifier: {
+                                      Kind: Identifier,
+                                      SourceValue: int
+                                    },
+                                    GenericArgs: []
+                                  }
+                                ]
+                              },
+                              {
+                                Type: TypeAst,
+                                Identifier: {
+                                  Kind: Identifier,
+                                  SourceValue: int,
+                                  Span: {
+                                    ByteOffset: 17,
+                                    ByteLength: 3,
+                                    Serialized: Samples/factorial.sol(17:20) at Line 1:18
+                                  }
+                                },
+                                GenericArgs: []
+                              }
+                            ]
+                          }
                         },
                         Args: [
                           {
+                            KindGroup: MathSymbol,
                             Kind: BinaryMinus,
                             Target: {
                               Value: n,
-                              AstKind: AtomExpression
+                              AstKind: AtomExpression,
+                              TypeAnnotation: {
+                                Type: FreshTypeAst,
+                                Identifier: {
+                                  Kind: Identifier,
+                                  SourceValue: 0
+                                },
+                                GenericArgs: []
+                              }
                             },
                             Arg: {
                               Kind: ValueInt,
                               Value: 1,
-                              AstKind: AtomExpression
+                              AstKind: AtomExpression,
+                              TypeAnnotation: {
+                                Type: TypeAst,
+                                Identifier: {
+                                  Kind: Identifier,
+                                  SourceValue: int
+                                },
+                                GenericArgs: []
+                              }
                             },
-                            AstKind: BinaryOperatorExpression
+                            AstKind: BinaryOperatorExpression,
+                            TypeAnnotation: {
+                              Type: TypeAst,
+                              Identifier: {
+                                Kind: Identifier,
+                                SourceValue: int
+                              },
+                              GenericArgs: []
+                            }
                           }
                         ],
-                        AstKind: CallOperatorExpression
+                        AstKind: CallOperatorExpression,
+                        TypeAnnotation: {
+                          Type: TypeAst,
+                          Identifier: {
+                            Kind: Identifier,
+                            SourceValue: int,
+                            Span: {
+                              ByteOffset: 17,
+                              ByteLength: 3,
+                              Serialized: Samples/factorial.sol(17:20) at Line 1:18
+                            }
+                          },
+                          GenericArgs: []
+                        }
                       },
-                      AstKind: BinaryOperatorExpression
+                      AstKind: BinaryOperatorExpression,
+                      TypeAnnotation: {
+                        Type: TypeAst,
+                        Identifier: {
+                          Kind: Identifier,
+                          SourceValue: int,
+                          Span: {
+                            ByteOffset: 17,
+                            ByteLength: 3,
+                            Serialized: Samples/factorial.sol(17:20) at Line 1:18
+                          }
+                        },
+                        GenericArgs: []
+                      }
                     },
                     AstKind: ReturnExpression
                   }
@@ -843,8 +1024,34 @@ console.printline(fact(15)),
           ],
           AstKind: StatementBody
         },
+        ReturnType: {
+          Type: TypeAst,
+          Identifier: {
+            Kind: Identifier,
+            SourceValue: int,
+            Span: {
+              ByteOffset: 17,
+              ByteLength: 3,
+              Serialized: Samples/factorial.sol(17:20) at Line 1:18
+            }
+          },
+          GenericArgs: []
+        },
         Kind: Function,
-        AstKind: FunctionDeclaration
+        AstKind: FunctionDeclaration,
+        TypeAnnotation: {
+          Type: TypeAst,
+          Identifier: {
+            Kind: Identifier,
+            SourceValue: int,
+            Span: {
+              ByteOffset: 17,
+              ByteLength: 3,
+              Serialized: Samples/factorial.sol(17:20) at Line 1:18
+            }
+          },
+          GenericArgs: []
+        }
       },
       {
         IsConst: true,
@@ -852,9 +1059,9 @@ console.printline(fact(15)),
           Kind: Identifier,
           SourceValue: console,
           Span: {
-            ByteOffset: 113,
+            ByteOffset: 123,
             ByteLength: 7,
-            Serialized: Samples/factorial.sol(113:120) at Line 9:8
+            Serialized: Samples/factorial.sol(123:130) at Line 9:8
           }
         },
         IdentifierValue: console,
@@ -874,9 +1081,27 @@ console.printline(fact(15)),
               AstKind: AtomExpression
             }
           ],
-          AstKind: MemberOperatorExpression
+          AstKind: MemberOperatorExpression,
+          TypeAnnotation: {
+            Id: 3,
+            Type: FreshTypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: 3
+            },
+            GenericArgs: []
+          }
         },
-        AstKind: VariableDeclaration
+        AstKind: VariableDeclaration,
+        TypeAnnotation: {
+          Id: 3,
+          Type: FreshTypeAst,
+          Identifier: {
+            Kind: Identifier,
+            SourceValue: 3
+          },
+          GenericArgs: []
+        }
       },
       {
         Target: {
@@ -891,25 +1116,103 @@ console.printline(fact(15)),
               AstKind: AtomExpression
             }
           ],
-          AstKind: MemberOperatorExpression
+          AstKind: MemberOperatorExpression,
+          TypeAnnotation: {
+            Id: 4,
+            Type: FreshTypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: 4
+            },
+            GenericArgs: []
+          }
         },
         Args: [
           {
             Target: {
               Value: fact,
-              AstKind: AtomExpression
+              AstKind: AtomExpression,
+              TypeAnnotation: {
+                Type: TypeAst,
+                Identifier: {
+                  Kind: Identifier,
+                  SourceValue: Fn
+                },
+                GenericArgs: [
+                  {
+                    Type: TypeAst,
+                    Identifier: {
+                      Kind: Identifier,
+                      SourceValue: Tuple
+                    },
+                    GenericArgs: [
+                      {
+                        Type: TypeAst,
+                        Identifier: {
+                          Kind: Identifier,
+                          SourceValue: int
+                        },
+                        GenericArgs: []
+                      }
+                    ]
+                  },
+                  {
+                    Type: TypeAst,
+                    Identifier: {
+                      Kind: Identifier,
+                      SourceValue: int,
+                      Span: {
+                        ByteOffset: 17,
+                        ByteLength: 3,
+                        Serialized: Samples/factorial.sol(17:20) at Line 1:18
+                      }
+                    },
+                    GenericArgs: []
+                  }
+                ]
+              }
             },
             Args: [
               {
                 Kind: ValueInt,
                 Value: 0,
-                AstKind: AtomExpression
+                AstKind: AtomExpression,
+                TypeAnnotation: {
+                  Type: TypeAst,
+                  Identifier: {
+                    Kind: Identifier,
+                    SourceValue: int
+                  },
+                  GenericArgs: []
+                }
               }
             ],
-            AstKind: CallOperatorExpression
+            AstKind: CallOperatorExpression,
+            TypeAnnotation: {
+              Type: TypeAst,
+              Identifier: {
+                Kind: Identifier,
+                SourceValue: int,
+                Span: {
+                  ByteOffset: 17,
+                  ByteLength: 3,
+                  Serialized: Samples/factorial.sol(17:20) at Line 1:18
+                }
+              },
+              GenericArgs: []
+            }
           }
         ],
-        AstKind: CallOperatorExpression
+        AstKind: CallOperatorExpression,
+        TypeAnnotation: {
+          Id: 6,
+          Type: FreshTypeAst,
+          Identifier: {
+            Kind: Identifier,
+            SourceValue: 6
+          },
+          GenericArgs: []
+        }
       },
       {
         Target: {
@@ -924,25 +1227,103 @@ console.printline(fact(15)),
               AstKind: AtomExpression
             }
           ],
-          AstKind: MemberOperatorExpression
+          AstKind: MemberOperatorExpression,
+          TypeAnnotation: {
+            Id: 7,
+            Type: FreshTypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: 7
+            },
+            GenericArgs: []
+          }
         },
         Args: [
           {
             Target: {
               Value: fact,
-              AstKind: AtomExpression
+              AstKind: AtomExpression,
+              TypeAnnotation: {
+                Type: TypeAst,
+                Identifier: {
+                  Kind: Identifier,
+                  SourceValue: Fn
+                },
+                GenericArgs: [
+                  {
+                    Type: TypeAst,
+                    Identifier: {
+                      Kind: Identifier,
+                      SourceValue: Tuple
+                    },
+                    GenericArgs: [
+                      {
+                        Type: TypeAst,
+                        Identifier: {
+                          Kind: Identifier,
+                          SourceValue: int
+                        },
+                        GenericArgs: []
+                      }
+                    ]
+                  },
+                  {
+                    Type: TypeAst,
+                    Identifier: {
+                      Kind: Identifier,
+                      SourceValue: int,
+                      Span: {
+                        ByteOffset: 17,
+                        ByteLength: 3,
+                        Serialized: Samples/factorial.sol(17:20) at Line 1:18
+                      }
+                    },
+                    GenericArgs: []
+                  }
+                ]
+              }
             },
             Args: [
               {
                 Kind: ValueInt,
                 Value: 1,
-                AstKind: AtomExpression
+                AstKind: AtomExpression,
+                TypeAnnotation: {
+                  Type: TypeAst,
+                  Identifier: {
+                    Kind: Identifier,
+                    SourceValue: int
+                  },
+                  GenericArgs: []
+                }
               }
             ],
-            AstKind: CallOperatorExpression
+            AstKind: CallOperatorExpression,
+            TypeAnnotation: {
+              Type: TypeAst,
+              Identifier: {
+                Kind: Identifier,
+                SourceValue: int,
+                Span: {
+                  ByteOffset: 17,
+                  ByteLength: 3,
+                  Serialized: Samples/factorial.sol(17:20) at Line 1:18
+                }
+              },
+              GenericArgs: []
+            }
           }
         ],
-        AstKind: CallOperatorExpression
+        AstKind: CallOperatorExpression,
+        TypeAnnotation: {
+          Id: 9,
+          Type: FreshTypeAst,
+          Identifier: {
+            Kind: Identifier,
+            SourceValue: 9
+          },
+          GenericArgs: []
+        }
       },
       {
         Target: {
@@ -957,25 +1338,103 @@ console.printline(fact(15)),
               AstKind: AtomExpression
             }
           ],
-          AstKind: MemberOperatorExpression
+          AstKind: MemberOperatorExpression,
+          TypeAnnotation: {
+            Id: 10,
+            Type: FreshTypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: 10
+            },
+            GenericArgs: []
+          }
         },
         Args: [
           {
             Target: {
               Value: fact,
-              AstKind: AtomExpression
+              AstKind: AtomExpression,
+              TypeAnnotation: {
+                Type: TypeAst,
+                Identifier: {
+                  Kind: Identifier,
+                  SourceValue: Fn
+                },
+                GenericArgs: [
+                  {
+                    Type: TypeAst,
+                    Identifier: {
+                      Kind: Identifier,
+                      SourceValue: Tuple
+                    },
+                    GenericArgs: [
+                      {
+                        Type: TypeAst,
+                        Identifier: {
+                          Kind: Identifier,
+                          SourceValue: int
+                        },
+                        GenericArgs: []
+                      }
+                    ]
+                  },
+                  {
+                    Type: TypeAst,
+                    Identifier: {
+                      Kind: Identifier,
+                      SourceValue: int,
+                      Span: {
+                        ByteOffset: 17,
+                        ByteLength: 3,
+                        Serialized: Samples/factorial.sol(17:20) at Line 1:18
+                      }
+                    },
+                    GenericArgs: []
+                  }
+                ]
+              }
             },
             Args: [
               {
                 Kind: ValueInt,
                 Value: 5,
-                AstKind: AtomExpression
+                AstKind: AtomExpression,
+                TypeAnnotation: {
+                  Type: TypeAst,
+                  Identifier: {
+                    Kind: Identifier,
+                    SourceValue: int
+                  },
+                  GenericArgs: []
+                }
               }
             ],
-            AstKind: CallOperatorExpression
+            AstKind: CallOperatorExpression,
+            TypeAnnotation: {
+              Type: TypeAst,
+              Identifier: {
+                Kind: Identifier,
+                SourceValue: int,
+                Span: {
+                  ByteOffset: 17,
+                  ByteLength: 3,
+                  Serialized: Samples/factorial.sol(17:20) at Line 1:18
+                }
+              },
+              GenericArgs: []
+            }
           }
         ],
-        AstKind: CallOperatorExpression
+        AstKind: CallOperatorExpression,
+        TypeAnnotation: {
+          Id: 12,
+          Type: FreshTypeAst,
+          Identifier: {
+            Kind: Identifier,
+            SourceValue: 12
+          },
+          GenericArgs: []
+        }
       },
       {
         Target: {
@@ -990,25 +1449,103 @@ console.printline(fact(15)),
               AstKind: AtomExpression
             }
           ],
-          AstKind: MemberOperatorExpression
+          AstKind: MemberOperatorExpression,
+          TypeAnnotation: {
+            Id: 13,
+            Type: FreshTypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: 13
+            },
+            GenericArgs: []
+          }
         },
         Args: [
           {
             Target: {
               Value: fact,
-              AstKind: AtomExpression
+              AstKind: AtomExpression,
+              TypeAnnotation: {
+                Type: TypeAst,
+                Identifier: {
+                  Kind: Identifier,
+                  SourceValue: Fn
+                },
+                GenericArgs: [
+                  {
+                    Type: TypeAst,
+                    Identifier: {
+                      Kind: Identifier,
+                      SourceValue: Tuple
+                    },
+                    GenericArgs: [
+                      {
+                        Type: TypeAst,
+                        Identifier: {
+                          Kind: Identifier,
+                          SourceValue: int
+                        },
+                        GenericArgs: []
+                      }
+                    ]
+                  },
+                  {
+                    Type: TypeAst,
+                    Identifier: {
+                      Kind: Identifier,
+                      SourceValue: int,
+                      Span: {
+                        ByteOffset: 17,
+                        ByteLength: 3,
+                        Serialized: Samples/factorial.sol(17:20) at Line 1:18
+                      }
+                    },
+                    GenericArgs: []
+                  }
+                ]
+              }
             },
             Args: [
               {
                 Kind: ValueInt,
                 Value: 10,
-                AstKind: AtomExpression
+                AstKind: AtomExpression,
+                TypeAnnotation: {
+                  Type: TypeAst,
+                  Identifier: {
+                    Kind: Identifier,
+                    SourceValue: int
+                  },
+                  GenericArgs: []
+                }
               }
             ],
-            AstKind: CallOperatorExpression
+            AstKind: CallOperatorExpression,
+            TypeAnnotation: {
+              Type: TypeAst,
+              Identifier: {
+                Kind: Identifier,
+                SourceValue: int,
+                Span: {
+                  ByteOffset: 17,
+                  ByteLength: 3,
+                  Serialized: Samples/factorial.sol(17:20) at Line 1:18
+                }
+              },
+              GenericArgs: []
+            }
           }
         ],
-        AstKind: CallOperatorExpression
+        AstKind: CallOperatorExpression,
+        TypeAnnotation: {
+          Id: 15,
+          Type: FreshTypeAst,
+          Identifier: {
+            Kind: Identifier,
+            SourceValue: 15
+          },
+          GenericArgs: []
+        }
       },
       {
         Target: {
@@ -1023,25 +1560,103 @@ console.printline(fact(15)),
               AstKind: AtomExpression
             }
           ],
-          AstKind: MemberOperatorExpression
+          AstKind: MemberOperatorExpression,
+          TypeAnnotation: {
+            Id: 16,
+            Type: FreshTypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: 16
+            },
+            GenericArgs: []
+          }
         },
         Args: [
           {
             Target: {
               Value: fact,
-              AstKind: AtomExpression
+              AstKind: AtomExpression,
+              TypeAnnotation: {
+                Type: TypeAst,
+                Identifier: {
+                  Kind: Identifier,
+                  SourceValue: Fn
+                },
+                GenericArgs: [
+                  {
+                    Type: TypeAst,
+                    Identifier: {
+                      Kind: Identifier,
+                      SourceValue: Tuple
+                    },
+                    GenericArgs: [
+                      {
+                        Type: TypeAst,
+                        Identifier: {
+                          Kind: Identifier,
+                          SourceValue: int
+                        },
+                        GenericArgs: []
+                      }
+                    ]
+                  },
+                  {
+                    Type: TypeAst,
+                    Identifier: {
+                      Kind: Identifier,
+                      SourceValue: int,
+                      Span: {
+                        ByteOffset: 17,
+                        ByteLength: 3,
+                        Serialized: Samples/factorial.sol(17:20) at Line 1:18
+                      }
+                    },
+                    GenericArgs: []
+                  }
+                ]
+              }
             },
             Args: [
               {
                 Kind: ValueInt,
                 Value: 15,
-                AstKind: AtomExpression
+                AstKind: AtomExpression,
+                TypeAnnotation: {
+                  Type: TypeAst,
+                  Identifier: {
+                    Kind: Identifier,
+                    SourceValue: int
+                  },
+                  GenericArgs: []
+                }
               }
             ],
-            AstKind: CallOperatorExpression
+            AstKind: CallOperatorExpression,
+            TypeAnnotation: {
+              Type: TypeAst,
+              Identifier: {
+                Kind: Identifier,
+                SourceValue: int,
+                Span: {
+                  ByteOffset: 17,
+                  ByteLength: 3,
+                  Serialized: Samples/factorial.sol(17:20) at Line 1:18
+                }
+              },
+              GenericArgs: []
+            }
           }
         ],
-        AstKind: CallOperatorExpression
+        AstKind: CallOperatorExpression,
+        TypeAnnotation: {
+          Id: 18,
+          Type: FreshTypeAst,
+          Identifier: {
+            Kind: Identifier,
+            SourceValue: 18
+          },
+          GenericArgs: []
+        }
       }
     ],
     AstKind: StatementBody

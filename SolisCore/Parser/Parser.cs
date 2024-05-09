@@ -1,4 +1,5 @@
 ﻿using SolisCore.Lexing;
+using SolisCore.Typechecking;
 using System;
 using System.Collections.Generic;
 
@@ -122,6 +123,7 @@ namespace SolisCore.Parser
                 return new FunctionDeclaration(
                     ParseList(end: Token.Punctuation(")"), next: Token.Punctuation(","), parse: ParseArg),
                     null,
+                    TryConsume(Token.Punctuation(":"), ParseType),
                     ParseStatementBodyBraced()
                 );
             }
@@ -170,6 +172,9 @@ namespace SolisCore.Parser
                     "*" => OperatorKind.BinaryMultiply,
                     "/" => OperatorKind.BinaryDivide,
                     "%" => OperatorKind.BinaryModulos,
+
+                    "||" => OperatorKind.LogicalOr,
+                    "&&" => OperatorKind.LogicalAnd,
 
                     "<" => OperatorKind.LessThan,
                     ">" => OperatorKind.GreaterThan,
@@ -231,7 +236,7 @@ namespace SolisCore.Parser
             }
 
             var op = TryParseOperator();
-            while (op is var (_, kind, precedence, rightAssociative) && (int)precedence < (int)currentPrecedence)
+            while (op is var (tok, kind, precedence, rightAssociative) && (int)precedence < (int)currentPrecedence)
             {
                 // we need to move forward to "accept" the op
                 idx++;
@@ -254,7 +259,7 @@ namespace SolisCore.Parser
                 else
                 {
                     var arg = ParseExpressionAtPrecedence(rightAssociative ? precedence : (Precendence)((int)precedence + 1));
-                    expr = new BinaryOperatorExpression(kind, expr, arg);
+                    expr = new BinaryOperatorExpression(tok.Kind, kind, expr, arg);
                 }
 
                 op = TryParseOperator();
@@ -285,7 +290,7 @@ namespace SolisCore.Parser
             return result;
         }
 
-        private List<T> ParseList<T>(Token end, Token next, Func<T> parse) where T : ASTNode
+        private List<T> ParseList<T>(Token end, Token next, Func<T> parse)
         {
             var result = new List<T>();
             while (true)
@@ -369,6 +374,7 @@ namespace SolisCore.Parser
                 return new FunctionDeclaration(
                     ParseList(end: Token.Punctuation(")"), next: Token.Punctuation(","), parse: ParseArg),
                     ident,
+                    TryConsume(Token.Punctuation(":"), ParseType),
                     ParseStatementBodyBraced()
                 );
             }

@@ -26,6 +26,7 @@
             },
             AstKind: FunctionArg,
             TypeAnnotation: {
+              Type: TypeAst,
               Identifier: {
                 Kind: Identifier,
                 SourceValue: int,
@@ -35,8 +36,7 @@
                   Serialized: Anonymous Function Variable(16:19) at Line 1:17
                 }
               },
-              GenericTypes: [],
-              AstKind: TypeAst
+              GenericArgs: []
             }
           },
           {
@@ -51,6 +51,7 @@
             },
             AstKind: FunctionArg,
             TypeAnnotation: {
+              Type: TypeAst,
               Identifier: {
                 Kind: Identifier,
                 SourceValue: int,
@@ -60,8 +61,7 @@
                   Serialized: Anonymous Function Variable(24:27) at Line 1:25
                 }
               },
-              GenericTypes: [],
-              AstKind: TypeAst
+              GenericArgs: []
             }
           }
         ],
@@ -69,10 +69,137 @@
           Statements: [],
           AstKind: StatementBody
         },
+        ReturnType: {
+          Type: TypeAst,
+          Identifier: {
+            Kind: Identifier,
+            SourceValue: float,
+            Span: {
+              ByteOffset: 30,
+              ByteLength: 5,
+              Serialized: Anonymous Function Variable(30:35) at Line 1:31
+            }
+          },
+          GenericArgs: []
+        },
         Kind: Function,
-        AstKind: FunctionDeclaration
+        AstKind: FunctionDeclaration,
+        TypeAnnotation: {
+          Type: TypeAst,
+          Identifier: {
+            Kind: Identifier,
+            SourceValue: Fn
+          },
+          GenericArgs: [
+            {
+              Type: TypeAst,
+              Identifier: {
+                Kind: Identifier,
+                SourceValue: Tuple
+              },
+              GenericArgs: [
+                {
+                  Type: TypeAst,
+                  Identifier: {
+                    Kind: Identifier,
+                    SourceValue: int,
+                    Span: {
+                      ByteOffset: 16,
+                      ByteLength: 3,
+                      Serialized: Anonymous Function Variable(16:19) at Line 1:17
+                    }
+                  },
+                  GenericArgs: []
+                },
+                {
+                  Type: TypeAst,
+                  Identifier: {
+                    Kind: Identifier,
+                    SourceValue: int,
+                    Span: {
+                      ByteOffset: 24,
+                      ByteLength: 3,
+                      Serialized: Anonymous Function Variable(24:27) at Line 1:25
+                    }
+                  },
+                  GenericArgs: []
+                }
+              ]
+            },
+            {
+              Type: TypeAst,
+              Identifier: {
+                Kind: Identifier,
+                SourceValue: float,
+                Span: {
+                  ByteOffset: 30,
+                  ByteLength: 5,
+                  Serialized: Anonymous Function Variable(30:35) at Line 1:31
+                }
+              },
+              GenericArgs: []
+            }
+          ]
+        }
       },
-      AstKind: VariableDeclaration
+      AstKind: VariableDeclaration,
+      TypeAnnotation: {
+        Type: TypeAst,
+        Identifier: {
+          Kind: Identifier,
+          SourceValue: Fn
+        },
+        GenericArgs: [
+          {
+            Type: TypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: Tuple
+            },
+            GenericArgs: [
+              {
+                Type: TypeAst,
+                Identifier: {
+                  Kind: Identifier,
+                  SourceValue: int,
+                  Span: {
+                    ByteOffset: 16,
+                    ByteLength: 3,
+                    Serialized: Anonymous Function Variable(16:19) at Line 1:17
+                  }
+                },
+                GenericArgs: []
+              },
+              {
+                Type: TypeAst,
+                Identifier: {
+                  Kind: Identifier,
+                  SourceValue: int,
+                  Span: {
+                    ByteOffset: 24,
+                    ByteLength: 3,
+                    Serialized: Anonymous Function Variable(24:27) at Line 1:25
+                  }
+                },
+                GenericArgs: []
+              }
+            ]
+          },
+          {
+            Type: TypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: float,
+              Span: {
+                ByteOffset: 30,
+                ByteLength: 5,
+                Serialized: Anonymous Function Variable(30:35) at Line 1:31
+              }
+            },
+            GenericArgs: []
+          }
+        ]
+      }
     }
   ],
   AstKind: StatementBody

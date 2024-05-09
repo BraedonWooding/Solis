@@ -28,9 +28,9 @@ namespace SolisCore.Parser
         public Token Identifier { get; }
 
         public string IdentifierValue => Identifier.SourceValue;
-        public ASTNode? Expression { get; }
+        public Expression? Expression { get; }
 
-        public VariableDeclaration(bool isConst, Token identifier, TypeAst? type, ASTNode? expression = null) : base(type)
+        public VariableDeclaration(bool isConst, Token identifier, TypeAst? type, Expression? expression = null) : base(type)
         {
             IsConst = isConst;
             Identifier = identifier;
@@ -71,13 +71,15 @@ namespace SolisCore.Parser
 
     public class BinaryOperatorExpression : Expression, IOperatorExpression
     {
-        public BinaryOperatorExpression(OperatorKind kind, Expression target, Expression arg)
+        public BinaryOperatorExpression(TokenKind group, OperatorKind kind, Expression target, Expression arg)
         {
+            KindGroup = group;
             Kind = kind;
             Target = target;
             Arg = arg;
         }
 
+        public TokenKind KindGroup { get; }
         public OperatorKind Kind { get; }
         public Expression Target { get; }
         public Expression Arg { get; }
@@ -224,7 +226,7 @@ namespace SolisCore.Parser
         public StatementBody Body { get; }
         public TypeAst? ReturnType { get; }
 
-        public FunctionDeclaration(List<FunctionArg> args, Token? identifier, StatementBody body, TypeAst? returnType) : base(AtomKind.Function, null)
+        public FunctionDeclaration(List<FunctionArg> args, Token? identifier, TypeAst? returnType, StatementBody body) : base(AtomKind.Function, null)
         {
             Args = args;
             Identifier = identifier;

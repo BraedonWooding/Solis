@@ -160,9 +160,27 @@ console.printline("Hello World!!"),
               AstKind: AtomExpression
             }
           ],
-          AstKind: MemberOperatorExpression
+          AstKind: MemberOperatorExpression,
+          TypeAnnotation: {
+            Id: 1,
+            Type: FreshTypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: 1
+            },
+            GenericArgs: []
+          }
         },
-        AstKind: VariableDeclaration
+        AstKind: VariableDeclaration,
+        TypeAnnotation: {
+          Id: 1,
+          Type: FreshTypeAst,
+          Identifier: {
+            Kind: Identifier,
+            SourceValue: 1
+          },
+          GenericArgs: []
+        }
       },
       {
         Target: {
@@ -177,16 +195,42 @@ console.printline("Hello World!!"),
               AstKind: AtomExpression
             }
           ],
-          AstKind: MemberOperatorExpression
+          AstKind: MemberOperatorExpression,
+          TypeAnnotation: {
+            Id: 2,
+            Type: FreshTypeAst,
+            Identifier: {
+              Kind: Identifier,
+              SourceValue: 2
+            },
+            GenericArgs: []
+          }
         },
         Args: [
           {
             Kind: ValueString,
             Value: Hello World!!,
-            AstKind: AtomExpression
+            AstKind: AtomExpression,
+            TypeAnnotation: {
+              Type: TypeAst,
+              Identifier: {
+                Kind: Identifier,
+                SourceValue: string
+              },
+              GenericArgs: []
+            }
           }
         ],
-        AstKind: CallOperatorExpression
+        AstKind: CallOperatorExpression,
+        TypeAnnotation: {
+          Id: 3,
+          Type: FreshTypeAst,
+          Identifier: {
+            Kind: Identifier,
+            SourceValue: 3
+          },
+          GenericArgs: []
+        }
       }
     ],
     AstKind: StatementBody

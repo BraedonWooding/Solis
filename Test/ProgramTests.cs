@@ -1,6 +1,7 @@
 using SolisCore.Executors;
 using SolisCore.Lexing;
 using SolisCore.Parser;
+using SolisCore.Typechecking;
 
 namespace Test
 {
@@ -17,6 +18,9 @@ namespace Test
             var fileContents = File.ReadAllText(fileName);
             var tokens = new Lexer().FileToTokens(fileName, fileContents);
             var ast = Parser.ParseTree(tokens);
+            var typechecker = new TypeChecker();
+            typechecker.TypeCheckStatement(ast);
+
             var executor = new ASTExecutor();
 
             // add global variables for console
