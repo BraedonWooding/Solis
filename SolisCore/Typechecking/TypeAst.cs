@@ -1,4 +1,5 @@
 ﻿using SolisCore.Lexing;
+using System;
 using System.Collections.Generic;
 
 namespace SolisCore.Typechecking
@@ -15,5 +16,10 @@ namespace SolisCore.Typechecking
 
         public Token Identifier { get; }
         public List<TypeAst> GenericArgs { get; }
+
+        public bool IsVoid()
+        {
+            return Identifier.SourceValue == "void";
+        }
     }
 }

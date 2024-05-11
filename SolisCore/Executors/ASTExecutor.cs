@@ -10,12 +10,14 @@ namespace SolisCore.Executors
     /// Directly executes the AST
     /// 
     /// Isn't meant to be fast but is a way to test compliance of more complicated execution agents
+    /// 
+    /// TODO: Write this to use types??
     /// </summary>
     public class ASTExecutor
     {
         public Dictionary<string, StatementBody> Files { get; } = new();
 
-        public Scope Scope = new();
+        public ExecutorScope Scope = new();
 
         public dynamic? RunFunction(string functionName, params dynamic?[] args)
         {
@@ -198,74 +200,74 @@ namespace SolisCore.Executors
 
             ExecuteStatementBody(Files[program]);
         }
-    }
 
-    public class IdentifierValue
-    {
-        public string CurrentPath { get; set; }
-
-        public IdentifierValue(string currentPath)
+        public class ExecutorScope
         {
-            CurrentPath = currentPath;
-        }
+            public Dictionary<string, dynamic?> GlobalVariables { get; } = new();
+            public Stack<(string Name, Dictionary<string, dynamic?> Variables)> Current { get; } = new();
 
-        public void Push(string path)
-        {
-            if (string.IsNullOrEmpty(CurrentPath)) CurrentPath = path;
-            else CurrentPath += "." + path;
-        }
-    }
+            public string ScopeId => string.Join('.', Current.Select(scope => scope.Name));
 
-    public class Scope
-    {
-        public Dictionary<string, dynamic?> GlobalVariables { get; } = new();
-        public Stack<(string Name, Dictionary<string, dynamic?> Variables)> Current { get; } = new();
-
-        public string ScopeId => string.Join('.', Current.Select(scope => scope.Name));
-
-        public dynamic? LookupVariable(List<string> memberPaths, dynamic? target = null)
-        {
-            target ??= new IdentifierValue("");
-            if (target is AtomExpression expr)
+            public dynamic? LookupVariable(List<string> memberPaths, dynamic? target = null)
             {
-                target = null;
-                foreach (var (_, Variables) in Current)
+                target ??= new IdentifierValue("");
+                if (target is AtomExpression expr)
                 {
-                    if (Variables.TryGetValue(expr.Value!.ToString(), out var varLocal))
+                    target = null;
+                    foreach (var (_, Variables) in Current)
                     {
-                        target = varLocal;
-                        break;
+                        if (Variables.TryGetValue(expr.Value!.ToString(), out var varLocal))
+                        {
+                            target = varLocal;
+                            break;
+                        }
+                    }
+
+                    target ??= GlobalVariables.GetValueOrDefault(expr.Value!.ToString(), new IdentifierValue(expr.Value?.ToString()!));
+                }
+
+                if (target is IdentifierValue ident)
+                {
+                    target = ident = new IdentifierValue(ident.CurrentPath);
+                    foreach (var memberPath in memberPaths) ident.Push(memberPath);
+
+                    foreach (var (_, Variables) in Current)
+                    {
+                        if (Variables.TryGetValue(ident.CurrentPath, out var varLocal))
+                        {
+                            target = varLocal;
+                            break;
+                        }
+                    }
+
+                    if (GlobalVariables.TryGetValue(ident.CurrentPath, out var varGlobal))
+                    {
+                        target = varGlobal;
                     }
                 }
-
-                target ??= GlobalVariables.GetValueOrDefault(expr.Value!.ToString(), new IdentifierValue(expr.Value?.ToString()!));
-            }
-
-            if (target is IdentifierValue ident)
-            {
-                target = ident = new IdentifierValue(ident.CurrentPath);
-                foreach (var memberPath in memberPaths) ident.Push(memberPath);
-
-                foreach (var (_, Variables) in Current)
+                else
                 {
-                    if (Variables.TryGetValue(ident.CurrentPath, out var varLocal))
-                    {
-                        target = varLocal;
-                        break;
-                    }
+                    throw new Exception("Current we don't support assignment :(");
                 }
 
-                if (GlobalVariables.TryGetValue(ident.CurrentPath, out var varGlobal))
-                {
-                    target = varGlobal;
-                }
+                return target;
             }
-            else
+        }
+
+        public class IdentifierValue
+        {
+            public string CurrentPath { get; set; }
+
+            public IdentifierValue(string currentPath)
             {
-                throw new Exception("Current we don't support assignment :(");
+                CurrentPath = currentPath;
             }
 
-            return target;
+            public void Push(string path)
+            {
+                if (string.IsNullOrEmpty(CurrentPath)) CurrentPath = path;
+                else CurrentPath += "." + path;
+            }
         }
     }
 }
