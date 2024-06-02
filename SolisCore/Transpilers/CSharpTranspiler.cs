@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SolisCore.Transpilers
 {
-    public class CSharpTranspiler : Transpiler
+    public class CSharpTranspiler 
     {
     }
 }

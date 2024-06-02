@@ -160,7 +160,7 @@ namespace SolisCore.Typechecking
             return type;
         }
 
-        [return: NotNullIfNotNull("expr")]
+        [return: NotNullIfNotNull(nameof(expr))]
         public TypeAst? TypeCheckExpr(Expression? expr)
         {
             if (expr == null) return null;

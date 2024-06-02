@@ -82,6 +82,9 @@ namespace SolisCore.Transpilers
     /// </summary>
     public abstract class Transpiler<TState>
     {
+        // Most "outputs" require the entire translation unit in memory before we can start writing
+        // this is because any function references
+
         public Dictionary<string, StatementBody> Files { get; } = new();
 
         public TranspilerScope Scope = new();

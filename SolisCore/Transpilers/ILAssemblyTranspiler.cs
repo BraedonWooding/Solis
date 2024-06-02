@@ -4,6 +4,7 @@ using System.Reflection.Metadata.Ecma335;
 using SolisCore.Parser;
 using System.Reflection.Metadata;
 using SolisCore.Typechecking;
+using System.Collections.Generic;
 
 namespace SolisCore.Transpilers
 {
@@ -36,13 +37,15 @@ namespace SolisCore.Transpilers
         }
     }
 
+    public 
+
     /// <summary>
     /// This uses <see cref="MetadataBuilder"/> this is much much faster than <see cref="ILDynamicAssemblyTranspiler"/>
     /// </summary>
     public class ILAssemblyTranspiler : Transpiler<ILAssemblyState>
     {
         private readonly MetadataBuilder _metadataBuilder;
-        private readonly 
+        private Dictionary<>
 
         /// <summary>
         /// Stores the entire translation unit.
@@ -122,6 +125,8 @@ namespace SolisCore.Transpilers
                 });
 
             base.Transpile(state, decl);
+
+            _metadataBuilder.AddMemberReference()
 
             int mainBodyOffset = _methodBodyStream.AddMethodBody(state._il);
 
