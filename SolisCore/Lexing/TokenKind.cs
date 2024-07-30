@@ -26,6 +26,8 @@
         ComparatorSymbol,
         // i.e. . ( [ { ,
         PunctuationSymbol,
+        // i.e. &&, ||
+        LogicalSymbol,
 
         // i.e. --[[ ... --]]
         // and --
@@ -39,6 +41,5 @@
         ValueString,
         ValueChar,
         ValueNull,
-        LogicalSymbol,
     }
 }

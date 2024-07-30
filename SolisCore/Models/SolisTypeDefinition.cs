@@ -50,10 +50,7 @@ namespace SolisCore.Models
         /// 
         /// For example GetColor(forPerson: "Bob") defined as GetColor(forPerson person: string)
         /// 
-        /// This can have the same value as Name too.
-        /// 
-        /// If it's defined as `_` then this value will be null and it can be elided.
-        /// i.e. GetColor(255, 255, 255) being defined as GetColor(_ r: int, _ g: int, _ b: int)
+        /// Some parameter types (like bool) require the parameter name to be specified.
         /// </summary>
         public string? ExposedAlias { get; set; }
 
